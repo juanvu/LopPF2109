@@ -1,0 +1,28 @@
+
+
+h1,h4,h3{
+   color: cadetblue; 
+   text-align: center;
+}
+
+table{
+    text-align: center;
+    margin-left: 20%;
+    
+}
+input{
+    margin-top: 2%;
+    margin-right: 2%;
+    margin-left: 20%;
+    border:none;
+    border-bottom: 1px solid gray;
+}
+
+button{
+    border:1px solid black;
+    border-radius: 10px;
+    background-color: aqua;
+    margin-top: 2%;
+    margin-right: 2%;
+    margin-left: 20%;
+}

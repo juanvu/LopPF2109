@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        padding: 3px;
+        margin: 0;
+    }
+    form {
+        background-color: chartreuse;
+    }
+    h3 {
+        margin-top: 0px;
+        color: rgb(238, 232, 232);
+        background-color: rgb(19, 158, 135);
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .flex-container {
+        display: flex;
+    }
+    b {
+        flex: 30%;
+        text-align: right;
+        color: royalblue;
+    }
+    label {
+        flex:70%;
+        margin-left: 50px;
+    }
+
+    #send {
+        display: flex;
+        justify-content: center;
+    }
+    #send > input {
+        margin-left: 5px;
+    }
+
+</style>
+
+<body>
+    <form>
+        <h3>Đăng ký học viên</h3>
+        <div class="flex-container">
+            <b>Họ và tên </b>
+            <label for="">
+                <input type="text" name="yourname">
+            </label>
+        </div>
+
+        <br>
+
+        <div class="flex-container">
+            <b>Ngày sinh</b>
+            <label for="">
+                <input type="email" name="email">
+            </label>
+        </div>
+
+        <br>
+
+        <div class="flex-container">
+            <b>Giới tính</b>
+            <label for="">
+                <input type="radio" name="gender"> Nam
+                <input type="radio" name="gender"> Nữ
+            </label>
+        </div>
+
+        <br>
+
+        <div class="flex-container">
+            <b>Địa chỉ</b>
+            <label for="" id="address">
+                <input type="text" name="address" style="height: 100px;" size="50">
+            </label>
+        </div>
+
+        <br>
+
+        <div class="flex-container">
+            <b><label for="class">Lớp</label></b>
+            <label for="">
+                <select name="class" id="class">
+                    <option value="10">Lớp 10</option>
+                    <option value="11">Lớp 11</option>
+                    <option value="12">Lớp 12</option>
+                </select>
+            </label>
+        </div>
+
+        <br>
+
+        <div class="flex-container">
+            <b>Email</b>
+            <label for="">
+                <input type="email" name="email">
+            </label>
+        </div>
+
+        <br>
+
+        <div class="flex-container">
+            <b>Điện thoại</b>
+            <label for="">
+                <input type="text" name="phone">
+            </label>
+        </div>
+
+        <br>
+
+        <label for="" id="send">
+            <input type="submit" value="Đăng ký">
+            <input type="reset" value="Nhập lại">
+        </label>
+
+    </form>
+</body>
+</html>

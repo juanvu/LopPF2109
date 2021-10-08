@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        padding: 3px;
+        margin: 0;
+    }
+    form {
+        border: 15px solid rgb(139, 209, 221);
+    }
+    h3 {
+        margin-top: 0px;
+        color: rgb(238, 232, 232);
+        background-color: red;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .flex-container {
+        display: flex;
+    }
+    b {
+        flex: 30%;
+        text-align: right;
+        color: royalblue;
+    }
+    label {
+        flex:70%;
+        margin-left: 50px;
+    }
+
+    #send {
+        display: flex;
+        justify-content: center;
+    }
+    #send > input {
+        margin-left: 5px;
+    }
+
+    #checkbox_flex {
+        flex-wrap: wrap;
+        display: flex;
+    }
+
+    #checkbox_flex .col-3 {
+        margin-left: 5px;
+    }
+
+</style>
+
+<body>
+    <form>
+        <h3>Sở thích của bạn</h3>
+        <div class="flex-container">
+            <b>Họ và tên </b>
+            <label for="">
+                <input type="text" name="yourname">
+            </label>
+        </div>
+
+        <br>
+
+        <div class="flex-container">
+            <b>Email</b>
+            <label for="">
+                <input type="email" name="email">
+            </label>
+        </div>
+
+        <br>
+
+        <div class="flex-container">
+            <b>Sở thích</b>
+            <label for="" id="checkbox_flex">
+                <div><input class="col-3" type="checkbox" name="hobby"> Thể thao</div>
+                <div><input class="col-3" type="checkbox" name="hobby"> Lướt web</div>
+                <div><input class="col-3" type="checkbox" name="hobby"> Du lịch</div>
+                <div><input class="col-3" type="checkbox" name="hobby"> Âm nhạc</div>
+                <div><input class="col-3" type="checkbox" name="hobby"> Chơi game</div>
+                <div><input class="col-3" type="checkbox" name="hobby"> Đọc sách</div>
+                <div><input class="col-3" type="checkbox" name="hobby"> Điện ảnh</div>
+            </label>
+        </div>
+
+        <br>
+
+        <label for="" id="send">
+            <input type="submit" value="Gửi thông tin">
+            <input type="reset" value="Nhập lại">
+        </label>
+
+    </form>
+</body>
+</html>

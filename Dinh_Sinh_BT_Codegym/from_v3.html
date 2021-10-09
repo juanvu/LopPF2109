@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+
+    h2 {
+        text-align: center;
+        color: blueviolet;
+    }
+    form {
+        border: 10px solid royalblue;
+    }
+
+    b {
+        color: cornflowerblue;
+        text-align: right;
+        flex:30%;
+        margin-bottom: 10px;
+    }
+    label {
+        flex:70%;
+        margin-left: 50px;
+    }
+    .flex-container {
+        display: flex;
+
+    }
+
+    #post {
+        text-align: center;
+        margin: 20px;
+    }
+    #post label > input {
+        height: 30px;
+        width: 100px;
+        background-color: rgb(19, 19, 194);
+    }
+
+    .input_change {
+        height: 25px;
+        width: 200px;
+    }
+
+</style>
+<body>
+    <form action="">
+        <h2>Registration Form</h2>
+        <div class="flex-container">
+            <b>Full Name</b>
+            <label for=""><input class="input_change" type="text" name="name" placeholder="Full Name"></label>
+            <br>
+            <br>
+        </div>
+        <div class="flex-container">
+            <b>Company</b>
+            <label for=""><input class="input_change" type="text" name="company" placeholder="Your company name"></label>
+            <br>
+            <br>
+        </div>
+        <div class="flex-container">
+            <b>Email</b>
+            <label for=""><input class="input_change" type="email" name="email" placeholder="email@example.com"></label>
+            <br>
+            <br>
+        </div>
+        <div class="flex-container">
+            <b>Full Name</b>
+            <label for=""><input class="input_change" type="text" name="name" placeholder="Full Name"></label>
+            <br>
+            <br>
+        </div>
+        
+        <div class="flex-container">
+            <b><label for="country">Country</label></b>
+            <label for="">
+                <select class="input_change" name="country" id="country" placeholder="Click to choose">
+                    <option value="10">Việt Nam</option>
+                    <option value="11">Japan</option>
+                    <option value="12">America</option>
+                </select>
+            </label>
+            <br>
+            <br>
+        </div>
+
+        <div class="flex-container">
+            <b>Sex</b>
+            <label for="">
+                <input type="radio" name="gender">Male
+                <input type="radio" name="gender">Female
+            </label>
+                <br>
+                <br>
+        </div>
+
+        <div class="flex-container">
+            <b>Language</b>
+            <label for="">
+                <input type="checkbox" name="language">English
+                <input type="checkbox" name="language">French
+                <input type="checkbox" name="language">Other
+            </label>
+                <br>
+                <br>
+        </div>
+
+        <div class="flex-container">
+            <b>Comment</b>
+            <label for=""><input class="input_change" type="text" placeholder="Say hello"></label>
+        </div>
+
+        <div class="flex-container">
+            <b></b>
+            <label for=""><input type="checkbox">I agree with <a href="#">Terms and Conditions</a></label>
+        </div>
+
+        <div id="post">
+            <label for=""><input type="submit" value="Register"></label>
+        </div>
+
+    </form>
+</body>
+</html>

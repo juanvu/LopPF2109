@@ -1,0 +1,13 @@
+table, td, th {
+    border: 1px solid black;
+  }
+  
+table {
+    margin-left: 20%;
+    width: 50%;
+    border-collapse: collapse;
+  }
+
+h3{
+    text-align: center;
+}

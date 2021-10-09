@@ -1,0 +1,45 @@
+<html>
+<body>
+
+<h2>Registration Form</h2>
+
+<form action="/action_page.php">
+  <label for="text">Full name:</label>
+  <input type="text" id="fname" name="fname" Placehoder="John"><br>
+  <label for="input">Company:</label>
+  <input type="text" id="lname" name="lname" placehoder="your company name"><br><br>
+  <label for="input">Email:</label>
+  <input type="text" id="lname" name="lname" Placehoder="email@examble.com"><br>
+  <label for="input">Phonenumber:</label>
+  <input type="text" id="lname" name="lname" Placehoder="1234"><br>
+  <label for="user">Country:</label>
+  <select name="country" id="country">
+    <option value="Vietnam">Vietnam</option>
+    <option value="Japan">Japan</option>
+    <option value="America">America</option>
+    <option value="Korea">Korea</option>
+  </select><br>
+  
+<label>Sex:</label>
+<input type="radio" id="html" name="Sex" value="Male">
+<label for="Sex"> Male </label>
+<input type="radio" id="html" name="Sex" value="Female">
+<label for="Sex"> Female </label><br>
+<label>Language:</label>
+<input type="radio" id="html" name="Language" value="English">
+<label for="Language"> English </label>
+<input type="radio" id="html" name="Language" value="French">
+<label for="Languge"> French </label>
+<input type="radio" id="html" name="Language" value="Other">
+<label for="Language"> French </label><br>
+<label for="text">Comment:</label>
+<input type="text" Placehoder="Say hello"><br>
+<input type="radio" id="html" name="I agree with Term and Conditions">
+<label for="I agree with Term and Conditions">I agree with Term and Conditions </label><br>
+<button type="button" >Register</button>
+</form> 
+
+
+</body>
+</html>
+

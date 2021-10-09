@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration Form</title>
+    </head>
+    <body>
+        <form>
+            <h1>Registration Form</h1>
+            <br/>
+            <table>
+                <tr>
+                    <td>Full Name</td>
+                    <td><input type="text" name="fullname" placeholder="Your name" style="border: 0px;"></td>
+                </tr>
+                <tr>
+                    <td>Company</td>
+                    <td><input type="text" name="company" placeholder="Your company name" style="border: 0px;"></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="email" name="email" placeholder="Your email" style="border: 0px;"></td>
+                </tr>
+                <tr>
+                    <td>Phone number</td>
+                    <td><input type="number" name="phonenumber" placeholder="Your phone number" style="border: 0px;"></td>
+                </tr>
+                <tr>
+                    <td>Country</td>
+                    <td>
+                        <select>
+                            <option placeholder="Select your country">Vietnam</option>
+                            <option>China</option>
+                            <option>Japan</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sex</td>
+                    <td>
+                        <input type="radio" name="sex" value="Male"><label>Male </label>
+		                <input type="radio" name="sex" value="Female"><label>Male </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Language</td>
+                    <td>
+                        <input type="checkbox" name="language" value="English"><label>English </label>
+                        <input type="checkbox" name="language" value="French"><label>French </label>
+                        <input type="checkbox" name="language" value="Other"><label>Other </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Comment</td>
+                    <td><input type="text" name="comment" placeholder="Say hello" style="border: 0px;"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="checkbox" name="check" value="check"><label>I agree with <a href="https://learn.codegym.vn/" style='color:rgb(56, 150, 204)' style='text-decoration: none' >Terms and Comditions</a> </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type='button' value='Register' onclick='alert("Done!")' />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

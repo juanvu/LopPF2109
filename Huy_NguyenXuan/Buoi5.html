@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <tilte>Thực hành buổi 5</tilte>
+</head>
+<body>
+    <form>
+        <h2>Registration Form</h2><br>
+        <label>Full Name</label><input type='text' name='Full Name' placeholder='Your Full Name'>
+        <br>
+        <label>Company</label><input type='text' name='Company' placeholder='Your company name'>
+        <br>
+        <label>Email</label><input type='text' name='Email' placeholder='email@example.com'>
+        <br>
+        <label>Phone number</label><input type='text' name='Phone number' placeholder='1234'>&nbsp;<input type='text' name='Phone number'>
+        <br>
+        <label>Country</label>
+        <select aria-placeholder='Click to choose'>
+            <option value='VietNam'>VietNam</option>
+            <option value='Brazil'>Brazil</option>
+            <option value='England'>England</option>
+            <option value='France'>France</option>
+            <option value='America'>America</option>
+            <option value='Italy'>Italy</option>
+        </select>
+        <br>
+        <label>Sex</label> 
+        <input type='radio' name='gender' value='Male'><label>Male</label>
+        <input type='radio' name='gender' value='famale'><label>female</label>
+        <br>
+        <label>Language</label>
+        <input type='checkbox' name='language1' value='English'><label>English</label>
+        <input type='checkbox' name='language2' value='French'><label>French</label>
+        <input type='checkbox' name='language3' value='Other'><label>Other</label>
+        <br>
+        <label>Comment</label><input type='text' name='comment' placeholder='Say hello'>
+        <br>
+        <input type='checkbox' name='acceptrules'><labe>I agree with</labe>&nbsp;<a href='https://www.24h.com.vn/' style='text-decoration: none;'>Terms and Conditions</a>
+        <br><br>
+        <input type='button' value='Register' onclick='confirm("Bạn có muốn lưu bản ghi này không?");
+        if (onclick == true) {
+            alert("Đồng ý");
+        } else {
+            alert("Nhập lại");
+        }'>
+
+        <!--<script src='app.js'></script>-->
+    </form>
+</body>
+</html>

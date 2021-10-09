@@ -1,0 +1,15 @@
+table {
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th {
+    padding: 10px;
+    background-color: #ccc;
+}
+
+h3 {
+    text-align: center;
+    margin: 0;
+}

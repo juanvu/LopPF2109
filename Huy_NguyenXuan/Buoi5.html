@@ -29,10 +29,13 @@
             text-align: left;
             margin-bottom: 5px;
         }
-        .input_box {
+        label {
             flex: 90%;
+            
+        }
+        label .input_box {
             height: 30px;
-            width: 100px;
+            width: 400px;
         }
         .input_phone1 {
             flex: 20%;
@@ -43,7 +46,7 @@
             flex: 80%;
             margin-left: 20px;
             height: 30px;
-            width: 300px;
+            width: 275px;
         }
         .choice {
             margin-left: 5px;
@@ -57,54 +60,75 @@
         </div>
         <form>
         <div class="container">
-            <p>Full Name</p><input class='input_box' type='text' name='Full Name' placeholder='Your Full Name'>
+            <p>Full Name</p>
+            <label for="">
+                <input class='input_box' type='text' name='Full Name' placeholder='Your Full Name'>
+            </label>
         </div>
         <br>
         <div class="container">
-            <p>Company</p><input class='input_box' type='text' name='Company' placeholder='Your company name'>
+            <p>Company</p>
+            <label for="">
+                <input class='input_box' type='text' name='Company' placeholder='Your company name'>
+            </label>
         </div>
         <br>
         <div class="container">
-            <p>Email</p><input class='input_box' type='text' name='Email' placeholder='email@example.com'>
+            <p>Email</p>
+            <label for="">
+                <input class='input_box' type='text' name='Email' placeholder='email@example.com'>
+            </label>
         </div>
         <br>
         <div class="container">
             <p>Phone number</p>
-            <div class='input_box'>
-                <input class='input_phone1' type='text' name='Phone number' placeholder='1234'>&nbsp;<input class='input_phone2' type='text' name='Phone number'>
-            </div>
+            <label for="">
+                <input class='input_phone1' type='text' name='Phone number' placeholder='1234'>
+                <input class='input_phone2' type='text' name='Phone number'>
+            </label>
         </div>
         <br>
         <div class="container">
             <p>Country</p>
-            <select class='input_box'>
-                <option value='VietNam'>VietNam</option>
-                <option value='Brazil'>Brazil</option>
-                <option value='England'>England</option>
-                <option value='France'>France</option>
-                <option value='America'>America</option>
-                <option value='Italy'>Italy</option>
-            </select>
+            <label for="">
+                <select class='input_box'>
+                    <option value='VietNam'>VietNam</option>
+                    <option value='Brazil'>Brazil</option>
+                    <option value='England'>England</option>
+                    <option value='France'>France</option>
+                    <option value='America'>America</option>
+                    <option value='Italy'>Italy</option>
+                </select>
+            </label>
         </div>
         <br>
         <div class="container">
             <p>Sex</p>
-            <div class='input_size'>
-                <input type='radio' name='gender' value='Male'><label  class='choice'>Male</label>
-                <input type='radio' name='gender' value='famale'><label class='choice'>female</label>
-            </div>
+            <label for="">
+                <div class='input_size'>
+                    <input type='radio' name='gender' value='Male'><label  class='choice'>Male</label>
+                    <input type='radio' name='gender' value='famale'><label class='choice'>female</label>
+                </div>
+            </label>
         </div>
         <br>
         <div class="container">
             <p>Language</p>
-            <div class='input_size'>
-                <input type='checkbox' name='language1' value='English'><label class='choice'>English</label>
-                <input type='checkbox' name='language2' value='French'><label class='choice'>French</label>
-                <input type='checkbox' name='language3' value='Other'><label class='choice'>Other</label>
-            </div>
+            <label for="">
+                <div class='input_size'>
+                    <input type='checkbox' name='language1' value='English'><label class='choice'>English</label>
+                    <input type='checkbox' name='language2' value='French'><label class='choice'>French</label>
+                    <input type='checkbox' name='language3' value='Other'><label 
+                    class='choice'>Other</label>
+                </div>
+            </label>
         </div>
+        <br>
         <div class="container">
-            <p>Comment</p><input class='input_box' type='text' name='comment' placeholder='Say hello'>
+            <p>Comment</p>
+            <label for="">
+                <input class='input_box' type='text' name='comment' placeholder='Say hello'>
+            </label>
         </div>
         <br>
         <div class="container">

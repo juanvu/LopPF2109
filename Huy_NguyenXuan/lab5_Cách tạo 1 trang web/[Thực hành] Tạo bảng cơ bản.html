@@ -15,19 +15,19 @@
                 text-align: left;
                 padding: 8px;
             }
-            tr:nth-child() {
-                background-color: #dddddd;
+            tr:nth-child(even) {
+                background-color: #ffffff;
+            }
+            tr:nth-child(odd) {
+                background-color: #bbbbbb;
             }
         </style>
         <table>
-            <thead>
                 <tr>
                     <th>Company</th>
                     <th>Contact</th>
                     <th>Country</th>
                 </tr>
-            </thead>
-            <tbody>
                 <tr>
                     <td>Alfreds Futterkiste</td>
                     <td>Maria Anders</td>
@@ -58,7 +58,6 @@
                     <td>Giovanni Rovelli</td>
                     <td>Italy</td>
                   </tr>
-            </tbody>
         </table>
     </body>
 </html>

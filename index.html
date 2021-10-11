@@ -5,131 +5,79 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./asset/css/style.css">
 </head>
 <body>
-    <h3>QUẢN LÝ SINH VIÊN</h3>
-    <table border="1">
-        <tr>
-            <th>ID</th>
-            <th>Họ và Tên</th>
-            <th>Điểm</th>
-            <th>Xếp loại</th>
-        </tr>
-        <tr>
-            <td colspan="4">Khóa A</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Trần Tiến Tài</td>
-            <td>7</td>
-            <td rowspan="2">Khá</td>
-        </tr>
+    <style>
+        h2 {
+            text-align: center;
+            color: #fff;
+            font-size: 25px;
+            background-color: orangered;
+            padding: 6px;
+        }
+
+        b {
+            color: rgb(49, 49, 194);
+        }
+        .mail {
+            padding: 10px 82px;
+        }
+        .button {
+           padding: 10px 140px;
+        }
+
+        .name {
+            padding-left: 50px;
+        }
+
+        a {
+            color: orangered;
+            text-decoration: none;
+        }
+
+        .hobby {
+            padding-left: 60px;
+        }
+
+       
+    </style>
+    <div>
+        <h2>SỞ THÍCH CỦA BẠN</h2>
+        <div class="name">
+            <b>Họ và tên</b>
+        <label for="">
+            <input type="text" name="yourname" id=""><br>
+        </label>
+        </div>
+
+        <div class="mail">
+            <b>Email</b>
+        <label for="">
+            
+        <input type="text" name="Email" id=""><br>
+        </label>
+        </div>
+
+        <div class="hobby">
+            <b>Sở thích</b>
+            <input type="checkbox" name="hobby" id=""><a href="#">Thể thao</a>
+            <input type="checkbox" name="hobby" id=""><a href="#">Âm nhạc</a>
+            <input type="checkbox" name="hobby" id=""><a href="#">Đọc sách</a><br>
+            <input type="checkbox" name="hobby" id=""><a href="#">Lướt web</a>
+            <input type="checkbox" name="hobby" id=""><a href="#">Chơi game</a>
+            <input type="checkbox" name="hobby" id=""><a href="#">Điện ảnh</a><br>
+            <input type="checkbox" name="hobby" id=""><a href="#">Du lịch</a>
+            <label for="">
+        </label><br>
+        </div>
+
+        <div class="button">
+            <label for="" id="button">
+                <input type="submit" value="Gửi thông tin">
+                <input type="reset" value="Nhập lại">
+            </label>
+        </div>
         
-        <tr>
-            <td>2</td>
-            <td>Phạm Mạnh Khoa</td>
-            <td>8</td>
-        </tr>
-
-        
-        <tr>
-            <td colspan="4">Khóa B</td>
-        </tr>
-
-        <tr>
-            <td>3</td>
-            <td>Trần Văn Hưng</td>
-            <td>5</td>
-            <td>Trung bình</td>
-        </tr>
-
-        <tr>
-            <td>4</td>
-            <td>Đỗ Đức Thành</td>
-            <td>10</td>
-            <td>Giỏi</td>
-        </tr>
-
-        <tr>
-            <th colspan="2">TỔNG CỘNG</th>
-            <th>7.5</th>
-            <th>Khá</th>
-        </tr>
-    </table>
-    <br>
-    <br>
-
-    <h2>Registration Form</h2>
-    
-    <form action="">
-        <b>FullName:
-        
-        </b>
-
-        <label for=""><input type="text" placeholder="John" name="name"></label>
-    
-        <br>
-        <br>
-    
-        <b>Company:
-            <label for=""><input type="text" placeholder="Your company name" name="company"></label>
-        </b>
-    
-        <br>
-        <br>
-    
-        <b>Email:
-            <label for=""><input type="email" placeholder="email@example.com" name="email"></label>
-        </b>
-
-        <br>
-        <br>
-
-        <b>Phone number:
-            <label for=""><input type="number" placeholder="1234" name="number"></label>
-        </b>
-
-        <br>
-        <br>
-        <b>Country:
-            <label for=""><input type="text" placeholder="Click to choose" name="number"></label>
-        </b>
-    
-        <br>
-        <br>
-    
-        <b>Sex:
-            <label for=""><input type="radio" name="gender">Male</label>
-            <label for=""><input type="radio" name="gender">Female</label>
-        </b>
-
-        <br>
-        <br>
-
-        <b>Language:
-        <label for=""><input type="checkbox" name="" id="">English</label>
-        <label for=""><input type="checkbox" name="" id="">French</label>
-        <label for=""><input type="checkbox" name="" id="">Other</label>
-        </b>
-
-        <br>
-        <br>
-
-        <b>Comment:
-            <label for=""><input type="text" placeholder="Say hello" name="number"></label>
-        </b>
-
-        <br>
-        <br>
-
-        <input type="checkbox" name="" id="">I agree with <a  href="#">Terms and Conditional</a>
-    
-        <br>
-        <br>
-    
-        <input type="submit" value="Register">
-    </form>
-    
+    </div>
 </body>
 </html>

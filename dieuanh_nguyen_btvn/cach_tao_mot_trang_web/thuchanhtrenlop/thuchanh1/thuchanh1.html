@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css"/>
+</head>
+<body>
+    <h2>
+        Registration Form
+    </h2>
+    <form>
+        <div class="field-block">
+            <div class="label">Full name</div>
+            <div><input type="text" name="name"/></div>
+        </div>
+        <div class="field-block">
+            <div class="label">Company</div>
+            <div><input type="text" name="company"/></div>
+        </div>
+        <div class="field-block">
+            <div class="label">Email:</div>
+            <div><input type="email" name="email"/></div>
+        </div>
+        <div class="field-block">
+            <div class="label">Phone number</div>
+            <div><input type="text" name="prefixphone"/><input type="text" name="phone"/> </div>
+        </div>
+        <div class="field-block">
+            <div class="label">Country</div>
+            <div>
+                <select name="country">
+                    <option>
+                        Vietnam
+                    </option>
+                    <option>
+                        China
+                    </option>
+                    <option>
+                        America
+                    </option>
+                </select>
+            </div>
+        </div>
+        <div class="field-block">
+            <div class="label">Sex</div>
+            <div>
+                <span>
+                   <input type="radio" value="male" name="gender"/>
+                   <span>Male</span>
+                </span> 
+                <span>
+                    <input type="radio" value="female" name="gender"/>
+                    <span>Female</span>
+                </span>
+            </div>
+        </div>
+        <div class="field-block">
+            <div class="label">Language</div>
+            <div>
+                <span>
+                   <input type="checkbox" value="english" name="language"/>
+                   <span>English</span>
+                </span> 
+                <span>
+                    <input type="checkbox" value="french" name="language"/>
+                    <span>French</span>
+                </span>
+                <span>
+                    <input type="checkbox" value="other" name="language"/>
+                    <span>Other</span>
+                </span>
+            </div>
+        </div>
+        <div class="field-block">
+                <div class="label">Comment</div>
+                <div>
+                    <textarea name="comment"></textarea>
+                </div>
+        </div>
+        <div>
+            <div>
+            <input type="checkbox" value="yes" name="termsconditions">
+            <span> I agree with <a href="https://google.com" target="_blank">Terms and Conditions</a></span>
+            </div>
+        </div>
+        <div class="field-block" id="buttons">
+            <button type="submit">Register</button>
+        </div>
+       
+    </form>
+</body>
+</html>

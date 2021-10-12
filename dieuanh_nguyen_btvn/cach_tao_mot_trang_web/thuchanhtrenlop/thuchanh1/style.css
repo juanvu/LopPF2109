@@ -1,0 +1,20 @@
+.field-block{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.field-block .label{
+    width: 100px;
+    padding-right: 5px;
+}
+
+#buttons{
+    margin-left: 105px;
+}
+#buttons>:last-child{
+    margin-left: 10px;
+}
+h2{
+    margin-left: 20px;
+}

@@ -4,9 +4,93 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>This is my project 1</title>
+    <title>Document</title>
 </head>
 <body>
-    <h1>Test is ready</h1>
+
+    <style>
+        #row {
+            padding: 5px;
+            background-color: rgb(223, 240, 149);
+        }
+
+        h2 {
+            color: blue;
+            background-color: rgb(175, 175, 238);
+            line-height: 40px;
+        }
+
+        .col-half p {
+            color: blue;
+        }
+
+        .col-half .form-control {
+            /* padding-left: 50px; */
+        }
+
+        .col-half .form-control1 {
+            width: 50%;
+            text-align: center;
+        }
+
+        .col-half1 p {
+            padding-left: 30px;
+        }
+
+        
+    </style>
+
+    <div id="row">
+        <h2>ĐĂNG KÝ HỌC VIÊN</h2>
+        <form action="">
+            <div class="col-half">
+                <p>Họ và tên
+                    <input type="text" name="" id="" class="form-control1">
+                </p>
+            </div>
+            <div class="col-half">
+                <p>Ngày sinh
+                    <input type="text" name="" id="" class="form-control2">
+                </p>
+            </div>
+
+            <div class="col-half">
+                <p>Giới tính
+                    <input type="radio" name="gender" id="" class="form-control">Nam
+                    <input type="radio" name="gender" id="" class="form-control">Nữ
+                </p>
+            </div>
+            
+            <div class="col-half">
+                <p>Địa chỉ
+                    <input style="height: 40px;" type="text" name="" id="" class="form-control3">
+                </p>
+            </div>
+
+            <div class="col-half">
+                <p>Lớp
+                    <select name="" id="">
+                        <option value=" ">--chọn lớp--</option>
+                    </select>
+                </p>
+            </div>
+
+            <div class="col-half">
+                <p>Email
+                    <input type="text" name="" id="" class="form-control">
+                </p>
+            </div>
+            <div class="col-half">
+                <p>Điện thoại
+                    <input type="text" name="" id="" class="form-control">
+                </p>
+            </div>
+            <div class="btn">
+            <input type="submit" value="Đăng ký">
+            <input type="submit" value="Nhập lại">
+            
+            </div>
+        </form>
+    </div>
 </body>
 </html>

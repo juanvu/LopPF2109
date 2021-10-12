@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Table simple</title>
+    </head>
+    <body>
+        <style>
+            * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            font-size: 26px;
+            }
+            .write_input {
+                margin-top: 30px;
+            }
+            .button_box {
+                border-radius: 5px;
+                padding-top: 3px;
+                padding-bottom: 3px;
+                padding-left: 10px;
+                padding-right: 10px;
+                background-color: white;
+                font-size: 15px;
+            }
+            label .input_box {
+                height: 30px;
+                width: 200px;
+            }
+            .input_radio {
+                height: 20px;
+                width: 30px;
+            }
+        </style>
+        <form method="get" action="simpleform.html">
+            <div class="write_input">
+                <p>Họ và tên:</p>
+                <label><input class='input_box' type = "text" name="email" size="35"/></label>
+            </div>
+            <div class="write_input">
+                <p>Email:</p>
+                <label><input class='input_box' type = "text" name="email" size="35"/></label>
+            </div>
+            <div class="write_input">
+                <p>Số điện thoại:</p>
+                <label><input class='input_box' type = "text" name="email" size="35"/></label>
+            </div>
+            <div class="write_input">
+                <p>Giới tính:</p>
+                <label  class='choice'><input class='input_radio' type = "radio" name="Gender" value="Nam"/>Nam</label>
+                <label  class='choice'><input class='input_radio' type = "radio" name="Gender" value="Nữ"/>Nữ</label>
+            </div>
+            <!--Tạo button-->
+            <div class="write_input">
+                <p><input class="button_box" type = "button" name="Submit" value="Đăng ký"/></p>
+            </div>
+        </form>
+    </body>
+</html>

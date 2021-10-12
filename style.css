@@ -1,0 +1,33 @@
+table {
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th {
+    padding: 10px;
+   
+}
+
+h3 {
+    text-align: center;
+    margin: 0;
+}
+
+h2 {
+  
+}
+
+form {
+    width: 100%;
+    
+}
+
+form a {
+    text-decoration: none;
+    
+}
+
+form b {
+    text-align: left;
+}

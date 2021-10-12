@@ -7,77 +7,90 @@
     <title>Document</title>
 </head>
 <body>
+
     <style>
+        #row {
+            padding: 5px;
+            background-color: rgb(223, 240, 149);
+        }
+
         h2 {
+            color: blue;
+            background-color: rgb(175, 175, 238);
+            line-height: 40px;
+        }
+
+        .col-half p {
+            color: blue;
+        }
+
+        .col-half .form-control {
+            /* padding-left: 50px; */
+        }
+
+        .col-half .form-control1 {
+            width: 50%;
             text-align: center;
-            color: #fff;
-            font-size: 25px;
-            background-color: orangered;
-            padding: 6px;
         }
 
-        b {
-            color: rgb(49, 49, 194);
-        }
-        .mail {
-            padding: 10px 82px;
-        }
-        .button {
-           padding: 10px 140px;
+        .col-half1 p {
+            padding-left: 30px;
         }
 
-        .name {
-            padding-left: 50px;
-        }
-
-        a {
-            color: orangered;
-            text-decoration: none;
-        }
-
-        .hobby {
-            padding-left: 60px;
-        }
-
-       
-    </style>
-    <div>
-        <h2>SỞ THÍCH CỦA BẠN</h2>
-        <div class="name">
-            <b>Họ và tên</b>
-        <label for="">
-            <input type="text" name="yourname" id=""><br>
-        </label>
-        </div>
-
-        <div class="mail">
-            <b>Email</b>
-        <label for="">
-            
-        <input type="text" name="Email" id=""><br>
-        </label>
-        </div>
-
-        <div class="hobby">
-            <b>Sở thích</b>
-            <input type="checkbox" name="hobby" id=""><a href="#">Thể thao</a>
-            <input type="checkbox" name="hobby" id=""><a href="#">Âm nhạc</a>
-            <input type="checkbox" name="hobby" id=""><a href="#">Đọc sách</a><br>
-            <input type="checkbox" name="hobby" id=""><a href="#">Lướt web</a>
-            <input type="checkbox" name="hobby" id=""><a href="#">Chơi game</a>
-            <input type="checkbox" name="hobby" id=""><a href="#">Điện ảnh</a><br>
-            <input type="checkbox" name="hobby" id=""><a href="#">Du lịch</a>
-            <label for="">
-        </label><br>
-        </div>
-
-        <div class="button">
-            <label for="" id="button">
-                <input type="submit" value="Gửi thông tin">
-                <input type="reset" value="Nhập lại">
-            </label>
-        </div>
         
+    </style>
+
+    <div id="row">
+        <h2>ĐĂNG KÝ HỌC VIÊN</h2>
+        <form action="">
+            <div class="col-half">
+                <p>Họ và tên
+                    <input type="text" name="" id="" class="form-control1">
+                </p>
+            </div>
+            <div class="col-half">
+                <p>Ngày sinh
+                    <input type="text" name="" id="" class="form-control2">
+                </p>
+            </div>
+
+            <div class="col-half">
+                <p>Giới tính
+                    <input type="radio" name="gender" id="" class="form-control">Nam
+                    <input type="radio" name="gender" id="" class="form-control">Nữ
+                </p>
+            </div>
+            
+            <div class="col-half">
+                <p>Địa chỉ
+                    <input style="height: 40px;" type="text" name="" id="" class="form-control3">
+                </p>
+            </div>
+
+            <div class="col-half">
+                <p>Lớp
+                    <select name="" id="">
+                        <option value=" ">--chọn lớp--</option>
+                    </select>
+                </p>
+            </div>
+
+            <div class="col-half">
+                <p>Email
+                    <input type="text" name="" id="" class="form-control">
+                </p>
+            </div>
+            <div class="col-half">
+                <p>Điện thoại
+                    <input type="text" name="" id="" class="form-control">
+                </p>
+            </div>
+            <div class="btn">
+            <input type="submit" value="Đăng ký">
+            <input type="submit" value="Nhập lại">
+            
+            </div>
+        </form>
     </div>
 </body>
 </html>

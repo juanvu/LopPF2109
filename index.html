@@ -5,131 +5,92 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./asset/css/style.css">
 </head>
 <body>
-    <h3>QUẢN LÝ SINH VIÊN</h3>
-    <table border="1">
-        <tr>
-            <th>ID</th>
-            <th>Họ và Tên</th>
-            <th>Điểm</th>
-            <th>Xếp loại</th>
-        </tr>
-        <tr>
-            <td colspan="4">Khóa A</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Trần Tiến Tài</td>
-            <td>7</td>
-            <td rowspan="2">Khá</td>
-        </tr>
-        
-        <tr>
-            <td>2</td>
-            <td>Phạm Mạnh Khoa</td>
-            <td>8</td>
-        </tr>
+
+    <style>
+        #row {
+            padding: 5px;
+            background-color: rgb(223, 240, 149);
+        }
+
+        h2 {
+            color: blue;
+            background-color: rgb(175, 175, 238);
+            line-height: 40px;
+        }
+
+        .col-half p {
+            color: blue;
+        }
+
+        .col-half .form-control {
+            /* padding-left: 50px; */
+        }
+
+        .col-half .form-control1 {
+            width: 50%;
+            text-align: center;
+        }
+
+        .col-half1 p {
+            padding-left: 30px;
+        }
 
         
-        <tr>
-            <td colspan="4">Khóa B</td>
-        </tr>
+    </style>
 
-        <tr>
-            <td>3</td>
-            <td>Trần Văn Hưng</td>
-            <td>5</td>
-            <td>Trung bình</td>
-        </tr>
+    <div id="row">
+        <h2>ĐĂNG KÝ HỌC VIÊN</h2>
+        <form action="">
+            <div class="col-half">
+                <p>Họ và tên
+                    <input type="text" name="" id="" class="form-control1">
+                </p>
+            </div>
+            <div class="col-half">
+                <p>Ngày sinh
+                    <input type="text" name="" id="" class="form-control2">
+                </p>
+            </div>
 
-        <tr>
-            <td>4</td>
-            <td>Đỗ Đức Thành</td>
-            <td>10</td>
-            <td>Giỏi</td>
-        </tr>
+            <div class="col-half">
+                <p>Giới tính
+                    <input type="radio" name="gender" id="" class="form-control">Nam
+                    <input type="radio" name="gender" id="" class="form-control">Nữ
+                </p>
+            </div>
+            
+            <div class="col-half">
+                <p>Địa chỉ
+                    <input style="height: 40px;" type="text" name="" id="" class="form-control3">
+                </p>
+            </div>
 
-        <tr>
-            <th colspan="2">TỔNG CỘNG</th>
-            <th>7.5</th>
-            <th>Khá</th>
-        </tr>
-    </table>
-    <br>
-    <br>
+            <div class="col-half">
+                <p>Lớp
+                    <select name="" id="">
+                        <option value=" ">--chọn lớp--</option>
+                    </select>
+                </p>
+            </div>
 
-    <h2>Registration Form</h2>
-    
-    <form action="">
-        <b>FullName:
-        
-        </b>
-
-        <label for=""><input type="text" placeholder="John" name="name"></label>
-    
-        <br>
-        <br>
-    
-        <b>Company:
-            <label for=""><input type="text" placeholder="Your company name" name="company"></label>
-        </b>
-    
-        <br>
-        <br>
-    
-        <b>Email:
-            <label for=""><input type="email" placeholder="email@example.com" name="email"></label>
-        </b>
-
-        <br>
-        <br>
-
-        <b>Phone number:
-            <label for=""><input type="number" placeholder="1234" name="number"></label>
-        </b>
-
-        <br>
-        <br>
-        <b>Country:
-            <label for=""><input type="text" placeholder="Click to choose" name="number"></label>
-        </b>
-    
-        <br>
-        <br>
-    
-        <b>Sex:
-            <label for=""><input type="radio" name="gender">Male</label>
-            <label for=""><input type="radio" name="gender">Female</label>
-        </b>
-
-        <br>
-        <br>
-
-        <b>Language:
-        <label for=""><input type="checkbox" name="" id="">English</label>
-        <label for=""><input type="checkbox" name="" id="">French</label>
-        <label for=""><input type="checkbox" name="" id="">Other</label>
-        </b>
-
-        <br>
-        <br>
-
-        <b>Comment:
-            <label for=""><input type="text" placeholder="Say hello" name="number"></label>
-        </b>
-
-        <br>
-        <br>
-
-        <input type="checkbox" name="" id="">I agree with <a  href="#">Terms and Conditional</a>
-    
-        <br>
-        <br>
-    
-        <input type="submit" value="Register">
-    </form>
-    
+            <div class="col-half">
+                <p>Email
+                    <input type="text" name="" id="" class="form-control">
+                </p>
+            </div>
+            <div class="col-half">
+                <p>Điện thoại
+                    <input type="text" name="" id="" class="form-control">
+                </p>
+            </div>
+            <div class="btn">
+            <input type="submit" value="Đăng ký">
+            <input type="submit" value="Nhập lại">
+            
+            </div>
+        </form>
+    </div>
 </body>
 </html>

@@ -1,0 +1,36 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.table1{
+    width: 500px;
+    height: auto;
+    border: 2px solid black;
+    margin-top: 20%;
+    margin-left: 20%;
+}
+
+table{
+    padding-left: 80px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+input{
+    border: none;
+    border-bottom: 1px solid gray;
+    
+}
+select{
+    margin-top: 10px;
+    border:none;
+    border-bottom: 1px solid gray;
+}
+
+button{
+    margin-left: 100px;
+    margin-top: 25px;
+    cursor: pointer;
+}
+

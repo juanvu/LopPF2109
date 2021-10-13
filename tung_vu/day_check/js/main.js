@@ -8,38 +8,32 @@ function run() {
 function dayCheck(_day,_money,_ct16) {
     switch (_day) {
         case "thứ 2":
-            alert("Thứ 2 đi học!")
+            alert(`${_day} đi học!`)
             break;
         case "thứ 3":
-            alert("Thứ 3 được nghỉ!")
+            alert(`${_day} được nghỉ!`)
             break;
         case "thứ 4":
-            alert("Thứ 4 được nghỉ!")
+            alert(`${_day} được nghỉ!`)
             break;
         case "thứ 5":
-            alert("Thứ 5 đi học!")
+            alert(`${_day} đi học!`)
             break;
         case "thứ 6":
-            alert("Thứ 6 đi học!")
+            alert(`${_day} đi học!`)
             break;
         case "thứ 7":
-            if (!_ct16) {
-                if (_money > 100000) {
-                    alert("Thứ 7 không dịch, có tiền: Đi xem phim và số dư -100.000đ");
-                    _money -= 100000;
-                }
-                else alert("Thứ 7 không dịch nhưng không có tiền: Ở nhà!");
-            }
-            else alert("Thứ 7 có tiền mà lại dịch: Ở nhà!")
+            alert(!_ct16 ?
+                _money > 100000 ?  
+                    `${_day} không dịch, có tiền: Đi xem phim và số dư -100.000đ` 
+                    : `${_day} không dịch nhưng không có tiền: Ở nhà!` 
+                : `Dịch: Ở nhà!`)
             break;
         case "chủ nhật":
-            if (_money > 0) {
-                alert("Có tiền: Đi ăn!");
-            }
-            else alert("Không có tiền: Ở nhà!")
+            alert(_money > 0 ? `Có tiền: Đi ăn!` : `Không có tiền: Ở nhà!`)
             break;
         default:
-            alert("Giá trị nhập chưa đúng!")
+            alert(`Giá trị nhập chưa đúng!`)
             break;
         } 
 }

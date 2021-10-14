@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <table id="studentList">
+      <thead>
+        <tr>
+          <th>MaSV</th>
+          <th>Họ Tên</th>
+          <th>Tuổi</th>
+          <th>Giới tính</th>
+          <th>Lớp</th>
+          <th>Hành Động</th>
+        </tr>
+      </thead>
+      <tbody id="studentTbody"></tbody>
+    </table>
+
+    <div style="width: 280px">
+      <div>
+        <h4>Thêm mới sinh viên</h4>
+      </div>
+      <form id="newStudentForm">
+        <div>
+          <i>(*): Thông tin bắt buộc</i>
+        </div>
+        <div><label>Ma SV (*)</label>: <input type="text" id="txtMaSV" /></div>
+        <div><label>Họ Tên(*)</label>: <input type="text" id="txtHoTen" /></div>
+        <div><label>Tuổi (*)</label>: <input type="number" id="txtTuoi" /></div>
+        <div>
+          <label>Giới Tính (*)</label>: <input type="text" id="txtGioiTinh" />
+        </div>
+        <div><label>Địa chỉ</label>: <input type="text" id="txtDiaChi" /></div>
+        <div style="text-align: right">
+          <input
+            type="button"
+            value="Lưu"
+            id="btnSave"
+            onclick="LuuSinhVien();"
+          />
+        </div>
+      </form>
+    </div>
+  </body>
+
+  <style>
+    .form-control {
+      background: red;
+    }
+  </style>
+  <script src="js/home.js"></script>
+</html>

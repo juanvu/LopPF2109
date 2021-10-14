@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registration Form</title>
+</head>
+<h1>Registration Form</h1>
+<body>
+    <script>
+        document.getElementById("demo").innerHTML = "My First JavaScript";
+   </script>
+</body>
+</html>

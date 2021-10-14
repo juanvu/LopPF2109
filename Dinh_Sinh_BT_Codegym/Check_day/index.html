@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-size: 18px;
+    }
+    h2 {
+        font-size: 25px;
+        text-align: center;
+        color:chocolate;
+        margin: 6px 0;
+    }
+    form {
+        border: 10px solid blueviolet;
+        border-radius: 5px;
+    }
+    .div_container {
+         display: flex;
+    }
+    .div_container > label {
+        flex: 30%;
+        text-align: right;
+        line-height: 30px;
+
+    }
+    .div_container  > div {
+        flex: 70%;
+        margin-left: 10px;
+    }
+    .div_container  > div .box{
+        width: 500px;
+        height: 30px;
+    }
+        .container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    }
+
+    /* Hide the browser's default checkbox */
+    .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    }
+
+    /* Create a custom checkbox */
+    .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    }
+
+    /* On mouse-over, add a grey background color */
+    .container:hover input ~ .checkmark {
+    background-color: #ccc;
+    }
+
+    /* When the checkbox is checked, add a blue background */
+    .container input:checked ~ .checkmark {
+    background-color: #2196F3;
+    }
+
+    /* Create the checkmark/indicator (hidden when not checked) */
+    .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    }
+
+    /* Show the checkmark when checked */
+    .container input:checked ~ .checkmark:after {
+    display: block;
+    }
+
+    /* Style the checkmark/indicator */
+    .container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    }
+
+    .div_center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    button {
+        background-color: #008CBA;
+        border: none;
+        color: white;
+        padding: 10px 24px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+</style>
+<body>
+    <form action=""> 
+        <h2>Chương trình tính lịch trình mỗi ngày!!</h2>
+        <div class="div_container">
+            <label for="day">Nhập vào thứ(*): </label> 
+            <div>
+                <input class="box" type="number" onkeydown="KeyDown();" name="day" id="day" placeholder="VD: Thứ 2" value="" min="2" max="8">
+            </div>
+        </div>
+        <br>
+        <div class="div_container">
+            <label for="money">Nhập vào số tiền bạn có(*): </label>
+            <div>
+                <input class="box" type="text" name="money" id="money" placeholder="VD: 2000" value="">
+            </div>
+        </div>
+        <br>
+        <div class="div_center">
+            <label class="container" id="CT16">Chỉ thị 16 đang được thực hiện
+                <input type="checkbox" checked="checked">
+                <span class="checkmark"></span>
+            </label>
+        </div>
+        <br>
+        <div class="div_center">
+            <button type="button" id="check" onclick="CalculateDay();">Check</button>
+        </div>
+    </form>
+</body>
+<script src="main.js"></script>
+</html>

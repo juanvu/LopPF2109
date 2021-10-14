@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src='js/home.js'></script>
+</head>
+<!-- <script>
+    function calcu() {
+        let x = document.getElementById('calcu_day').value;
+        let y = document.getElementById('calcu_money').value;
+        let z = document.getElementById('calcu_law').value;
+
+        if((isNaN(y)) == true){
+            alert("Mời bạn nhập lại số tiền");
+            return;
+        }   else if ((z=='Chỉ thị 16') || (z=='Chỉ thị 15')) {
+                if (x=='Thứ 2') {
+                    alert('Học online');
+                }   else if (x=='Thứ 3') {
+                    alert('Nghỉ học');
+                }   else if (x=='Thứ 4') {
+                    alert('Nghỉ học');
+                }   else if (x=='Thứ 5') {
+                    alert('Học online');
+                }   else if (x=='Thứ 6') {
+                    alert('Học online');
+                }   else if (x=='Thứ 7') {
+                    alert('Ở nhà');
+                }   else {
+                    alert('Ở nhà');
+                }
+        }   else {
+                if (x=='Thứ 2') {
+                    alert('Đi học');
+                }   else if (x=='Thứ 3') {
+                    alert('Nghỉ học');
+                }   else if (x=='Thứ 4') {
+                    alert('Nghỉ học');
+                }   else if (x=='Thứ 5') {
+                    alert('Đi học');
+                }   else if (x=='Thứ 6') {
+                    alert('đi học');
+                }   else if (x=='Thứ 7') {
+                    if (y>=100) {
+                        alert('Đi xem film')
+                    }   else {
+                        alert('Ở nhà');}   
+                }   else {
+                    if (y>=100) {
+                        alert('Đi ăn')
+                    }   else {
+                        alert('Ở nhà');}   
+                }
+        }
+    }
+</script> -->
+<body>
+    <style>
+        .container {
+            display: flex;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        p {
+            flex: 20%;
+            text-align: left;
+        }
+        label {
+            flex: 80%;          
+        }
+        label .input_box {
+            height: 30px;
+            width: 300px;
+            margin-top: 12px;
+        }
+    </style>
+    <form>
+        <div class='container'>
+            <p>Lựa chọn ngày</p>
+            <label for=''>
+            <select class='input_box' id='calcu_day'>
+                <option class='' name=''>-Select-</option>
+                <option class='' name=''>Thứ 2</option>
+                <option class='' name=''>Thứ 3</option>
+                <option class='' name=''>Thứ 4</option>
+                <option class='' name=''>Thứ 5</option>
+                <option class='' name=''>Thứ 6</option>
+                <option class='' name=''>Thứ 7</option>
+                <option class='' name=''>Chủ nhật</option>
+            </select>
+            </label>
+        </div>    
+        <div class='container'>
+            <p>Nhập vào số tiền</p>
+            <label for=''><input class='input_box' id='calcu_money' name='' type='text' placeholder="0"></label>
+        </div>
+        <!-- <div class='container'>
+            <p>Chỉ thị áp dụng</p>
+            <div id='calcu_law' name='chithi'>
+                <label><input class='' name='chithi' type='radio'>Bình thường mới</label>
+                <label><input class='' name='chithi' type='radio'>Chỉ thị 16</label>
+                <label><input class='' name='chithi' type='radio'>Chỉ thị 15</label>
+                <label><input class='' name='chithi' type='radio'>Chỉ thị 19</label> 
+            </div>
+        </div> -->
+        <div class='container'>
+            <p>Chỉ thị áp dụng</p>
+            <label>
+            <select class='input_box' id='calcu_law'>
+                <option class='' name=''>Bình thường mới</option>
+                <option class='' name=''>Chỉ thị 16</option>
+                <option class='' name=''>Chỉ thị 15</option>
+                <option class='' name=''>Chỉ thị 19</option>
+            </select>
+            </label>
+        </div>
+        </label for=''>
+        <input type='button' name='button_send' value='Gửi đi' onclick='calcu()'>
+        </label>
+    </form>
+</body>
+</html>

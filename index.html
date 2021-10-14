@@ -5,57 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./asset/css/style.css">
 </head>
 <body>
-    <h3>QUẢN LÝ SINH VIÊN</h3>
-    <table border="1">
-        <tr>
-            <th>ID</th>
-            <th>Họ và Tên</th>
-            <th>Điểm</th>
-            <th>Xếp loại</th>
-        </tr>
-        <tr>
-            <td colspan="4">Khóa A</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Trần Tiến Tài</td>
-            <td>7</td>
-            <td rowspan="2">Khá</td>
-        </tr>
-        
-        <tr>
-            <td>2</td>
-            <td>Phạm Mạnh Khoa</td>
-            <td>8</td>
-        </tr>
+    <h1>Lấy dữ liệu cơ bản từ form</h1>
+    <form action="">
+        CT16 <input type="text" id="x" /> <br>
+        Thứ <input type="text" id="y"/> <br>
+        Tiền <input type="text" id="z"/> <br>
+        Chọn <button type="button" onclick="xem()">xem</button> <br>
+        Kết quả: <span id="kq"></span>
+    </form>
 
-        
-        <tr>
-            <td colspan="4">Khóa B</td>
-        </tr>
+    <script>
+        function xem(){
+             //1.  lấy giá trị trong thẻ input người dùng nhập
+            var x = document.getElementById('x').value;
+            var y = document.getElementById("y").value;
+            var z = document.getElementById("z").value;
+  
+            //3. tính toán
+            var Ketqua = '';
+            if (x === 'Yes') {
+                ketqua = 'nghi'
+            } else {if (y === 'T7' && z !== '') {
+                ketqua += ' Di xem film ton 100'
+            } else {if (y === 'T3' || y === 'T4' || y === 'CN') {
+                ketqua += 'nghi'
+            } else {
+                ketqua += 'di hoc'
+            }
+                
+            }
+                
+            }
+           
+            document.querySelector('#kq').innerHTML = ketqua;
+           
 
-        <tr>
-            <td>3</td>
-            <td>Trần Văn Hưng</td>
-            <td>5</td>
-            <td>Trung bình</td>
-        </tr>
+        } 
 
-        <tr>
-            <td>4</td>
-            <td>Đỗ Đức Thành</td>
-            <td>10</td>
-            <td>Giỏi</td>
-        </tr>
-
-        <tr>
-            <th colspan="2">TỔNG CỘNG</th>
-            <th>7.5</th>
-            <th>Khá</th>
-        </tr>
-    </table>
+    </script>
 </body>
 </html>

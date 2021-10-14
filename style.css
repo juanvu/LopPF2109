@@ -6,10 +6,28 @@ table {
 
 th {
     padding: 10px;
-    background-color: #ccc;
+   
 }
 
 h3 {
     text-align: center;
     margin: 0;
+}
+
+h2 {
+  
+}
+
+form {
+    width: 100%;
+    
+}
+
+form a {
+    text-decoration: none;
+    
+}
+
+form b {
+    text-align: left;
 }

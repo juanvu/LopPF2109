@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <tilte></tilte>
+</head>
+<body>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        h2 {
+            margin-left: 40px;
+            margin-bottom: 30px;
+        }
+        form {
+            
+            padding-left: 40px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .container {
+            display: flex;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        p {
+            flex: 10%;
+            text-align: left;
+            margin-bottom: 5px;
+        }
+        label {
+            flex: 90%;
+            
+        }
+        label .input_box {
+            height: 30px;
+            width: 400px;
+        }
+        .input_phone1 {
+            flex: 20%;
+            height: 30px;
+            width: 100px;
+        }
+        .input_phone2 {
+            flex: 80%;
+            margin-left: 20px;
+            height: 30px;
+            width: 275px;
+        }
+        .choice {
+            margin-left: 5px;
+        }
+        .input_size {
+            flex: 90%;
+        }
+    </style>
+        <div class='container'>
+            <h2>Registration Form</h2>
+        </div>
+        <form>
+        <div class="container">
+            <p>Full Name</p>
+            <label for="">
+                <input class='input_box' type='text' name='Full Name' placeholder='Your Full Name'>
+            </label>
+        </div>
+        <br>
+        <div class="container">
+            <p>Company</p>
+            <label for="">
+                <input class='input_box' type='text' name='Company' placeholder='Your company name'>
+            </label>
+        </div>
+        <br>
+        <div class="container">
+            <p>Email</p>
+            <label for="">
+                <input class='input_box' type='text' name='Email' placeholder='email@example.com'>
+            </label>
+        </div>
+        <br>
+        <div class="container">
+            <p>Phone number</p>
+            <label for="">
+                <input class='input_phone1' type='text' name='Phone number' placeholder='1234'>
+                <input class='input_phone2' type='text' name='Phone number'>
+            </label>
+        </div>
+        <br>
+        <div class="container">
+            <p>Country</p>
+            <label for="">
+                <select class='input_box'>
+                    <option value='VietNam'>VietNam</option>
+                    <option value='Brazil'>Brazil</option>
+                    <option value='England'>England</option>
+                    <option value='France'>France</option>
+                    <option value='America'>America</option>
+                    <option value='Italy'>Italy</option>
+                </select>
+            </label>
+        </div>
+        <br>
+        <div class="container">
+            <p>Sex</p>
+            <label for="">
+                <div class='input_size'>
+                    <input type='radio' name='gender' value='Male'><label  class='choice'>Male</label>
+                    <input type='radio' name='gender' value='famale'><label class='choice'>female</label>
+                </div>
+            </label>
+        </div>
+        <br>
+        <div class="container">
+            <p>Language</p>
+            <label for="">
+                <div class='input_size'>
+                    <input type='checkbox' name='language1' value='English'><label class='choice'>English</label>
+                    <input type='checkbox' name='language2' value='French'><label class='choice'>French</label>
+                    <input type='checkbox' name='language3' value='Other'><label 
+                    class='choice'>Other</label>
+                </div>
+            </label>
+        </div>
+        <br>
+        <div class="container">
+            <p>Comment</p>
+            <label for="">
+                <input class='input_box' type='text' name='comment' placeholder='Say hello'>
+            </label>
+        </div>
+        <br>
+        <div class="container">
+            <p></p>
+            <div class='input_size'>
+                <input type='checkbox' name='acceptrules'><labe class='choice'>I agree with</labe>&nbsp;<a href='https://www.24h.com.vn/' style='text-decoration: none; color: red;'>Terms and Conditions</a>
+            </div>
+        </div>
+        <br><br>
+            <input type='submit' value='Register' onclick='confirm("Bạn có muốn lưu bản ghi này không?");
+            if (onclick == true) {
+                alert("Đồng ý");
+            } else {
+                alert("Nhập lại");
+            }'>
+
+        <!--<script src='app.js'></script>-->
+    </form>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div>
+            Chon thu: 
+            <span>
+                <input type="radio" name="day" value="1"/> 
+                <span>Thu hai</span>
+            </span>
+            <span>
+                <input type="radio" name="day" value="2"/> 
+                <span>Thu ba</span>
+            </span>
+            <span>
+                <input type="radio" name="day" value="3"/> 
+                <span>Thu tu</span>
+            </span>
+            <span>
+                <input type="radio" name="day" value="4"/> 
+                <span>Thu nam</span>
+            </span>
+            <span>
+                <input type="radio" name="day" value="5"/> 
+                <span>Thu sau</span>
+            </span>
+            <span>
+                <input type="radio" name="day" value="6"/> 
+                <span>Thu bay</span>
+            </span>
+            <span>
+                <input type="radio" name="day" value="7"/> 
+                <span>Chu nhat</span>
+            </span>
+            
+        </div>
+        <div>
+            Nhap so tien <input type="number" id="money">
+        </div>
+        <div>
+            Chi thi 16: <input type="checkbox" id="ct16">
+        </div>
+        
+         <button onclick="tinhketqua()">Dua ra ket qua</button>
+    </div>
+    <div>
+        Ket qua: <span id="result"></span>
+    </div>
+    <script>
+        let day, money, ct16, result;
+        function tinhketqua(){
+            result = 'Khong co ket qua';
+            day = parseInt(document.querySelector('input[name="day"]:checked').value);
+            console.log(day);
+            money = parseInt(document.getElementById("money").value);
+            ct16 = document.getElementById("ct16").checked;
+            switch (day){
+                case 1:
+                case 4:
+                case 5:
+                    result = "di hoc";
+                    break;
+                case 2:
+                case 3:
+                    result = 'nghi hoc';
+                    break;
+                case 6:
+                    if (ct16){
+                        result = "o nha";
+                    }
+                    else {
+                        if (!isNaN(money)){
+                            if (money>=100){
+                                result = "di xem phim";
+                            }
+                            else{
+                                result = "Khong du tien => o nha T_T";
+                            }
+                        }
+                        else {
+                            result = "Can nhap so tien";
+                        }
+                    }
+                    break;
+                case 7:
+                if (ct16){
+                        result = "o nha";
+                    }
+                    else {
+                        if (!isNaN(money)){
+                            if (money>0){
+                                result = "di an";
+                            }
+                            else{
+                                result = "Khong du tien => o nha T_T";
+                            }
+                        }
+                        else {
+                            result = "Can nhap so tien";
+                        }
+                    }
+                    break;
+                default:
+                    result = "Chon thu";
+                    break;
+            }
+            document.getElementById("result").innerText = result;
+        }
+    </script>
+
+</body>
+</html>

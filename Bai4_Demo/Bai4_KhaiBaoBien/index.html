@@ -1,0 +1,82 @@
+<html>
+
+<head>
+    <title>bai4: khai bao bien</title>
+</head>
+let sfsdfsd = "day khong phai la javascript";
+
+<body></body>
+
+<script>
+    let i = 10; //cu phap khai bao bien i, co kieu du lieu la số
+
+    let f = 230.5; //Biến f kiểu số thực, có giá trị là 230.5
+
+    let isFemale = true; //Biến isFemale kiểu logic, có giá trị là true
+    //kieu du lieu chua xac dinh: undefined, null
+
+    let address = "Hà Nội";
+    // if (isFemale) {
+    //     alert("hien thi: " + "ban la con gai");
+    // } else {
+    //     alert("hien thi: " + "ban khong phai la con gai");
+    // }
+
+    document.write("day gia tri bien i: la " + i);
+    document.write("<br/>");
+    document.write("day la gia tri bien f: " + f);
+    document.write("<br/>");
+    document.write("day la gia tri bien isFemale: " + isFemale);
+    document.write("<br/>");
+    document.write("day la gia tri bien address: " + address);
+
+
+    //bat dau bai 4: tinh dien tich hinh chu nhat
+    let x = prompt("Moi ban nhap canh X:");
+    let y = prompt("Moi ban nhap vao canh Y:");
+
+    function TinhChuViHinhChuNhat(x, y) {
+        //check du lieu cua x va y
+
+        let chuvi = x * y;
+        /// x/y: day la phep chia
+        alert(chuvi);
+    }
+
+    TinhChuViHinhChuNhat(x, y);
+
+    //ket thuc bat dau bai 4: tinh dien tich hinh chu nhat
+
+    //bai moi: Bài 3: Dùng hàm prompt() để nhập 2 số từ bàn phím, lưu vào 2 biến là a và b. 
+    //Kiểm tra xem a có phải là bội số của b hay không(tức là a có chia hết cho b hay không).
+    //Hiển thị kết quả ra màn hình bằng cách sử dụng hàm alert().
+
+
+
+
+
+
+
+
+
+
+    // let chuvi = x * y;
+    // /// x/y: day la phep chia
+    // alert(chuvi);
+
+    //khai bao ham TinhChuViHinhChuNhat
+    function TinhChuViHinhChuNhat(x, y) {
+        //check du lieu cua x va y
+
+        let chuvi = x * y;
+        /// x/y: day la phep chia
+        alert(chuvi);
+    }
+
+    TinhChuViHinhChuNhat(x, y);
+
+    //tuong duong voi cach khai bao ham o ben tren
+    //let TinhChuViHinhChuNhat = function() {};
+</script>
+
+</html>

@@ -1,0 +1,1 @@
+alert('toi o file index.js');

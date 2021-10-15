@@ -44,36 +44,36 @@
                 let day = document.getElementById('day').value;
                 let money = parseInt(document.getElementById('monney').value);
                 let ct16 = document.getElementById('ct16').value;
-                if ( day = 'chose day') { alert(' vui lòng nhập lại');
+                if ( day == 'chose day') { alert(' vui lòng nhập lại');
                     } else {
                     switch (day) {
-                        case monday:
-                        case thirday:
-                        case friday:
+                        case 'monday':
+                        case 'thirday':
+                        case 'friday':
                             document.write('hôm nay đi học');
                             break;    
-                        case tuseday:
-                        case wennesday:
+                        case 'tuesday':
+                        case 'wennesday':
                             document.write('hôm nay được nghỉ học');
                             break;    
-                        case sartuday: 
-                            if(money>100){
-                                if(ct16="no"){
+                        case 'sartuday': 
+                            if(money >= 100){
+                                if(ct16 =="no"){
                                     alert('Bạn được đi xem phim');
                                 } else {
                                     alert('bạn nên ở nhà đi');
                                 }
                             }  
                             break;
-                        case sunday:
-                            if(money != 0){
+                        case 'sunday':
+                            if(money > 0){
                                 alert ('Bạn nên đi ăn Đi !!');
                             } else {
                                 alert('bạn nên ở nhà')
                             }
                             break;
                         default : 
-                                alert('vui lòng chọn ngyaf bạn muốn kiểm tra');
+                                alert('vui lòng chọn ngày bạn muốn kiểm tra');
                     }
                 }
             }

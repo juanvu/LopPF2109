@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div style ="background-color: brown;">
+        <h2>Bảng Check Day</h2>
+    </div>
+    <form action="">
+        <div>
+            <label for="thu">Nhập vào thứ bạn muốn kiểm tra *:</label>
+            <select name = 'thu'  id = 'day'>
+                <option value="chose day">Chọn Thứ</option>
+                <option value="monday">Thứ 2</option>
+                <option value="tuesday">Thứ 3</option>
+                <option value="wennesday">Thứ 4</option>
+                <option value="thirday">Thứ 5</option>
+                <option value="friday">Thứ 6</option>
+                <option value="sartuday">Thứ 7</option>
+                <option value="sunday">Chủ Nhật</option>
+            </select>
+            <br>
+        
+            <label for="money">Nhập Số Tiền Bạn Đang Có*:</label>
+            <input type="number" name="monney" id="monney" placeholder="Nhập số Tiền VD : 200">
+            <br>
+        
+            <label for="ct16">Hôm nay có Chỉ Thị 16 hay không? : </label>
+            <input type="text" name="ct16" id="ct16" placeholder="Nhập vào yes or no"> 
+            <br>
+            
+            <button type ="button" onclick="mycheck()">Kiểm Tra</button>
+        </div>    
+    </form>
+    <script>
+        
+       
+        function mycheck() {
+                let day = document.getElementById('day').value;
+                let money = parseInt (document.getElementById('money').value);
+                let ct16 = document.getElementById('ct16').value;
+                if ( day = isNaN) { alert(' vui lòng nhập lại');
+                } else {
+                    switch (day) {
+                        case 'monday':
+                        case 'thirday':
+                        case 'friday':
+                            document.write('hôm nay đi học');
+                        case 'tuseday':
+                        case 'wennesday':
+                            document.write('hôm nay được nghỉ học');
+                        case 'sartuday': 
+                            if(money>100){
+                                if(ct16="no"){
+                                    alert('Bạn được đi xem phim');
+                                } else {
+                                    alert('bạn nên ở nhà đi');
+                                }
+                            }  
+                            break;
+                        case 'sunday':
+                            if(money != 0){
+                                alert ('Bạn nên đi ăn Đi !!');
+                            }
+                            break;
+                        default : 
+                                alert('vui lòng chọn ngyaf bạn muốn kiểm tra');
+                    }
+                }
+            }
+    </script>
+
+</body>
+</html>

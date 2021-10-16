@@ -75,6 +75,13 @@ let LuuSinhVien = function () {
 		//sau khi luu du lieu xong, clear form
 		document.getElementById("newStudentForm").reset();
 	}
+	let buttionAction = document.getElementById("newStudentForm").attr('action');
+	if(buttionAction == 'AddNew') {
+		//thuc hien the moi
+		
+	} else {
+		//thuc hien the moi
+	}
 };
 
 //ham nay de kiem tra du lieu sinh vien hop le hay khong, neu hop le tra ve true, sai thi tra ve false
@@ -126,44 +133,20 @@ let suaHocSinh = function (maSV) {
 	//hàm confirm: bật lên thông báo xác nhận
 	if(confirm(`Bạn có muốn sửa học sinh ${maSV} không?`)) {
 
+		//students co 100;
 		for (var i = 0; i < students.length; i++) {
 			let student = students[i]; // lấy ra student cụ thể trong mảng students
 
 			//nếu mã sinh viên truyền vào, trùng với mã sinh viên trong mảng students, thì sẽ xóa sinh viên đó
 			if(student.MaSV.toUpperCase() == maSV.toUpperCase()) {
-				students.splice(i,1);
+				//students.splice(i,1);
 				document.getElementById("txtMaSV").value = student.MaSV;
 				document.getElementById("txtHoTen").value = student.HoTen;
 				document.getElementById("txtTuoi").value = student.Tuoi;
 				document.getElementById("txtGioiTinh").value = student.GioiTinh;
 				document.getElementById("txtDiaChi").value = student.DiaChi;
-
-				//kiểm tra dữu liêu hợp lệ
-				let isSinhVienHopLe = kiemTraDuLieuSinhVien(
-					maSV,
-					hoTen,
-					tuoi,
-					gioitinh
-				);
-				if (isSinhVienHopLe) {
-					let student = {
-						MaSV: maSV,
-						HoTen: hoTen,
-						Tuoi: tuoi,
-						GioiTinh: gioitinh,
-						DiaChi: diachi,
-					};
-
-					students.push(student);
-
-					genStudentTable();
-
-					//sau khi luu du lieu xong, clear form
-					document.getElementById("newStudentForm").reset();
-				}
 			}
 		}
-		genStudentTable();
 	}
 }
 

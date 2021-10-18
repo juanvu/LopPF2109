@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>day la demo dom</title>
+</head>
+<body >
+<style>
+ .text-bold {
+	font-weight: bold;
+ }
+</style>
+<h1>The input element</h1>
+
+<form action="/action_page.php"  id='form1' class='text-bold'>
+<label for="fname">Full name:</label>
+  <input type="text" id="fullName" name="fnames" onMouseOver="chuThichWhenMouseOver()" /><br><br>
+
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname" onkeypress="nameChange()"><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname" onkeypress="nameChange()"><br><br>
+  <input type="button" value="Submit" id='btnSubmit' onclick='submitForm();' />
+   <input type="button" value="InnerText" id='btnSubmit' onclick='submitFormInnerText();' />
+   <input type="button" value="demo inline js" id='btnSubmit' onclick='alert("thuc hien luon cau lenh js");' />
+   onchange='thanhphoChange();'
+   <select id='thanhpho' >
+		<option>Hanoi</option>
+		<option>TP.HCM</option>
+   </select>
+</form>
+
+
+<div id='divThongBao' style='background:red'>
+<div>tao o vi tri 0</div>
+<div>tao o vi tri 1</div>
+</div>
+
+<ul id='ulCartItems'><!-- unsorted list -->
+	<li onclick='xoaCartItem(0)' itemCode='0'>Shoes</li>
+	<li onclick='xoaCartItem(1)' itemCode='1'>Bag</li>
+	<li onclick='xoaCartItem(2)' itemCode='2'>T-Shirt</li>
+</ul>
+
+
+<!-- <p style='display:block'>Đơn hàng của bạn đã được thanh toán thành công.</p>
+
+-->
+
+<span>day la the span</span>
+
+</body>
+
+
+<script>
+
+<!-- let ulTag = document.getElementById('ulCartItems'); -->
+<!-- alert(ulTag.children.length); -->
+//demo xoa phan tu dom
+let xoaCartItem = function(vitri) {
+	let ulCartItems = document.getElementById('ulCartItems');
+	let liCartItem =  ulCartItems.querySelectorAll('[itemCode="' + vitri + '"]')[0];
+	liCartItem.remove();
+}
+let submitForm = function() {
+	//xac dinh vi tri cua the divThongBao
+	let divThongBao = document.getElementById('divThongBao');
+	divThongBao.innerHTML  = "<div>tao se vao giua</div>";
+}
+let submitFormInnerText = function() {
+	//xac dinh vi tri cua the divThongBao
+	let divThongBao = document.getElementById('divThongBao');
+	divThongBao.innerText  = "<p style='display:block'>Đơn hàng của bạn đã được thanh toán thành công.</p>";
+}
+
+let chuThichWhenMouseOver = function(){
+ alert('Viết in hoa có dấu. ví dụ: TRẦN TRỌNG NGHĨA');
+}
+
+let thanhphoChange = function() {
+	let thanhphoSelected = document.getElementById('thanhpho').value;
+	if(thanhphoSelected && thanhphoSelected.toUpperCase() == "TP.HCM".toUpperCase()) {
+		alert("Di den thanh pho hcm thoi diem nay co the bi cach ly");
+	}
+}
+let nameChange = function() {
+	let inputFullName = document.getElementById('fullName');
+	let fname = document.getElementById('fname');
+	
+	inputFullName.value = fname.value; //dong nay
+}
+
+</script>
+
+</html>

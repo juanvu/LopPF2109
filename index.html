@@ -7,43 +7,45 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Lấy dữ liệu cơ bản từ form</h1>
-    <form action="">
-        CT16 <input type="text" id="x" /> <br>
-        Thứ <input type="text" id="y"/> <br>
-        Tiền <input type="text" id="z"/> <br>
-        Chọn <button type="button" onclick="xem()">xem</button> <br>
-        Kết quả: <span id="kq"></span>
-    </form>
+    
+    <style>
+        #cacul .input {
+            padding-bottom: 30px;
+        }
+    </style>
 
-    <script>
-        function xem(){
-             //1.  lấy giá trị trong thẻ input người dùng nhập
-            var x = document.getElementById('x').value;
-            var y = document.getElementById("y").value;
-            var z = document.getElementById("z").value;
-  
-            //3. tính toán
-            var Ketqua = '';
-            if (x === 'Yes') {
-                ketqua = 'nghi'
-            } else {if (y === 'T7' && z !== '') {
-                ketqua += ' Di xem film ton 100'
-            } else {if (y === 'T3' || y === 'T4' || y === 'CN') {
-                ketqua += 'nghi'
-            } else {
-                ketqua += 'di hoc'
-            }
-                
-            }
-                
-            }
-           
-            document.querySelector('#kq').innerHTML = ketqua;
-           
-
-        } 
-
-    </script>
+    <h1>Caculator</h1>
+    <div id="cacul">
+        <form action="">
+            <div class="input">
+                <input type="text" placeholder="12">
+                <input type="text" placeholder="12">
+            </div>
+            <div class="button">
+                <button onclick="showResult1();" type="submit">Addition(+)</button>
+                <button onclick="showResult2();" type="submit">Subtraction(-)</button>
+                <button onclick="showResult3();" type="submit">Multiplication(x)</button>
+                <button onclick="showResult4();" type="submit">Division(/)</button>
+            </div>
+            
+        </form>
+        
+    </div>
+    <p id="result"></p>
 </body>
 </html>
+
+<script>
+    function showResult1() {
+        document.getElementById('result').innerHTML = 'Result Addition :24';
+    }
+    function showResult2() {
+        document.getElementById('result').innerHTML = 'Result Subtraction :0';
+    }
+    function showResult3() {
+        document.getElementById('result').innerHTML = 'Result Multiplication :144';
+    }
+    function showResult4() {
+        document.getElementById('result').innerHTML = 'Result Division :1';
+    }
+</script>

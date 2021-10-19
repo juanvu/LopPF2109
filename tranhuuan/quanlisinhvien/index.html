@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./styles.css"/>
+    <script src="javas.js"></script>
+</head>
+<body>
+    <h1>bảng quản lí sinh viên</h1>
+    <div id="ta">
+        <table id="tablel">
+            <thead id="thead">
+                <tr id="tr">
+                    <td id="td">MSSV</td>
+                    <td id="td">HỘ TÊN</td>
+                    <td id="td">NGÀY SINH</td>
+                    <td id="td">TUỔI</td>
+                    <td id="td">GIỚI TÍNH</td>
+                    <td id="td">LỚP</td>
+                    <td id="td">HÀNH ĐỘNG</td>
+                </tr>
+            </thead>
+            <tbody id="recods">
+                
+            </tbody>
+        </table>
+    </div>
+
+
+
+    <table id="in">
+        <tr>
+            <td><P>nhập id</P></td>
+            <td><input type="text" id='id' placeholder="ID"/></td>
+        </tr>
+        <tr>
+            <td><P>họ và tên</P></td>
+            <td><input type="text" id='name' placeholder="họ và tên"/></td>
+        </tr>
+        <tr>
+            <td><P>ngày sinh</P></td>
+            <td><input type="datetime" id='sinh' placeholder="ngày sinh"/></td>
+        </tr>
+        <tr>
+            <td><P>giới tính</P></td>
+            <td><input type="text" id='sex'placeholder="giới tính"/></td>
+        </tr>
+        <tr>
+            <td> <P> tuổi </P> </td>
+            <td><input type="text" id='age' placeholder="tuổi"/></td>
+        </tr>
+        <tr>
+            <td><P>lớp</P></td>
+            <td>
+                <select id="class2">
+                     <option>javascript</option>
+                     <option>python</option>
+                     <option>c++</option>
+                     <option>java</option>   
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+               <center> <input type="button" value="click me" onclick="myclick()"/> </center>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

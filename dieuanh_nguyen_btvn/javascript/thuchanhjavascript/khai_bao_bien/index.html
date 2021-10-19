@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>khai bao bien</title>
+    </head>
+    let sdfjhsgfjh = "day khong phai la javascript";
+    <body>
+
+    </body>
+    <script>
+        let i = 10; //cu phap khai bao bien i, co kieu du lieu la so
+        
+        let f = 230.5; //bien f kieu so thuc, co gia tri la 230.5
+        let address = "Ha Noi";
+        let isFemale = true; //bien isFemale kieu logic, co gia tri la true
+
+        if(isFemale){
+            alert("hien thi: " + "ban la con gai");
+        }
+        else{
+            alert("hien thi: " + "ban la con trai");
+        }
+
+        document.write("day la gia tri bien i: " + i);
+        document.write("<br/>");
+        document.write("day la gia tri bien f: " + f);
+        document.write("<br/>");
+        document.write("day la gia tri bien isFemale: " + isFemale);
+        document.write("<br/>");
+        document.write("day la gia tri bien address: " + address);
+        document.write("<br/>");
+
+        let x = prompt('Moi ban nhap canh X: ');
+        let y = prompt('Moi ban nhap vap canh Y: ');
+
+        function Tinhchuvihinhchunhat(x,y){
+            //check du lieu cua x va y xem co phai la so khong
+            let chuvi = x*y;
+            // x/y: day la phep chia, se co 2 truong hop lay so nguyen va lay so du
+            alert(chuvi);
+        }
+        Tinhchuvihinhchunhat(x,y);
+
+        let a = prompt('Moi ban nhap so A: ');
+        a = parseInt(a);
+        let b = prompt ('Moi ban nhap so B: ');
+            b = parseInt(b);
+
+        if(!isNaN(a)&&!isNaN(b)){
+                let rest = a%b;
+                if(rest === 0){
+                    alert('A chia het cho B');
+                }
+                else{
+                    alert('A khong chia het cho B');
+                }
+            }
+    
+        
+
+        
+    </script>
+</html>

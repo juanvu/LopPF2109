@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ứng dụng tính toán</title>
+</head>
+<body>
+    <form action="">
+        <label for=""><input type="text" id="firstN" placeholder="Nhập số thứ 1"></label>
+        <label for=""><input type="text" id="secondN" placeholder="Nhập số thứ 2"></label>
+        <hr>
+        <label for="" id="calculate">
+            <input type="button" value="+" onclick="cong();">
+            <input type="button" value="-" onclick="tru();">
+            <input type="button" value="x" onclick="nhan();">
+            <input type="button" value="/" onclick="chia();">
+        </label>
+        <hr>
+    </form>
+        <h3>Kết quả: </h3>
+        <h3 id="showResult"></h3>
+</body>
+<script src="main.js"></script>
+</html>

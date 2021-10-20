@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  #container {
+    border: 1px solid black; 
+    height: 190px; 
+    width: 190px; 
+    background-color:rgb(255, 245, 226);
+  }
+  #tank{
+    position: relative; 
+    top: 0px;
+    left: 0px;
+    width: 19px;
+    height: 19px;
+  }
+  .center{
+    text-align: center;
+  }
+</style>
+<body>
+  <div id="container">
+      <img id="tank" src="acssets/tank.png">
+  </div>
+  <br>
+  <div>
+    <table border="1">
+      <tr class="center">
+        <td colspan="3"><input type="button" id="up" value="&#8593" onclick="mouseUp();"></td>
+      </tr>
+  
+      <tr>
+        <td><input type="button" id="left" value="&#8592" onclick="mouseLeft();"></td>
+        <td><input type="button" id="" value="O"></td>
+        <td><input type="button" id="right" value="&#8594" onclick="mouseRight();"></td>
+      </tr>
+      
+      <tr class="center">
+        <td colspan="3"><input type="button" id="dowm" value="&#8595" onclick="mouseDown();"></td>
+      </tr>
+    </table>
+  </div>
+</body>
+<script src="main.js"></script>
+</html>

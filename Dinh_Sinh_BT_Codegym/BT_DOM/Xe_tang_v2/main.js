@@ -10,27 +10,34 @@ function mouseReset() {
 // boom
 let xBoom = document.getElementById("boom").style;
 let yBoom = document.getElementById("boom").style;
-xBoom['left'] = (Math.floor(Math.random() * 20) + 1)*30 + "px";
-yBoom['top'] = (Math.floor(Math.random() * 20) + 1)*30 + "px";
+xBoom['left'] = (Math.floor(Math.random() * 10) + 1)*60 + "px";
+yBoom['top'] = (Math.floor(Math.random() * 10) + 1)*60 + "px";
 
 // tank
 xTank["top"] = 0 + "px";
 yTank["left"] = 0 + "px";
 
 function mouseUp() {
-    yTank['top'] = parseInt(yTank['top']) - 30 + "px";
+    yTank['top'] = parseInt(yTank['top']) - 60 + "px";
+    document.getElementById("tank").style.transform = 'rotate(360deg)';
     catchMouse();
 }
 function mouseLeft() {
-    xTank['left'] = parseInt(xTank['left']) - 30 + "px";
+    xTank['left'] = parseInt(xTank['left']) - 60 + "px";
+    document.getElementById("tank").style.transform = 'rotate(-90deg)';
+
     catchMouse();
 }
 function mouseRight() {
-    xTank['left'] = parseInt(xTank['left']) + 30 + "px";
+    xTank['left'] = parseInt(xTank['left']) + 60 + "px";
+    document.getElementById("tank").style.transform = 'rotate(90deg)';
+
     catchMouse();
 }
 function mouseDown() {
-    yTank['top'] = parseInt(yTank['top']) + 30 + "px";
+    yTank['top'] = parseInt(yTank['top']) + 60 + "px";
+    document.getElementById("tank").style.transform = 'rotate(180deg)';
+
     catchMouse();
 }
 

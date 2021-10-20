@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        CALCULATOR
+    </h1>
+      <p>
+         <input type="number" id = "num1" placeholder="input num">
+         <input type="number" id= "num2" placeholder="input num"><br>
+      </p>
+        
+
+        <button onclick="button1()">addition</button>
+        <button onclick="button2()">subtraction</button>
+        <button onclick="button3()">multiplication</button>
+        <button onclick="button4()">division</button>
+        <br>
+    
+
+ <script>
+    
+
+    function button1() {
+    let num1 = parseInt(document.getElementById('num1').value);
+    let num2 = parseInt(document.getElementById('num2').value);
+    
+    let out = num1 + num2;
+    alert ('ket qua la : ' + out);
+ }
+ function button2() {
+    let num1 = parseInt(document.getElementById('num1').value);
+    let num2 = parseInt(document.getElementById('num2').value);
+    let out = num1 - num2;
+    alert ('ket qua la : ' + out);
+ }  
+ function button3() {
+    let num1 = parseInt(document.getElementById('num1').value);
+    let num2 = parseInt(document.getElementById('num2').value);
+    let out = num1 * num2;
+    alert ('ket qua la : ' + out);
+ }
+ function button4() {
+    let num1 = parseInt(document.getElementById('num1').value);
+    let num2 = parseInt(document.getElementById('num2').value);
+    let out = num1 / num2;
+    alert ('ket qua la : ' + out);
+ }
+ </script>
+    
+    
+    
+
+</body>
+</html>

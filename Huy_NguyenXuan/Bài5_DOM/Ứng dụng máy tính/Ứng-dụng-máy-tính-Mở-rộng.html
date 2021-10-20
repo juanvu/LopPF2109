@@ -28,7 +28,7 @@
         }
     </style>
     <form>
-        <input type='text' class='boxText' id='innerTextBox' value='0'>
+        <input type='text' class='boxText' id='innerTextBox' value='' readonly>
         <table>
             <tbody>
                 <tr>
@@ -50,16 +50,16 @@
                     <td><input type='button'id='multiNum' onclick='multiNum()' class='calcu'  value='*'></td>
                 </tr>
                 <tr>
-                    <td><input type='button' id='one' onclick='one()' value='1'></td>
-                    <td><input type='button' id='two' onclick='two()' value='2'></td>
+                    <td><input type='button' id='one' onclick='numberClick(1)' value='1'></td>
+                    <td><input type='button' id='two' onclick='numberClick(2)' value='2'></td>
                     <td><input type='button' id='three' onclick='three()' value='3'></td>
                     <td><input type='button' id='subNum' onclick='subNum()' class='calcu' value='-'></td>
                 </tr>
                 <tr>
                     <td><input type='button' id='oh' onclick='oh()' value='0'></td>
                     <td><input type='button' id='dot' onclick='dot()' value='.'></td>
-                    <td><input type='button'id='equal' onclick='equal()' class='equal'  value='='></td>
-                    <td><input type='button' id='sumNum' onclick='sumNum()' class='calcu' value='+'></td>
+                    <td><input type='button'id='equal' onclick='showResult()' class='equal'  value='=' /></td>
+                    <td><input type='button' id='sumNum' onclick='operatorClikc("+")' class='calcu' value='+'></td>
                 </tr>
             </tbody>
         </table>

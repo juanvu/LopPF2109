@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máy Tính GG</title>
+</head>
+<style>
+    td{
+        width: 80px;
+        height: 40px;
+    }
+   table{
+       margin: auto;
+   }
+   button{
+    width: 80px;
+    height: 40px;
+   }
+
+</style>
+<body>
+    <!-- Xây dựng layout: 7 hàng 4 cột -->
+    <!-- Emet cheatsheet -->
+    <table border="1px" cellspacing=0 >
+        
+        <tr>
+            <td id="bieu-thuc" colspan="4"></td>
+        </tr>
+        <tr>
+            <td id="man-hinh" colspan="4"> </td>
+        </tr>
+        <tr>
+            <td><button  onclick="clickcell('(')">(</button></td>
+            <td><button onclick="clickcell(')')">)</button></td>
+            <td><button onclick="xoaKT()">DEL</button></td>
+            <td><button onclick="xoaMH()">AC</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="clickcell(7)">7</button></td>
+            <td><button onclick="clickcell(8)">8</button></td>
+            <td><button onclick="clickcell(9)">9</button></td>
+            <td><button onclick="clickcell('+')">+</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="clickcell(4)">4</button></td>
+            <td><button onclick="clickcell(5)">5</button></td>
+            <td><button onclick="clickcell(6)">6</button></td>
+            <td><button onclick="clickcell('-')">-</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="clickcell(1)">1</button></td>
+            <td><button onclick="clickcell(2)">2</button></td>
+            <td><button onclick="clickcell(3)">3</button></td>
+            <td><button onclick="clickcell('*')">x</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="clickcell(0)">0</button></td>
+            <td><button onclick="clickcell('.')">.</button></td>
+            <td><button onclick="tinhToan()">=</button></td>
+            <td><button onclick="clickcell('/')">/</button></td>
+        </tr>  
+    </table>
+    <script>
+        //a+=b <=> a=a+b;
+        // Giá trị chuyền vào hàm
+        function clickcell(value){
+            document.getElementById('man-hinh').innerText+=value;
+        }
+        function tinhToan(){
+            let bieuthuc=document.getElementById('man-hinh').innerText;
+            let ketqua= eval(bieuthuc);
+            document.getElementById('bieu-thuc').innerText=bieuthuc+"=";
+            document.getElementById('man-hinh').innerText=ketqua;
+
+        }
+        function xoaKT(){
+            let bieuthuc= document.getElementById('man-hinh').innerText;
+            let kq=bieuthuc.substring(0, bieuthuc.length -1);
+            document.getElementById('man-hinh').innerText=kq;
+
+        }
+        function xoaMH(){
+            document.getElementById('man-hinh').innerText='0';
+            document.getElementById('bieu-thuc').innerText='';
+        }
+
+    </script>
+</body>
+</html>

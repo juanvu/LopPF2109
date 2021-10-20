@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src='js/home.js'></script>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Amount</th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td><input id='moneyConvert' type='text' class='' name='amountBox' placeholder="0"></td>
+            <td><select id='moneyFrom'>
+                <option value='VND'>VietNamDong</option>
+                <option value='USD'>USD</option>
+                <option value='Yên'>Yên</option>
+            </select></td>
+            <td><select id='moneyTo'>
+                <option value='VND'>VietNamDong</option>
+                <option value='USD'>USD</option>
+                <option value='Yên'>Yên</option>
+            </select></td>
+            <td><input type='button' name='Convert' value='Convert' onclick='moneyConvert()'></td>
+        </tr>
+        <tr>
+            <td><h4>Result</h4><p id='displayResult'></p></td>
+
+        </tr>
+    </table>
+</body>
+</html>

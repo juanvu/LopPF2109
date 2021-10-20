@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Cách 1 - xử dụng alert
+    <button type='button' onclick='Showme()'>Hiển thị</button>
+
+    <script>
+        function Showme() {
+            alert('Xin chào');
+        }
+    </script> -->
+
+    <!--Cách 2 _ sử dụng innerHTML
+    <div  id='buttonMe'></div>
+    <button type='button' onclick='showMe()'>Hiển thị</button>
+    <script>
+        let buttonMe = document.getElementById('buttonMe');
+        function showMe() {
+            buttonMe.innerHTML = 'Xin Chào';
+        }
+    </script> -->
+
+    <!-- Cách 3 _ sử dụng document.write
+    <button type='button' onclick='showMe()'>Hiển thị</button>
+<script>
+    function showMe() {
+        document.write('Xin chào !');
+    }
+</script> -->
+
+    <!-- Cách 4 _ sử dụng _ console.log
+    <button type='button' onclick='showMe()'>Hiển thị</button>
+    <script>
+        function showMe() {
+            console.log('Xin chào thứ 2!');
+        }
+    </script> -->
+
+    <!-- Cách 5 _ Sử dụng addEvenListener -->
+    <button id='showMe' type='button'>Hiển thị</button>
+    <script>
+        let showMe = document.getElementById('showMe');
+        showMe.addEventListener('click',getClick);
+        function getClick() {
+            alert('Xin chào chủ nhật');
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src='js/openHome.js'></script>
+</head>
+<body>
+    <style>
+        input {
+            width: 60px;
+            height: 40px;
+        }
+        .boxText {
+            width: 240px;
+            height: 40px;
+            margin-left: 5px;
+            
+        }
+        .calcu {
+            background-color: rgb(167, 167, 167);
+        }
+        .equal {
+            background-color: blue;
+            color: white;
+        }
+    </style>
+    <form>
+        <input type='text' class='boxText' id='innerTextBox' value='' readonly>
+        <table>
+            <tbody>
+                <tr>
+                    <td><input type='button' class='calcu' id='openBrack' onclick='openBrack()' value='('></td>
+                    <td><input type='button' class='calcu' id='offBrack' onclick='offBrack()' value=')'></td>
+                    <td><input type='button' class='calcu' id='percent' onclick='percent()' value='%'></td>
+                    <td><input type='button' class='calcu' id='delNum' onclick='delNum()' value='AC'></td>
+                </tr>
+                <tr>
+                    <td><input type='button' id='seven' onclick='seven()' value='7'></td>
+                    <td><input type='button' id='eight' onclick='eight()' value='8'></td>
+                    <td><input type='button' id='nine' onclick='nine()' value='9'></td>
+                    <td><input type='button' id='divNum' onclick='divNum()' class='calcu' value='/'></td>
+                </tr>
+                <tr>
+                    <td><input type='button' id='four' onclick='four()' value='4'></td>
+                    <td><input type='button' id='five' onclick='five()' value='5'></td>
+                    <td><input type='button' id='six' onclick='six()' value='6'></td>
+                    <td><input type='button'id='multiNum' onclick='multiNum()' class='calcu'  value='*'></td>
+                </tr>
+                <tr>
+                    <td><input type='button' id='one' onclick='numberClick(1)' value='1'></td>
+                    <td><input type='button' id='two' onclick='numberClick(2)' value='2'></td>
+                    <td><input type='button' id='three' onclick='three()' value='3'></td>
+                    <td><input type='button' id='subNum' onclick='subNum()' class='calcu' value='-'></td>
+                </tr>
+                <tr>
+                    <td><input type='button' id='oh' onclick='oh()' value='0'></td>
+                    <td><input type='button' id='dot' onclick='dot()' value='.'></td>
+                    <td><input type='button'id='equal' onclick='showResult()' class='equal'  value='=' /></td>
+                    <td><input type='button' id='sumNum' onclick='operatorClikc("+")' class='calcu' value='+'></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>

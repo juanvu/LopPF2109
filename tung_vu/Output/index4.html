@@ -1,0 +1,6 @@
+<button type="button" onclick="showMessage();">Click Me!</button>
+<script>
+ function showMessage(){
+     console.log('Xin chào!');
+ }
+</script>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src='js/home.js'></script>
+</head>
+<body>
+<style>
+    .textCenter {
+        text-align: center;
+    }
+    td {
+        width: 20px;
+        height: 20px;
+    }
+</style>
+    <div style="border: 1px solid black; height: 190px; width: 190px; background-color: black;">
+        <img id="tank" src='tank.png' style="position: relative; top: 0px; left: 0px;" width="19px" height="19">
+    </div>
+    <div>
+        <table>
+            <tr class='textCenter'>
+                <td colspan='3'><input type='button' id='up' value="&#8593" onclick="mouseUp()"></td>
+            </tr>
+            <tr>
+                <td><input type='button' id='left' value="&#8592" onclick="mouseLeft()"></td>
+                <td></td>
+                <td><input type='button' id='right' value="&#8594" onclick="mouseRight()"></td>
+            </tr>
+            <tr class='textCenter'>
+                <td colspan='3'><input type='button'id='down' value="&#8595" onclick="mouseDown()"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

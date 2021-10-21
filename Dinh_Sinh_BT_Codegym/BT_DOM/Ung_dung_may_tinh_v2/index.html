@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table {
+        background-color: wheat;
+    }
+    td button, th {
+        border: 0px;
+        font-size: 20px;
+        font-weight: bold;
+        background-color: wheat;
+        text-align: center;
+        width: 60px;
+        height: 60px; 
+    }
+    #clearAll{
+        width: 262px;
+        height: 50px;
+    }
+    #result {
+        background-color:cornflowerblue;
+        border: 3px solid rgb(7, 109, 112);
+        border-radius: 3px;
+
+    }
+</style>
+<body>
+    <table border="1">
+        <tr>
+            <th colspan="4" id="result"></th>
+        </tr>
+        <tr>
+            <td colspan="4"><button id="clearAll" class="button" onclick="clearAll();">CLEAR ALL</button></td>
+        </tr>
+        <tr>
+            <td><button class="button" value="1">1</button></td>
+            <td><button class="button" value="2">2</button></td>
+            <td><button class="button" value="3">3</button></td>
+            <td><button class="button" value="+">+</button></td>
+        </tr>
+        <tr>
+            <td><button class="button" value="5">5</button></td>
+            <td><button class="button" value="4">4</button></td>
+            <td><button class="button" value="6">6</button></td>
+            <td><button class="button" value="-">-</button></td>
+        </tr>
+        <tr>
+            <td><button class="button" value="8">8</button></td>
+            <td><button class="button" value="7">7</button></td>
+            <td><button class="button" value="9">9</button></td>
+            <td><button class="button" value="*">x</button></td>
+        </tr>
+        <tr>
+            <td><button class="button" onclick="deleteChar();">C</button></td>
+            <td><button class="button" value="0">0</button></td>
+            <td><button class="button" onclick="calculate();">=</button></td>
+            <td><button class="button" value="/">/</button></td>
+        </tr>
+    </table>
+</body>
+<script src="main.js"></script>
+</html>

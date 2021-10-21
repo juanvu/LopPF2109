@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="text-align: center;">
+        <form style="background: cornflowerblue; width: 633px; height: 60px ; text-align: center;">
+            <label for="Amout"Amount>Amount</label>
+            <input style="background: darkgray;" type="number" name="Amount" id="volume">
+    
+            <label for="from curency">From Currency</label>
+            <select style="background: darkgray;"name="from curency" id="fcurency">
+                <option value="22760.22">VietNam</option>
+                <option value="1">USA</option>
+                <option value="6.39">china</option>
+                <option value="114.18">japan</option>
+                <option value="27.87">TaiWan</option>
+            </select>
+    
+            <label for="to curency">To curency</label>
+            <select style="background: darkgray;"name="to curency" id="tcurency">
+                <option value="22760.22">VietNam</option>
+                <option value="1">USA</option>
+                <option value="6.39">china</option>
+                <option value="114.18">japan</option>
+                <option value="27.87">TaiWan</option>
+            </select><br><br>
+    
+           <button type="button" onclick="convert()" style="background-color: darkgoldenrod; ">CONVERT</button>
+           
+        </form>
+    
+    </div>
+   
+        <h4 style= "border-style: double; width:150px  ;height: 24px
+        ; color: rgb(26, 25, 21);"  id="ketqua" ></h4>
+  
+    
+        
+    <script>
+       
+        function convert() {
+            
+            let Amount = parseFloat (document.getElementById('volume').value);
+            let Tcurency = parseFloat ( document.getElementById('tcurency').value);
+            let Fcurency = parseFloat (document.getElementById('fcurency').value);
+            let count = Amount * (Tcurency/Fcurency) ; 
+            document.getElementById('ketqua').innerHTML = 'Result : '+ count.toLocaleString();
+        }
+    </script>
+</body>
+</html>

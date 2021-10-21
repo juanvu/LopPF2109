@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <table border="2">
+            <tr>
+                <th>Amount</th>
+                <th>From Currency</th>
+                <th>To Currency</th>
+                <th rowspan="2">
+                    <input type="button" name="" id="" value="Convert" onclick="convertMoney();">
+                </th>
+            </tr>
+            <tr>
+                <td><input type="text" name="" id="money" placeholder="Nhập vào số tiền:"></td>
+                <td>
+                    <select name="" id="fromMoney">
+                        <option value="VND">VND</option>
+                        <option value="USD">USD</option>
+                        <option value="EURO">EURO</option>
+                        <option value="JPY">JPY</option>
+                    </select>
+                </td>
+                <td>
+                    <select name="" id="toMoney">
+                        <option value="VND">VND</option>
+                        <option value="USD">USD</option>
+                        <option value="EURO">EURO</option>
+                        <option value="JPY">JPY</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <h3>Result :</h3>
+        <h3 id="show"></h3>
+    
+    </form>
+</body>
+<script src="main.js"></script>
+</html>

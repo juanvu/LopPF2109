@@ -37,8 +37,9 @@ function dayCheck(_day,_money,_ct16) {
             break;
         } 
 }
-function displayRadioValue(elName) {
-    var ele = document.getElementsByName(elName);
+
+function displayRadioValue(ct16) {
+    var ele = document.getElementsByName(ct16);
     let returnValue = false;
     for(i = 0; i < ele.length; i++) {
         if(ele[i].checked && ele[i].value == "true")

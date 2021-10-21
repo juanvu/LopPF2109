@@ -5,47 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="./main.js"></script>
 </head>
-<body>
-    
-    <style>
-        #cacul .input {
-            padding-bottom: 30px;
-        }
-    </style>
 
-    <h1>Caculator</h1>
-    <div id="cacul">
-        <form action="">
-            <div class="input">
-                <input type="text" placeholder="12">
-                <input type="text" placeholder="12">
-            </div>
-            <div class="button">
-                <button onclick="showResult1();" type="submit">Addition(+)</button>
-                <button onclick="showResult2();" type="submit">Subtraction(-)</button>
-                <button onclick="showResult3();" type="submit">Multiplication(x)</button>
-                <button onclick="showResult4();" type="submit">Division(/)</button>
-            </div>
+<style>
+    #firstSelect {
+        padding: 0 30px;
+    }
+
+    #secondSelect {
+        padding: 0 30px;
+    }
+    
+    
+    td {
+        padding: 0 30px;
+    }
+
+    #btn {
+        color: #fff;
+        background-color: rgb(119, 29, 122);
+        padding: 0 5px;
+    }
+</style>
+
+<body>
+    <table id="table">
+        <tr>
+            <th>Amount</th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+        </tr>
+
+        <tr>
+            <td><input type="text" name="" id="firstInput"></td>
+            <td><select name="" id="firstSelect">
+                    <option id="vnCurrency" value="">VND</option>
+                    <option id="usdCurrency" value="">USD</option>
+                </select>
             
-        </form>
+            </td>
+            <td><select name="" id="secondSelect">
+                    <option id="vnCurrency" value="">VND</option>
+                    <option id="usdCurrency" value="">USD</option>
+                </select>
+            </td>
+
+            <td><input onclick="showValue();" type="button" value="Convert" name="" id="btn"></td>
+        </tr>
         
-    </div>
-    <p id="result"></p>
+    </table>
+
+    <p id="convert"></p>
 </body>
 </html>
-
-<script>
-    function showResult1() {
-        document.getElementById('result').innerHTML = 'Result Addition :24';
-    }
-    function showResult2() {
-        document.getElementById('result').innerHTML = 'Result Subtraction :0';
-    }
-    function showResult3() {
-        document.getElementById('result').innerHTML = 'Result Multiplication :144';
-    }
-    function showResult4() {
-        document.getElementById('result').innerHTML = 'Result Division :1';
-    }
-</script>

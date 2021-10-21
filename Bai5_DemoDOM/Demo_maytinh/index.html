@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src='home.js'></script>
+	<style>
+		.fullWith  {
+			width: 100%;
+		}
+		
+		.readonly {
+			background-color: #E5E5E5;
+		}
+		.calRow input[type='button'] {
+			width: 44px;
+		}
+	</style>
+</head>
+<body>
+
+<table>
+	<tbody>
+		<tr>
+			<td colspan='7'>
+			<input type='text' id='calShowResult' class='fullWith  readonly'  readonly /></td>		
+		</tr>
+		<tr class='calRow'>
+			<td><input type='button' value='Rad' /></td>
+			<td><input type='button' value='....' /></td>
+			<td><input type='button' value='x!' /></td>
+			<td><input type='button' value='(' /></td>
+			<td><input type='button' value=')' /></td>
+			<td><input type='button' value='%' /></td>
+			<td><input type='button' value='AC' /></td>
+		</tr>
+		<tr class='calRow'>
+			<td><input type='button' value='Inv' /></td>
+			<td><input type='button' value='sin' /></td>
+			<td><input type='button' value='Ln' /></td>
+			<td><input type='button' value='7' onclick="numerInput(7)"/></td>
+			<td><input type='button' value='8' onclick="numerInput(8)"/></td>
+			<td><input type='button' value='9' onclick="numerInput(9)"/></td>
+			<td><input type='button' value='+' onclick="operaInput('+')"/></td>
+		</tr class='calRow'>
+		<tr class='calRow'>
+			<td><input type='button' value='R' /></td>
+			<td><input type='button' value='cos' /></td>
+			<td><input type='button' value='log' /></td>
+			<td><input type='button' value='4' onclick="numerInput(4)"/></td>
+			<td><input type='button' value='5' onclick="numerInput(5)"/></td>
+			<td><input type='button' value='6' onclick="numerInput(6)"/></td>
+			<td><input type='button' value='X' onclick="operaInput('*')"/></td>
+		</tr>
+		<tr class='calRow'>
+			<td><input type='button' value='e' /></td>
+			<td><input type='button' value='tan' /></td>
+			<td><input type='button' value='???' /></td>
+			<td><input type='button' value='1' onclick="numerInput(1)"/></td>
+			<td><input type='button' value='2' onclick="numerInput(2)"/></td>
+			<td><input type='button' value='3' onclick="numerInput(3)"/></td>
+			<td><input type='button' value='-' onclick="operaInput('-')"/></td>
+		</tr>
+		<tr class='calRow'>
+			<td><input type='button' value='Ans' /></td>
+			<td><input type='button' value='Exp' /></td>
+			<td><input type='button' value='xY' /></td>
+			<td><input type='button' value='0' onclick="numerInput(0)"/></td>
+			<td><input type='button' value='.' /></td>
+			<td><input type='button' value='=' onclick="showResult()"/></td>
+			<td><input type='button' value='+' onclick="operaInput('+')"/></td>
+		</tr>
+	</tbody>
+</table>
+
+
+	
+</body>
+
+
+
+</html>

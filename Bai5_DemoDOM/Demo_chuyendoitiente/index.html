@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src='home.js'></script>
+	<style>
+		.fullWith  {
+			width: 100%;
+		}
+		
+		.readonly {
+			background-color: #E5E5E5;
+		}
+		.calRow input[type='button'] {
+			width: 44px;
+		}
+		
+		.inline-block {
+			display: inline-block;	
+		}
+		
+		.col-block:not(:first-child) {
+			padding-left: 20px;
+		}
+		.col-block label {
+			text-align:center;
+			display:block;
+		}
+	</style>
+</head>
+<body>
+
+<div>
+	<div class='inline-block col-block'>
+		<label>Amount</label> <br/>
+		<input type='number' id='txtAmount' />
+	</div>
+	
+	<div class='inline-block col-block'>
+		<label>From Currency</label><br/>
+		<select id='slFromCurrency'>
+			<option>Viet Nam</option>
+			<option>Thai Lan</option>
+			<option>Lao</option>
+		</select>
+	</div>
+	
+	<div  class='inline-block col-block'>
+		<label>To Currency</label><br/>
+		<select id='toCurrency'>
+			<option>USD</option>
+			<option>Yen</option>
+		</select>
+	</div>
+	
+	<div class='inline-block col-block'>
+		<input type='button' value='convert' onclick='convertCurrency()' />
+	</div>
+</div>
+<div>
+	<p id='showRS'></p>
+</div>
+</body>
+
+</html>

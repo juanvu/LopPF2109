@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./main.js"></script>
+</head>
+
+<style>
+    .tankContainer {
+        border: 1px solid black;
+        width: 400px;
+        height: 400px;
+    }
+
+    #tank {
+        width: 19px;
+        height: 19px;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+</style>
+
+<body>
+    <div class="tankContainer">
+        <img id="tank" src="https://s3.ap-southeast-1.amazonaws.com/learn.codegym.vn/media/public/2020/12/02171059/tank.png" alt="">
+    </div>
+
+    <table>
+        <tr>
+            <td></td>
+            <td><input onclick="navTop();" type="button" value="^"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><input onclick="navLeft();" type="button" value="&lt;"></td>
+            <td></td>
+            <td><input onclick="navRight();" type="button" value="&gt;"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input onclick="navBottom();" type="button" value="v"></td>
+            <td></td>
+        </tr>
+    </table>
+
+</body>
+</html>

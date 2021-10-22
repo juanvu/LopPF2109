@@ -1,0 +1,23 @@
+/********Bai nay tuong tu bai TinhSoNgayTrongThang, thử xem lại bài đó rồi áp dụng cho bài này*********/
+
+1. Thuc hien phan giao dien
+	+ dung the input de nhận giá trị người dùng nhập vào
+	+ dùng thẻ input có type là button để tính toán giá hóa quả, khai bao sự kiện onclick.
+2. viết hàm tính toán giá hóa quả
+	+ lấy gia trị người dùng nhập vào. sư dụng document.getEle......
+
+	+ kiểm tra nếu số nhập vào theo điều kiện đề bài (if() else if()), hoặc sử dụng switch
+		Ổi: 20000 VNĐ/kg
+		Dưa Hấu: 20000 VNĐ/kg
+		Táo: 30000 VNĐ/kg
+		Xoài: 30000 VNĐ/kg
+		Cam: 40000 VNĐ/kg
+		Chôm Chôm: 40000 VNĐ/kg
+		Măng Cụt: 50000 VNĐ/kg
+	+ nếu dùng switch thì cú pháp như sau: ( chú ý phải có câu lệnh break sau cùng ở mỗi điều kiện)
+	switch(tenHoaQua) {
+		case "Ổi":
+		case "Dưa Hấu": alert('20000 VNĐ/kg');
+				break;
+	
+	}

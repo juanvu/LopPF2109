@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobby</title>
+    <style>
+        #firstLine {
+            background-color: orange;
+            color: white;
+            text-align: center;
+        }
+        #form {
+            border-top: 5px solid #6efcfc;
+            border-bottom: 5px solid #6efcfc;
+            border-left: 10px solid #6efcfc;
+            border-right: 10px solid #6efcfc;
+        }
+    </style>
+</head>
+<body>
+    <form action="hobbyForm.html" method="get" id="hobbyForm">
+        <table style="margin: 0 auto;" id="form">
+            <tr><td colspan="4" id="firstLine">SỞ THÍCH CỦA BẠN</td></tr>
+            <tr>
+                <td><label>Họ và tên</label></td>
+                <td colspan="3"><input type="text" name="yourname"></td>
+            </tr>
+            <tr>
+                <td><label>Email</label></td>
+                <td colspan="3"><input type="text" name="email"><br></td>
+            </tr>
+            <tr>
+                <td><label>Sở thích</label></td>
+                <td><input type="checkbox" name="hobby">Thể thao</td>
+                <td><input type="checkbox" name="hobby">Âm nhạc</td>  
+                <td><input type="checkbox" name="hobby">Đọc sách</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="checkbox" name="hobby">Lướt web</td>
+                <td><input type="checkbox" name="hobby">Chơi game</td>
+                <td><input type="checkbox" name="hobby">Điện ảnh</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="3">
+                    <input type="checkbox" name="hobby">Du lịch
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="3">
+                    <input type="button" value="Gửi thông tin" onclick="_submit()">
+                    <input type="button" value="Nhập lại" onclick="_reset()">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
+<script>
+    let _submit = function() {
+        let check = confirm("Ok?");
+        if (check) {
+            document.getElementById("hobbyForm").reset();
+        }   
+        
+        document.getElementById("hobbyForm").submit();
+    }
+    let _reset = function () {
+        let check = confirm("Bạn có muốn nhập lại?");
+        if (check) {
+            document.getElementById("hobbyForm").reset();
+        }    
+    }
+</script>

@@ -1,27 +1,35 @@
-let innerTextBox = 0;
-function openBrack() {
-    
-    let openBrack = document.getElementById('openBrack').value;
-        let innerTextBox = document.getElementById('innerTextBox').value;
-    innerTextBox.innerHTML = innetTextBox + openBrack;
+// let numerInput = function(num) {
+// 	//Mỗi lần nhập số thì thêm dữ liệu vào màn hình của máy tính
+// 	let showResultInput = document.getElementById('calShowResult');
+// 	let showResultInputVal = showResultInput.value;
+// 	let newVal = showResultInputVal + num;
+// 	showResultInput.value = newVal;
+// }
+function numerInput(num) {
+	let showResultInput = document.getElementById('calShowResult');
+	let showResultInputVal = showResultInput.value;
+	let newVal = showResultInputVal + num;
+	showResultInput.value = newVal;
 }
-function offBrack() {
-    let offBrack = document.getElementById('offBrack').value;
-    let innerTextBox = document.getElementById('innerTextBox').value;
-    innerTextBox.innerHTML = innerTextBox + offBrack;
+// let operaInput = function(opera) {
+// 	//Mỗi lần nhập số thì thêm dữ liệu vào màn hình của máy tính
+// 	let showResultInput = document.getElementById('calShowResult');
+// 	let showResultInputVal = showResultInput.value;
+// 	let newVal = showResultInputVal + opera;
+// 	showResultInput.value = newVal;
+// }
+function operaInput(opera) {
+	let showResultInput = document.getElementById('calShowResult');
+	let showResultInputVal = showResultInput.value;
+	let newVal = showResultInputVal + opera;
+	showResultInput.value = newVal;
 }
-
-function numberClick(val) {
-	//co the kiem tra xem dung la so khong
-	document.getElementById('innerTextBox').value += val;
-}
-function showResult(){
-	const result = eval(document.getElementById('innerTextBox').value);
-	
-	document.getElementById('innerTextBox').value += ("=" + result);
-}
-
-function operatorClikc(opr){
-	//kiem tra xem dung la nhung toan tu hop le ko
-	document.getElementById('innerTextBox').value += opr;
+//day al ham khi an vao dau bang, tra ra ket qua
+let showResult = function(){
+	let showResultInput = document.getElementById('calShowResult');
+	let showResultInputVal = showResultInput.value;
+	//alert("noi dung thong bao");
+	//let alertCmd = 'alert("' + showResultInputVal + '")';
+	let alertCmd = `alert(${showResultInputVal});`;
+	eval(alertCmd);
 }

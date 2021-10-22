@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .container {
+        font-size: 24px;
+        padding-left: 10px;
+        padding-top: 15px;
+        display: flex;
+    }
+    h2, p {
+        flex: 7%;
+    }
+    label {
+        flex: 93%;
+    }
+    input {
+        width: 90px;
+        height: 25px;
+    }
+    button {
+        padding: 5px;
+        margin-bottom: 20px;
+    }
+    h3 {
+        color: red;
+    }
+</style>
+    <div class='container'>
+        <h2 clas=''>Tính điểm ĐH khối D</h2>
+    </div>
+    <div class='container'>
+        <p>Môn Toán</p>
+        <label><input type='text' class='' id='mathInput'></label>
+    </div>
+    <div class='container'>
+        <p>Môn Văn</p>
+        <label><input type='text' class='' id='literatureInput'></label>
+    </div>
+    <div class='container'>
+        <p>Môn Anh</p>
+        <label><input type='text' class='' id='englishInput'></label>
+    </div>
+    <div class='container'>
+        <p>Khu vực</p>
+        <label>
+            <select id='addressInput'>
+                <option type='select' value='KV1' name='KV1'>KV1</option>
+                <option type='select' value='KV2-NT' name='KV2-NT'>KV2-NT</option>
+                <option type='select' value='KV2' name='KV2'>KV2</option>
+                <option type='select' value='KV3' name='KV3'>KV3</option>
+            </select>
+        </label>
+    </div>
+    <div class='container'>
+        <label>
+            <button type='button' onclick='calcuResult()' name='' class=''>Tính điểm</button>
+        </label>
+    </div>
+    <div class='container'>
+        <h4 id='showResult'></h4>
+    </div>
+    <script src='js/home.js'></script>
+</body>
+</html>

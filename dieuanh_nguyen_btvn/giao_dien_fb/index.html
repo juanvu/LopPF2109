@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giao dien fb</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/news-feed.css">
+</head>
+<body>
+    <div class="custom-control custom-switch">
+        <input type="checkbox" class="custom-control-input" id="darkmodeSwitch">
+        <label class="custom-control-label" id="darkmodeLabel" for="darkmodeSwitch">Dark mode</label>
+      </div>
+    <form id="new-status" method="POST">
+        <div class="form-group d-flex flex-row mt-3">
+            <div class="form-group col-md-1">
+                <span class="avatar">
+                    <img src="./img/person.svg"/>
+                </span>
+            </div>
+            <div class="form-group col-md-9">
+                <textarea placeholder="What's on your mind, Dieu Anh?" class="form-control w-100" id="postStatus" rows="3"></textarea>
+            </div>
+        </div>
+        <div class="d-flex flex-row justify-content-end">
+            <button type="submit" class="btn col-md-2 btn-primary mb-2">Submit</button>
+            <div class="col-md-2"></div>
+        </div>
+    </form>
+    <div id="news-feed">
+        <div class="ml-5 mt-5 mb-5" id="news-feed-template">
+            <div class="row d-flex align-items-center justify-content-start">
+                <div class="col-md-10">
+                    <div class="card">
+                        <div class="d-flex justify-content-between p-2 px-3">
+                            <div class="d-flex flex-row align-items-center"> <img src="./img/person.svg" width="50" class="rounded-circle post-avatar">
+                                <div class="d-flex flex-column ml-2"> <span class="font-weight-bold post-user"></span> <small class="text-primary post-time"></small> </div>
+                            </div>
+                            <div class="d-flex flex-row mt-1 ellipsis"><i class="fas fa-ellipsis-h"></i> </div>
+                        </div>
+                        <div class="p-2">
+                            <p class="text-justify post-message"></p>
+                            <hr>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex flex-row icons d-flex align-items-center"> <span class="post-like-btn" data-toggle="tooltip" data-placement="bottom" title=""><i class="fas fa-thumbs-up"></i> Like</span></div>
+                                <div class="d-flex flex-row muted-color"> <span class="post-nb-comments"></span> <span class="ml-2">Share</span> </div>
+                            </div>
+                            <hr>
+                            <div class="comments">
+                                <div class="d-flex flex-row mb-2" id="comment-template"> <img src="./img/person.svg" width="40" class="rounded-image comment-avatar">
+                                    <div class="d-flex flex-column ml-2"> <span class="name comment-user"></span> <small class="comment-text comment-message"></small>
+                                        <div class="d-flex flex-row align-items-center status"> <small><i class="fas fa-thumbs-up"></i>Like</small> <small>Reply</small> <small>Translate</small> <small class="comment-time"></small> </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/g/jquery.dirtyforms@2.0.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>

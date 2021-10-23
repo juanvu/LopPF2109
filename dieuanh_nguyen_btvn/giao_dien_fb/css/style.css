@@ -1,0 +1,22 @@
+body{
+    background-color: #eff2f5;
+}
+.avatar{
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-end;
+}
+.avatar img{
+    width: 30px;
+    height: 30px;
+}
+
+body.darkmode{
+    background-color: black;
+}
+

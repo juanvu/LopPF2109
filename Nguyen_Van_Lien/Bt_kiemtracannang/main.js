@@ -2,8 +2,9 @@ let showBmi = function() {
     let leftNum = document.getElementById('firstInput').value;
     let rightNum = document.getElementById('secondInput').value;
 
-    let result = parseInt(leftNum) / parseInt(rightNum ** 2);
-
+    
+    let result = (leftNum) / (rightNum **= 2);
+    
     if (result < 16)　{
         document.getElementById('result').innerText = 'Gầy độ 3';
     } 
@@ -16,7 +17,7 @@ let showBmi = function() {
     } else if (result >= 18.5 && result < 25) {
         document.getElementById('result').innerText = 'Bình thường';
 
-    } else if (result>= 25 && result < 30) {
+    } else if (result >= 25 && result < 30) {
         document.getElementById('result').innerText = 'Thừa cân';
 
     } else if (result >= 30 && result < 35) {

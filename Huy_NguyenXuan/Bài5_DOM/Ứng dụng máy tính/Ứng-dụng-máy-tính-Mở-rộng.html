@@ -9,57 +9,68 @@
 </head>
 <body>
     <style>
-        input {
-            width: 60px;
-            height: 40px;
-        }
-        .boxText {
-            width: 240px;
-            height: 40px;
-            margin-left: 5px;
-            
-        }
-        .calcu {
-            background-color: rgb(167, 167, 167);
-        }
-        .equal {
-            background-color: blue;
-            color: white;
-        }
+        .fullWith  {
+			width: 100%;
+		}
+		
+		.readonly {
+			background-color: #E5E5E5;
+		}
+		.calRow input[type='button'] {
+			width: 44px;
+		}
     </style>
     <form>
-        <input type='text' class='boxText' id='innerTextBox' value='' readonly>
         <table>
             <tbody>
                 <tr>
-                    <td><input type='button' class='calcu' id='openBrack' onclick='openBrack()' value='('></td>
-                    <td><input type='button' class='calcu' id='offBrack' onclick='offBrack()' value=')'></td>
-                    <td><input type='button' class='calcu' id='percent' onclick='percent()' value='%'></td>
-                    <td><input type='button' class='calcu' id='delNum' onclick='delNum()' value='AC'></td>
+                    <td colspan='7'>
+                    <input type='text' id='calShowResult' class='fullWith  readonly'  readonly /></td>		
                 </tr>
-                <tr>
-                    <td><input type='button' id='seven' onclick='seven()' value='7'></td>
-                    <td><input type='button' id='eight' onclick='eight()' value='8'></td>
-                    <td><input type='button' id='nine' onclick='nine()' value='9'></td>
-                    <td><input type='button' id='divNum' onclick='divNum()' class='calcu' value='/'></td>
+                <tr class='calRow'>
+                    <td><input type='button' value='Rad' /></td>
+                    <td><input type='button' value='....' /></td>
+                    <td><input type='button' value='x!' /></td>
+                    <td><input type='button' value='(' /></td>
+                    <td><input type='button' value=')' /></td>
+                    <td><input type='button' value='%' /></td>
+                    <td><input type='button' value='AC' /></td>
                 </tr>
-                <tr>
-                    <td><input type='button' id='four' onclick='four()' value='4'></td>
-                    <td><input type='button' id='five' onclick='five()' value='5'></td>
-                    <td><input type='button' id='six' onclick='six()' value='6'></td>
-                    <td><input type='button'id='multiNum' onclick='multiNum()' class='calcu'  value='*'></td>
+                <tr class='calRow'>
+                    <td><input type='button' value='Inv' /></td>
+                    <td><input type='button' value='sin' /></td>
+                    <td><input type='button' value='Ln' /></td>
+                    <td><input type='button' value='7' onclick="numerInput(7)"/></td>
+                    <td><input type='button' value='8' onclick="numerInput(8)"/></td>
+                    <td><input type='button' value='9' onclick="numerInput(9)"/></td>
+                    <td><input type='button' value=':' onclick="operaInput('/')"/></td>
+                </tr class='calRow'>
+                <tr class='calRow'>
+                    <td><input type='button' value='R' /></td>
+                    <td><input type='button' value='cos' /></td>
+                    <td><input type='button' value='log' /></td>
+                    <td><input type='button' value='4' onclick="numerInput(4)"/></td>
+                    <td><input type='button' value='5' onclick="numerInput(5)"/></td>
+                    <td><input type='button' value='6' onclick="numerInput(6)"/></td>
+                    <td><input type='button' value='X' onclick="operaInput('*')"/></td>
                 </tr>
-                <tr>
-                    <td><input type='button' id='one' onclick='numberClick(1)' value='1'></td>
-                    <td><input type='button' id='two' onclick='numberClick(2)' value='2'></td>
-                    <td><input type='button' id='three' onclick='three()' value='3'></td>
-                    <td><input type='button' id='subNum' onclick='subNum()' class='calcu' value='-'></td>
+                <tr class='calRow'>
+                    <td><input type='button' value='e' /></td>
+                    <td><input type='button' value='tan' /></td>
+                    <td><input type='button' value='???' /></td>
+                    <td><input type='button' value='1' onclick="numerInput(1)"/></td>
+                    <td><input type='button' value='2' onclick="numerInput(2)"/></td>
+                    <td><input type='button' value='3' onclick="numerInput(3)"/></td>
+                    <td><input type='button' value='-' onclick="operaInput('-')"/></td>
                 </tr>
-                <tr>
-                    <td><input type='button' id='oh' onclick='oh()' value='0'></td>
-                    <td><input type='button' id='dot' onclick='dot()' value='.'></td>
-                    <td><input type='button'id='equal' onclick='showResult()' class='equal'  value='=' /></td>
-                    <td><input type='button' id='sumNum' onclick='operatorClikc("+")' class='calcu' value='+'></td>
+                <tr class='calRow'>
+                    <td><input type='button' value='Ans' /></td>
+                    <td><input type='button' value='Exp' /></td>
+                    <td><input type='button' value='xY' /></td>
+                    <td><input type='button' value='0' onclick="numerInput(0)"/></td>
+                    <td><input type='button' value='.' /></td>
+                    <td><input type='button' value='=' onclick="showResult()"/></td>
+                    <td><input type='button' value='+' onclick="operaInput('+')"/></td>
                 </tr>
             </tbody>
         </table>

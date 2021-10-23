@@ -20,5 +20,5 @@ function deleteChar() {
     let showResultInput = document.getElementById('calShowResult');
     let showResultInputVal = showResultInput.value;
     let newVal = showResultInputVal;
-    showResultInput.value = newVal.substring(0,length(newVal-1));
+    showResultInput.value = newVal.substring(0,newVal.length-1);s
 }

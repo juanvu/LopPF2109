@@ -16,9 +16,6 @@ let showResult = function() {
         case 'KV2-Nt':
             sum += 0.25;
             break;
-        case 'KV3':
-            sum = result;
-            break;
     }
 
     let result = parseInt(firstInput) + parseInt(secondInput) + parseInt(thirdInput) + sum;

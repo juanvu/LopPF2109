@@ -1,0 +1,18 @@
+#tank {
+    width: 19px;
+    height: 19px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+#container {
+    border: 1px solid black; 
+    height: 190px; 
+    width: 190px; 
+    background-color: rgb(192, 192, 192);
+}
+.btn {
+    height: 25px; 
+    width: 25px; 
+    border: 1px solid rgb(219, 219, 219);
+}

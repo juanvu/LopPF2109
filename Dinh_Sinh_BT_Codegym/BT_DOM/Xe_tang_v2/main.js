@@ -10,12 +10,12 @@ function mouseReset() {
 // boom
 let xBoom = document.getElementById("boom").style;
 let yBoom = document.getElementById("boom").style;
-xBoom['left'] = (Math.floor(Math.random() * 10) + 1)*60 + "px";
-yBoom['top'] = (Math.floor(Math.random() * 10) + 1)*60 + "px";
+xBoom['left'] = (Math.floor(Math.random() * 10))*60 + "px";
+yBoom['top'] = (Math.floor(Math.random() * 10))*60 + "px";
 
 // tank
-xTank["top"] = 0 + "px";
-yTank["left"] = 0 + "px";
+xTank['top'] = 0 + "px";
+yTank['left'] = 0 + "px";
 
 function mouseUp() {
     yTank['top'] = parseInt(yTank['top']) - 60 + "px";

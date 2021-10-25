@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xe tăng (2)</title>
+    <script src="./home.js"></script>
+</head>
+<body>
+    <div style="width: 190px; height: 190px; border: 1px solid black;" id="battleFiled">
+        <div
+          style="top: 19px; left: 38px;width: 19px; height: 19px; background-image: url('tank-1.png');background-size: 100% 100%;position: relative;"
+          id="tank">
+        </div>
+        <div
+          style="top: 76px; left: 133px;width: 19px; height: 19px; background-image: url('boom.png');background-size: 100% 100%;position: relative;"
+          id="bomm">
+        </div>
+      </div>
+      <table>
+        <tr>
+          <td></td>
+          <td>
+            <button onclick="moveUp()">⬆</button>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <button onclick="moveLeft()">⬅</button></td>
+          <td></td>
+          <td>
+            <button onclick="moveRight()">➡</button></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <button onclick="moveDown()">⬇</button></td>
+          <td></td>
+        </tr>
+      </table>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>máy tính nâng cao</title>
+    <script src="./home.js"></script>
+</head>
+<style>
+    input[type='text']{
+        width: 325px;
+    }
+    input[type="button"]{
+        width: 44px;
+    }
+</style>
+<body>
+    <table>
+        <tbody>
+            <tr colspan='7'><input type="text"  id="show" /> </tr>
+            <tr>
+                <td> <input type="button" value="Rad"/></td>
+                <td> <input type="button" value=".."/></td>
+                <td> <input type="button" value="X!"/></td>
+                <td> <input type="button" value="("/></td>
+                <td> <input type="button" value=")"/></td>
+                <td> <input type="button" value="%"/></td>
+                <td> <input type="button" value="AC" onclick="del_val()"/></td>
+            </tr>
+
+            <tr>
+                <td> <input type="button" value="Inv"/></td>
+                <td> <input type="button" value="sin"/></td>
+                <td> <input type="button" value="ln" /></td>
+                <td> <input type="button" value="7" onclick="myfunction(7)"/></td>
+                <td> <input type="button" value="8" onclick="myfunction(8)" /></td>
+                <td> <input type="button" value="9" onclick="myfunction(9)"/></td>
+                <td> <input type="button" value=":" onclick="myfunction('/')"/></td>
+            </tr>
+
+            <tr>
+                <td> <input type="button" value="pi"  onclick="myfunction('pi')"/></td>
+                <td> <input type="button" value="cos" onclick="myfunction('cos')"/></td>
+                <td> <input type="button" value="log" onclick="myfunction('log')"/></td>
+                <td> <input type="button" value="4"   onclick="myfunction(4)"/></td>
+                <td> <input type="button" value="5"   onclick="myfunction(5)"/></td>
+                <td> <input type="button" value="6"   onclick="myfunction(6)"/></td>
+                <td> <input type="button" value="X"   onclick="myfunction('*')"/></td>
+            </tr>
+
+            <tr>
+                <td> <input type="button" value="e"   onclick="myfunction('e')"/></td>
+                <td> <input type="button" value="tan" onclick="myfunction('tan')"/></td>
+                <td> <input type="button" value="căn" onclick="myfunction('căn')"/></td>
+                <td> <input type="button" value="1"   onclick="myfunction(1)"/></td>
+                <td> <input type="button" value="2"   onclick="myfunction(2)"/></td>
+                <td> <input type="button" value="3"   onclick="myfunction(3)"/></td>
+                <td> <input type="button" value="-"   onclick="myfunction('-')"/></td>
+            </tr>
+            <tr>
+                <td> <input type="button" value="Ans"/></td>
+                <td> <input type="button" value="EXP"/></td>
+                <td> <input type="button" value="xY" /></td>
+                <td> <input type="button" value="0"  onclick="myfunction('0')"/></td>
+                <td> <input type="button" value="."  onclick="myfunction('.')"/></td>
+                <td> <input type="button" value="="  onclick="showResultInput()"/></td>
+                <td> <input type="button" value="+"  onclick="myfunction('+')"/></td>
+            </tr>
+
+           
+        </tbody>
+    </table>
+</body>
+</html>

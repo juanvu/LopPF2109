@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="lib/favicon.ico" type="image/x-icon">
+    <title>Thanh toán</title>
+</head>
+<body>
+    <label style="font-weight: bold; color: brown;">Thanh toán</label>
+    <div>
+        <table>
+            <tr>
+                <td><label style="font-weight: bold;">Tháng hiện tại:</label></td>
+                <td>
+                    <select name="month" id="thisMonth" onchange="_thisMonth()">
+                        <option value="0"></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Số tiền:</label></td>
+                <td><input type="number" id="money"></td>
+            </tr>
+            <tr>
+                <td><label>Tên khách hàng:</label></td>
+                <td><input type="text" id="name"></td>
+            </tr>
+            <tr>
+                <td><label>DOB</label></td>
+                <td><input type="date" id="dob" required></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="Ok" onclick="display()"></td>
+                <td><input type="button" value="Reset" onclick="reset()"></td>
+            </tr>
+            <tr>
+                <td><label style="font-weight: bold; font-style: italic;">Tổng thanh toán:</label></td>
+                <td><input type="text" id="display" readonly style="background-color: darkorange; color: black;"></td>
+            </tr>
+        </table>
+    </div>
+    
+</body>
+</html>
+<script src="js/main.js"></script>

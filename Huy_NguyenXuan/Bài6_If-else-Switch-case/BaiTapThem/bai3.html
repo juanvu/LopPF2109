@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe để bữa khác</title>
+</head>
+<body>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        .container {
+            display: flex;
+        }
+        p {
+            flex: 10%;
+            text-align: left;
+            margin-bottom: 5px;
+            margin-top: 5px;
+            margin-left: 4px;
+        }
+        label {
+            flex: 90%;
+            margin-bottom: 5px;           
+        }
+        .birth {
+            height: 25px;
+            width: 40px;
+        }
+        .other {
+            height: 25px;
+            width: 130px;
+        }
+        button {
+            height: 30px;
+            width: 70px;
+        }
+    </style>
+    <script src='js/home3.js'></script>
+    <form>
+        <div class='container'>
+            <p>Nhập số tiền thanh toán</p>
+            <label>
+                <input type='number' name='totalBill' class='other' id='totalBill'/>
+            </label>
+        </div>
+        <div class='container'>
+            <p>Nhập tên khách hàng</p>
+            <label>
+                <input type='text' name='nameCustomer' class='other' id='nameCustomer'/>
+            </label>
+        </div>
+        <div class='container'>
+            <p>Nhập ngày,tháng và năm sinh</p>
+            <label>
+                <input type='number' name='dayOfBirth' class='birth' id='dayOfBirth'/>
+                <input type='number' name='monthOfBirth' class='birth' id='monthOfBirth'/>
+                <input type='number' name='yearOfBirth' class='birth' id='yearOfBirth'/>
+            </label>
+        </div>
+        <div>
+            <button type='button' class='' onclick='showResult()'>Chi tiết</button>
+        </div>
+        <div class='container'>
+            <p id='showTotal'></p>
+        </div>
+    </form>
+</body>
+</html>

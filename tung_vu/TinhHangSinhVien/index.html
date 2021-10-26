@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="lib/favicon.ico" type="image/x-icon">
+    <title>Tính hạng sinh viên</title>
+</head>
+<body>
+    <div>
+        <table>
+            <tr>
+                <td>
+                    <label>Nhập vào điểm chuyên cần (1-10):</label>
+                </td>
+                <td>
+                    <input type="number" id="chuyenCan" min="1" max="10">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Nhập vào điểm tổng kết (0-10):</label>
+                </td>
+                <td>
+                    <input type="number" id="tongKet" min="1" max="10">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="OK" onclick="display()">
+                </td>
+                <td>
+                    <span id="display"></span>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
+<script src="js/main.js"></script>

@@ -1,0 +1,9 @@
+input[type='button'] {
+    width: 50px;
+    height: 25px;
+}
+table {
+    margin: auto;
+    border: 2px solid #333;
+    background-color: bisque;
+}

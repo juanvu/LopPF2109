@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="lib/favicon.ico" type="image/x-icon">
+    <title>Trò chơi xe tăng v2</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="container">
+        <img id="tank" src="lib/tank.png" >
+        <img  id="boom" src="lib/boom.png">
+        <img id="explosion" src="lib/explosion.png" >
+    </div>
+    <br>
+    <div><label id="end" style="display: none;">Bạn đã thua! Hãy ấn nút &#10084 để chơi lại!</label></div>
+    <br>
+    <div>
+        <table>
+            <tr>
+                <td></td>
+                <td><input type="button" value="&#10148" class="btn" id="up" style="transform: rotate(-90deg);" onclick="up()" onkeydown="38"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="&#10148" class="btn" id="left" style="transform: rotate(-180deg);" onclick="left()" onkeydown="39"></td>
+                <td><input type="button" value="&#10084" class="btn" id="reset" onclick="Reset()"></td>
+                <td><input type="button" value="&#10148" class="btn" id="right" onclick="right()" onkeydown="40"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="button" value="&#10148" class="btn" id="down" style="transform: rotate(90deg);" onclick="down()" onkeydown="37"></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
+<script src="js/main.js"></script>

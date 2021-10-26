@@ -9,8 +9,21 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/news-feed.css">
+	<style>
+		.onAdded {
+			animation: expand .5s ease-in-out;
+		}
+		@keyframes expand {
+  from {
+    transform: scale(0);
+    opacity: 0;
+    background: #5470B0;
+  }
+}
+	</style>
 </head>
 <body>
+<div class='container'>
     <div class="custom-control custom-switch">
         <input type="checkbox" class="custom-control-input" id="darkmodeSwitch">
         <label class="custom-control-label" id="darkmodeLabel" for="darkmodeSwitch">Dark mode</label>
@@ -32,7 +45,7 @@
         </div>
     </form>
     <div id="news-feed">
-        <div class="ml-5 mt-5 mb-5" id="news-feed-template">
+        <div class="ml-5 mt-5 mb-5 onAdded" id="news-feed-template" >
             <div class="row d-flex align-items-center justify-content-start">
                 <div class="col-md-10">
                     <div class="card">
@@ -66,8 +79,9 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/g/jquery.dirtyforms@2.0.0"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/g/jquery.dirtyforms@2.0.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
     <script src="./app.js"></script>
+	</div>
 </body>
 </html>

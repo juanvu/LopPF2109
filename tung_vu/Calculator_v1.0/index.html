@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="lib/favicon.ico" type="image/x-icon">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+</head>
+<body>
+    <table>
+        <tr><td colspan="7"><input type="text" readonly id="display" style="width: 98%;"></td></tr>
+        <tr>
+            <td><input type="button" value="Rad"></td>
+            <td><input type="button" value="Deg"></td>
+            <td><input type="button" value="x!" onclick="showMath('x!')"></td>
+            <td><input type="button" value="(" onclick="operaInput('(')"></td>
+            <td><input type="button" value=")" onclick="operaInput(')')"></td>
+            <td><input type="button" value="%" onclick="operaInput('%')"></td>
+            <td><input type="button" value="AC" onclick="AC()"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="," onclick="operaInput(',')"></td>
+            <td><input type="button" value="sin" onclick="showMath('sin')"></td>
+            <td><input type="button" value="ln" onclick="numberInput(7)"></td>
+            <td><input type="button" value="7" onclick="numberInput(7)"></td>
+            <td><input type="button" value="8" onclick="numberInput(8)"></td>
+            <td><input type="button" value="9" onclick="numberInput(9)"></td>
+            <td><input type="button" value="/" onclick="operaInput('/')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="π" onclick="showMath('π')"></td>
+            <td><input type="button" value="cos" onclick="showMath('cos')"></td>
+            <td><input type="button" value="log" onclick="showMath('log')"></td>
+            <td><input type="button" value="4" onclick="numberInput(4)"></td>
+            <td><input type="button" value="5" onclick="numberInput(5)"></td>
+            <td><input type="button" value="6" onclick="numberInput(6)"></td>
+            <td><input type="button" value="x" onclick="operaInput('*')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="e" onclick="showMath('e')"></td>
+            <td><input type="button" value="tan" onclick="showMath('tan')"></td>
+            <td><input type="button" value="Can" onclick="showMath('Can')"></td>
+            <td><input type="button" value="1" onclick="numberInput(1)"></td>
+            <td><input type="button" value="2" onclick="numberInput(2)"></td>
+            <td><input type="button" value="3" onclick="numberInput(3)"></td>
+            <td><input type="button" value="-" onclick="operaInput('-')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="Ans" onclick="showMath('Ans')"></td>
+            <td><input type="button" value="EXP" onclick="showMath('EXP')"></td>
+            <td><input type="button" value="x^y" onclick="showMath('x^y')"></td>
+            <td><input type="button" value="0" onclick="numberInput(0)"></td>
+            <td><input type="button" value="." onclick="operaInput('.')"></td>
+            <td><input type="button" value="=" onclick="showResult()" style="background-color: rgb(0, 194, 201);"></td>
+            <td><input type="button" value="+" onclick="operaInput('+')"></td>
+        </tr>
+    </table>
+</body>
+</html>
+<script src="js/main.js"></script>

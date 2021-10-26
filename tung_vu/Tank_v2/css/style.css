@@ -1,0 +1,35 @@
+#tank {
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+#container {
+    position: relative;
+    border: 1px solid black; 
+    height: 380px; 
+    width: 380px; 
+    background-color: rgb(192, 192, 192);
+}
+.btn {
+    height: 25px; 
+    width: 25px; 
+    border: 1px solid rgb(253, 253, 253);
+    background-color: rgb(253, 130, 192);;
+}
+#boom {
+    top: 0px; 
+    left: 0px;
+    width: 19px; 
+    height: 19px; 
+    background-size: 100% 100%;
+    position: absolute;
+}
+#explosion {
+    width: 19px; 
+    height: 19px;
+    position: absolute;
+    background-size: 100% 100%;
+    display: none;
+}

@@ -83,7 +83,7 @@ function move(deg,pos,negative){
 
 function explosion(){
     if((position.left === boom.left)&&(position.top === boom.top)){
-        document.getElementById("tank").style["background"] = "url(/explosion.png)";
+        document.getElementById("tank").style["background"] = "url(explosion.png)";
         document.getElementById("boom").style["display"] = "none";
         end = true;
         // ham setTimout: muon thuc hien function ben trong sau khoang thoi gian 500ms
@@ -164,7 +164,6 @@ function shoot(checked = false){
         }
     }
 }
-
 
 startgame();
 window.addEventListener("keydown",function(e){

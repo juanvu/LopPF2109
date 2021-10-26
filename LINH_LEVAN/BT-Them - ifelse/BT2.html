@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id = '1'></h1>
+    <h1 id = '2'></h1>
+    <h1 id = '3'></h1>
+    <h1 id = '4'></h1>
+    <h1 id = '5'></h1>
+    <h1 id = '6'></h1>
+    <h1 id = '7'></h1>
+    <h1 id = '8'></h1>
+    <h1 id = '9'></h1>
+    <h1 id = '10'></h1>
+    
+    <script>
+        let input1 = prompt('Nhập số hay chữ bất kỳ: 1');
+        let input2 = prompt('Nhập số hay chữ bất kỳ: 2');
+        let input3 = prompt('Nhập số hay chữ bất kỳ: 3');
+        let input4 = prompt('Nhập số hay chữ bất kỳ: 4');
+        let input5 = prompt('Nhập số hay chữ bất kỳ: 5');
+        let input6 = prompt('Nhập số hay chữ bất kỳ: 6');
+        let input7 = prompt('Nhập số hay chữ bất kỳ: 7');
+        let input8 = prompt('Nhập số hay chữ bất kỳ: 8');
+        let input9 = prompt('Nhập số hay chữ bất kỳ: 9');
+        let input10 = prompt('Nhập số hay chữ bất kỳ: 10');
+        
+        let t1 = input1.charAt(0) ;
+        let t2 = input2.charAt(0) ;
+        let t3 = input3.charAt(0) ;
+        let t4 = input4.charAt(0) ;
+        let t5 = input5.charAt(0) ;
+        let t6 = input6.charAt(0) ;
+        let t7 = input7.charAt(0) ;
+        let t8 = input8.charAt(0) ;
+        let t9 = input9.charAt(0) ;
+        let t10 = input10.charAt(0) ;
+
+        let str1 = t1.toUpperCase() + input1.slice(1);
+        let str2 = t2.toUpperCase() + input2.slice(1);
+        let str3 = t3.toUpperCase() + input3.slice(1);
+        let str4 = t4.toUpperCase() + input4.slice(1);
+        let str5 = t5.toUpperCase() + input5.slice(1);
+        let str6 = t6.toUpperCase() + input6.slice(1);
+        let str7 = t7.toUpperCase() + input7.slice(1);
+        let str8 = t8.toUpperCase() + input8.slice(1);
+        let str9 = t9.toUpperCase() + input9.slice(1);
+        let str10 = t10.toUpperCase() + input10.slice(1);
+
+
+        
+        if (  isNaN(t1)) {
+            document.getElementById('1').innerHTML = str1 ;
+        } else {
+            document.getElementById('1').innerHTML = 'false';
+            document.getElementById('1').style.color = 'red'; 
+        };
+
+        
+        if (  isNaN(t2)) {
+            document.getElementById('2').innerHTML = str2 ;
+        } else {
+            document.getElementById('2').innerHTML = 'false';
+            document.getElementById('2').style.color = 'red';
+        };
+
+
+        if (  isNaN(t3)) {
+            document.getElementById('3').innerHTML = str3 ;
+        } else {
+            document.getElementById('3').innerHTML = 'false';
+            document.getElementById('3').style.color = 'red';
+        };
+
+
+        if (  isNaN(t4)) {
+            document.getElementById('4').innerHTML = str4 ;
+        } else {
+            document.getElementById('4').innerHTML = 'false';
+            document.getElementById('4').style.color = 'red';
+        };
+
+
+        if (  isNaN(t5)) {
+            document.getElementById('5').innerHTML = str5 ;
+        } else {
+            document.getElementById('5').innerHTML = 'false';
+            document.getElementById('5').style.color = 'red';
+        };
+
+
+        if (  isNaN(t6)) {
+            document.getElementById('6').innerHTML = str6 ;
+        } else {
+            document.getElementById('6').innerHTML = 'false';
+            document.getElementById('6').style.color = 'red';
+        };
+
+
+        if (  isNaN(t7)) {
+            document.getElementById('7').innerHTML = str7 ;
+        } else {
+            document.getElementById('7').innerHTML = 'false';
+            document.getElementById('7').style.color = 'red';
+        };
+
+
+        if (  isNaN(t8)) {
+            document.getElementById('8').innerHTML = str8 ;
+        } else {
+            document.getElementById('8').innerHTML = 'false';
+            document.getElementById('8').style.color = 'red';
+        };
+
+
+        if (  isNaN(t9)) {
+            document.getElementById('9').innerHTML = str9 ;
+        } else {
+            document.getElementById('9').innerHTML = 'false';
+            document.getElementById('9').style.color = 'red';
+        };
+
+        if (  isNaN(t10)) {
+            document.getElementById('10').innerHTML = str10 ;
+        } else {
+            document.getElementById('10').innerHTML = 'false';
+            document.getElementById('10').style.color = 'red';
+        };
+
+        
+    </script>
+</body>
+</html>

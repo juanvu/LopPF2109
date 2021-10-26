@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="width: 112px; height: 17px;" ><label >Điểm Tổng Kết</label></div>
+    <input type="number" id="point" ><br>
+
+    <div style="width: 112px; height: 17px;" ><label >Điểm chuyên cần</label></div>
+    <input type="number" id="dipoint" ><br>
+
+    <input type="button" onclick="check()" value="Check Rank"><br>
+    <h3 id = 'Rank' ></h3>
+
+    <script>
+        
+        function check(){
+         let point = parseFloat(document.getElementById('point').value) ;
+         let diponit = parseFloat(document.getElementById('dipoint') .value) ;
+         let pointextra = 0;
+         
+         if(diponit>10 || point > 10){alert('chỉ nhập số 1->10')}
+         else if (diponit <= 10 ) {
+             if (diponit >= 8) {  pointextra =+ 0.5}
+                 else if(diponit <= 7 ){
+                     if(diponit >= 5) { pointextra =+ 0.25}
+                        else if (diponit <5){
+                            if(diponit >= 0) { pointextra=+ 0.1}
+                                else {alert('Chỉ nhập từ 0-> 10')}
+                        } 
+                    }
+                }
+         
+
+         let lastpoint = point + pointextra ;
+         
+         if ( lastpoint <11){
+             if(lastpoint >= 8) { document.getElementById('Rank').innerHTML = 'Tổng điểm của bạn là: '+ lastpoint + '  Xếp hạng : A';}
+                else if( lastpoint < 8) {
+                    if(lastpoint>= 6) { document.getElementById('Rank').innerHTML = 'Tổng điểm của bạn là: '+ lastpoint + '  Xếp hạng : B'; }
+                        else if (lastpoint<6){
+                            if (lastpoint>=4) {document.getElementById('Rank').innerHTML = 'Tổng điểm của bạn là: '+ lastpoint + ' Xếp hạng : C';}
+                                else {document.getElementById('Rank').innerHTML = 'Tổng điểm của bạn là: '+ lastpoint + '  Xếp hạng : D';}
+                            }
+                    }
+                }
+
+
+        }
+        
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let money = prompt('nhập số tiền thanh toán');
+        let name = prompt('nhập tên');
+        let birthDay = prompt('nhập tháng sinh nhật');
+
+        let thisMonth = 10;
+
+        if(birthDay == thisMonth && money >= 200 && money < 400) {
+            alert('Bạn được giảm 25% trên tổng hóa đơn');
+        } else if(money >= 400 && money < 500) {
+            alert('Bạn được giảm 20% trên tổng hóa đơn');
+        } else if(money >= 500 && birthDay == thisMonth) {
+            alert('Bạn được giảm 30% trên tổng hóa đơn');
+        } else {
+            alert('Bạn không được giảm');
+        }
+    </script>
+</body>
+</html>

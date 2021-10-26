@@ -17,7 +17,7 @@ body{
     position: absolute;
     top: 0px;
     left: 0px;
-    background:url("/tank.png");
+    background:url("tank.png");
     background-size: 50px 50px;
 }
 #boom {
@@ -27,7 +27,7 @@ body{
     position: absolute;
     top: 0px;
     left: 0px;
-    background:url("/boom.png");
+    background:url("boom.png");
     background-size: 50px 50px;
 }
 table{
@@ -41,6 +41,6 @@ table{
     position: absolute;
     top: 0px;
     left: 0px;
-    background:url("/bullet.png");
+    background:url("bullet.png");
     background-size: 10px 10px;
 }

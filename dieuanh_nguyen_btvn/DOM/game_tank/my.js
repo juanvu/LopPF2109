@@ -95,7 +95,7 @@ function moveDown(){
 } 
 function explosion(){
     if((position.left === boom.left)&&(position.top === boom.top)){
-        document.getElementById("tank").style["background"] = "url(/explosion.png)";
+        document.getElementById("tank").style["background"] = "url(explosion.png)";
         document.getElementById("boom").style["display"] = "none";
         end = true;
     }

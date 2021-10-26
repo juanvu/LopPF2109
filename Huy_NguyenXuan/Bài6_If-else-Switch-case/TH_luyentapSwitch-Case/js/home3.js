@@ -7,11 +7,11 @@ let value = Number(prompt('Type a number', 0));
 //     alert('0');
 // }
 
-switch (value) {
-    case :
+switch ((value > 0) ? 1 : (value < 0) ? -1 : 0) {
+    case 1:
         alert('1');
         break;
-    case :
+    case -1:
         alert('-1');
         break;
     default:

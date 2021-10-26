@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        <h3>Chọn tháng bạn cần tìm</h3>
+        <select  id="month" >
+            <option value="1">Tháng 1</option>
+            <option value="2">Tháng 2</option>
+            <option value="3">Tháng 3</option>
+            <option value="4">Tháng 4</option>
+            <option value="5">Tháng 5</option>
+            <option value="6">Tháng 6</option>
+            <option value="7">Tháng 7</option>
+            <option value="8">Tháng 8</option>
+            <option value="9">Tháng 9</option>
+            <option value="10">Tháng 10</option>
+            <option value="11">Tháng 11</option>
+            <option value="12">Tháng 12</option>
+        </select>
+        
+        <input type="button" onclick = "check()" value="check">
+    </div>
+   
+    <script>
+        let month = parseInt(document.getElementById('month').value) ;
+        // function check() {
+        //     let month = parseInt(document.getElementById('month').value) ;
+        //     if (month == 1 || month ==3 || month == 5 || month ==7 || month == 8 ||  month==10 || month == 12) {
+        //        alert ('số ngày trong tháng là: 31');
+        //     } else if( month == 11 ||  month == 4 ||  month == 6 || month == 9  ){
+        //         alert ('số ngày trong tháng là: 30');
+        //     } else {
+        //         alert ('số ngày trong tháng là: 29 hoặc 28');
+        //     }
+        
+        // }
+
+     function check(){
+            let month = parseInt(document.getElementById('month').value) ;
+                switch (month) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+            alert ('số ngày trong tháng là: 31');   
+                break;            
+            case 4:
+            case 6:
+            case 9:
+            alert ('số ngày trong tháng là: 30');
+                break;                                         
+            default:
+            alert ('số ngày trong tháng là: 29 hoặc 28');
+                break;
+
+        }
+
+     }
+        
+
+        
+    </script>
+</body>
+</html>

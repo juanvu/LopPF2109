@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h3>Nhập số kg cân nặng của bạn: </h3>
+        <input type="number" id="kg" placeholder="VD: 70">
+        <h3>Nhâp chiều cao tính theo mét của bạn: VD: 1m7 là 1.7 </h3>
+        <input type="number"  id="height" placeholder="VD: 1.7"><br><br>
+
+        <input type="button" onclick="check()" value="kiểm tra">
+
+    </div>
+    <script>
+
+        function check (){
+            let kg = parseFloat(document.getElementById('kg').value);
+            let height = parseFloat(document.getElementById('height').value);
+            let BMI = kg / (height*height);
+            if (BMI > 40){
+                alert('Bạn bị béo phì cấp 3 !!!')
+            } else {
+                if(BMI>=35){
+                    alert('Bạn bị béo phì cấp 2 !!!')
+                } else {
+                    if (BMI>=30) {
+                        alert('Bạn bị béo phì cấp 1 !!!')
+                    } else {
+                        if (BMI>=25){
+                            alert('Bạn bị thừa cân !!!')
+                        } else {
+                            if(BMI>=18.5) {
+                                alert('Bình Thường')
+                            } else {
+                                if (BMI>=17){
+                                    alert('Bạn bị gầy cấp độ 1!!!')
+                                } else {
+                                    if (BMI>=16){
+                                        alert('Bạn bị gầy cấp độ 2!!!')
+                                    } else {
+                                        alert('Bạn bị gầy cấp độ 3!!!')
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+             
+            
+
+    </script>
+</body>
+</html>

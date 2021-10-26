@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <label for="name"  >Họ Và Tên</label>
+    <input type="text"  id="name"><br><br>
+    
+    <label for="date">Your birthday</label>
+    <input type="number" id="date" style="width: 60px; height: 21px;" placeholder="dd">
+
+    
+    <label for="month">-</label>
+    <input type="number" id="month" style="width: 60px; height: 21px;" placeholder="mm" >
+
+    <label for="years">-</label>
+    <input type="number" id="year" style="width: 60px; height: 21px;" placeholder="yy"><br><br>
+
+    <label for="monney" >Số Tiền</label>
+    <input type="number" name="monney" id="monney" > <br><br>
+
+
+    <input type="button" value="Kiểm tra" onclick="check()">
+    <p id = 'sale'></p>
+
+    <script>
+            let today = new Date();
+            let Mtoday = today.getMonth() + 1;
+
+        function check() {
+            let name = document.getElementById('name').value;
+            let Mbirthday = parseInt(document.getElementById('month').value);
+            let monney = document.getElementById('monney').value ;
+            if (monney>= 500 & Mbirthday == Mtoday) {
+                document.getElementById('sale').innerHTML = 'Chào bạn '  + name +'<br>'+ 'Bạn Được giảm 30% hóa đơn:'+ '<br>'+ 'số tiền bạn phải thanh toán là: ' + monney*(1-0.3) + 'k' ;
+            } else if(  monney > 200 & Mbirthday == Mtoday){
+                document.getElementById('sale').innerHTML = 'Chào bạn ' + name +'<br>'+'Bạn Được giảm 25% hóa đơn:'+ '<br>'+ 'số tiền bạn phải thanh toán là: ' + monney*(1-0.25) +'k';
+            } else if( monney > 400){
+                document.getElementById('sale').innerHTML = 'Chào bạn '  + name +'<br>'+'Bạn Được giảm 20% hóa đơn:'+ '<br>'+ 'số tiền bạn phải thanh toán là: ' + monney*(1-0.2) +'k';
+            } else {
+                document.getElementById('sale').innerHTML = 'Chào bạn '  + name +'<br>'+'Rất tiếc bạn chưa được áp dụng chương trình sale của chúng tôi!!!';
+            }
+        }
+      
+        
+      
+    </script>
+</body>
+</html>

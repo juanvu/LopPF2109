@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="container">
+        <img id="tank" src="lib/tank.png" >
+        <img  id="boom" src="lib/boom.png">
+        <img id="explosion" src="lib/explosion.png" >
+    </div>
+    <br>
+    <div>
+        <input type="button" value="Restart" class="btn2" id="reset" onclick="Reset()">
+        <label id="end" style="display: none;">Bạn đã thua! Hãy ấn nút Restart để chơi lại!</label>
+    </div>
+    <table>
+        <tr>
+            <tr>
+                <td></td>
+                <td><input type="button" value="&#10148" class="btn" id="up" style="transform: rotate(270deg);" onclick="up()" onkeydown="38"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="&#10148" class="btn" id="left" style="transform: rotate(180deg);" onclick="left()" onkeydown="39"></td>
+                <td></td>
+                <td><input type="button" value="&#10148" class="btn" id="right" style="transform: rotate(0deg);" onclick="right()" onkeydown="40"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="button" value="&#10148" class="btn" id="down" style="transform: rotate(90deg);" onclick="down()" onkeydown="37"></td>
+                <td></td>
+            </tr>
+        </tr>
+    </table>
+    <script src="js/main.js"></script>
+</body>
+</html>

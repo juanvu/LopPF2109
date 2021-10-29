@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div id="container">
+      <div>
+        <img id="tank" src="acssets/tank.png">
+      </div>
+      <img id="boom" src="acssets/boom.png">
+      <div>
+        <img id="explosion" src="acssets/explosion.png">
+      </div>
+      <div>
+        <img id="winner" src="acssets/winner.jpg">
+      </div>
+      <div id ="bullet"></div>
+  </div>
+  
+  <br>
+  <div>
+    <div>
+      <input class="bullet" type="button" value="Nạp đạn" onkeydown="" name="">
+      <button class="bullet" type="button">Set Up Boom</button>
+    </div>
+    <table border="1">
+      <tr class="center">
+        <td colspan="3"><input type="button" id="up" value="&#8593" onclick="mouseUp();"></td>
+      </tr>
+  
+      <tr class="center">
+        <td><input type="button" id="left" value="&#8592" onclick="mouseLeft();"></td>
+        <td><input type="button" id="reset" value="O" onclick="mouseReset();"></td>
+        <td><input type="button" id="right" value="&#8594" onclick="mouseRight();"></td>
+      </tr>
+      
+      <tr class="center">
+        <td colspan="3"><input type="button" id="dowm" value="&#8595" onclick="mouseDown();"></td>
+      </tr>
+    </table>
+  </div>
+</body>
+<script src="main.js"></script>
+</html>

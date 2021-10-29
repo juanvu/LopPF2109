@@ -1,0 +1,42 @@
+#tank {
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+#container {
+    position: relative;
+    border: 1px solid black; 
+    height: 380px; 
+    width: 380px; 
+    background-color: rgb(201, 201, 201);
+}
+.btn {
+    height: 30px; 
+    width: 30px; 
+    border: 1px solid rgb(253, 253, 253);
+    background-color: rgb(253, 130, 192);;
+}
+.btn2 {
+    height: 30px; 
+    width: 60px; 
+    border: 1px solid rgb(253, 253, 253);
+    background-color: rgb(255, 0, 0);;
+    margin-bottom: 30px;
+}
+#boom {
+    top: 0px; 
+    left: 0px;
+    width: 19px; 
+    height: 19px; 
+    background-size: 100%;
+    position: absolute;
+}
+#explosion {
+    width: 19px; 
+    height: 19px;
+    position: absolute;
+    background-size: 100%;
+    display: none;
+}

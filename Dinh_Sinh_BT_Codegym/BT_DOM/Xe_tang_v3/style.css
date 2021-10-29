@@ -1,0 +1,61 @@
+#container {
+    position: relative;
+    border: 1px solid black; 
+    height: 660px; 
+    width: 660px; 
+    background: url('acssets/background.jpg') ;
+    
+  }
+  #tank{
+    position: absolute; 
+    border-radius: 3px;
+    top: 0px;
+    left: 0px;
+    width: 60px;
+    height: 60px;
+    transform: rotate(180deg);
+  }
+  .center{
+    text-align: center;
+  }
+  .center td input{
+    width: 65px;
+  }
+  #boom {
+    position: absolute;
+    top: 60px; 
+    left: 60px;
+    width: 60px; 
+    height: 60px; 
+  }
+  #explosion {
+    display: none;
+    /* left: 281px;
+    top: 281px; */
+    position: relative;
+    border: 1px solid black; 
+    height: 660px; 
+    width: 660px;
+  }
+  #winner {
+    display: none;
+    /* left: 281px;
+    top: 281px; */
+    position: relative;
+    border: 1px solid black; 
+    height: 660px; 
+    width: 660px;
+  }
+  #bullet {
+  top: 0px; 
+  left: 0px;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  background-color: rgba(7, 11, 70, 0.8);
+  border-radius: 50%;
+}
+.bullet {
+  width: 107px;
+  height: 30px;
+}

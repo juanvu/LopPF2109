@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let tamgiac = Number(parseInt(prompt("Mời nhập vào: ")));
+
+        // Cách 1 sử dụng switch-case;
+        switch (tamgiac) {
+            case 1:
+                {
+                    for (var i=0; i<5; i++) {
+                        for (var j=0; j<=i; j++) {
+                            document.write("*");
+                        }
+                        document.write("<br>");
+                    }
+                    break;
+                }
+            case 2:
+            {
+                for (var i=0; i<5; i++) {
+                    for (var j=4; j>=i; j--) {
+                        document.write("*");
+                    }
+                    document.write("<br>");
+                }
+                break;
+            }
+            case 3:
+            {
+                for (var i=0; i<5; i++) {
+                    for (var j=3; j>=i; j--) {
+                        document.write("&nbsp;&nbsp;");
+                    }
+                    for (var j=0; j<=i; j++) {
+                        document.write("*");
+                    }
+                    document.write("<br>");
+                }
+                break;
+            }
+            case 4:
+            {
+                for (var i=0; i<5; i++) {
+                    for (var j=0; j<i; j++) {
+                        document.write("&nbsp;&nbsp;");
+                    }
+                    for (var j=4; j>=i; j--) {
+                        document.write("*");
+                    }
+                    document.write("<br>");
+                }
+                break;
+            }
+            default:
+                alert('Bạn nhập sai giá trị');
+        }
+
+        // Cách 2 sử dụng if + for 
+        // if (tamgiac == 1) {
+        //     for (var i=0; i<5; i++) {
+        //         for (var j=0; j<=i; j++) {
+        //             document.write("*");
+        //         }
+        //         document.write("<br>");
+        //     }
+        // }
+        // if (tamgiac == 2) {
+        //     for (var i=0; i<5; i++) {
+        //         for (var j=4; j>=i; j--) {
+        //             document.write("*");
+        //         }
+        //         document.write("<br>");
+        //     }
+        // }
+        // if (tamgiac == 3) {
+        //     for (var i=0; i<5; i++) {
+        //         for (var j=3; j>=i; j--) {
+        //             document.write("&nbsp;&nbsp;");
+        //         }
+        //         for (var j=0; j<=i; j++) {
+        //             document.write("*");
+        //         }
+        //         document.write("<br>");
+        //     }
+        // }
+        // if (tamgiac == 4) {
+        //     for (var i=0; i<5; i++) {
+        //         for (var j=0; j<i; j++) {
+        //             document.write("&nbsp;&nbsp;");
+        //         }
+        //         for (var j=4; j>=i; j--) {
+        //             document.write("*");
+        //         }
+        //         document.write("<br>");
+        //     }
+        // }
+    </script>
+</body>
+</html>

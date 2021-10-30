@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>bai tap dao chieu so</title>
+
+<style>
+table td {
+	border: 1px solid black;
+}
+</style>
+</head>
+<body>
+<div id='result'>
+	<table >
+		<tbody id='tBodyRs'>
+		</tbody>
+	</table>
+</div>
+</body>
+</html>
+<script>
+let innerTable = "";
+
+//"<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>"
+for(i=1; i <= 9; i++) {
+
+	let trEl = "<tr>";
+	for(j=2; j<=9; j++) {
+		trEl += `<td>${j}x${i}=${i*j}</td>`;
+	}
+	trEl += "</tr>";
+	innerTable += trEl;
+}
+
+document.getElementById('tBodyRs').innerHTML = innerTable;
+</script>

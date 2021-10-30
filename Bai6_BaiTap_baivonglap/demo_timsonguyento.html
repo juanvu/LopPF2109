@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Display Radio Buttons</h1>
+
+
+<script>
+	
+	
+	
+	let maxSoNguyenTo = 3;
+	let foundNumbers = [];
+	debugger;
+	let lastFoundNumber = 1;
+	while(foundNumbers.length <= 5) {
+		
+		if(lastFoundNumber > 2) {
+		
+			let tempNumer = lastFoundNumber;
+			
+			let isSoNguyenTo = false;			
+			for(i =2; i< tempNumer; i++) {
+				if(tempNumer % i == 0) {
+					isSoNguyenTo = true;
+					break;
+				}
+			}
+			if(isSoNguyenTo) {
+				foundNumbers.push(tempNumer);
+			}
+			
+		}
+		lastFoundNumber++;
+	} 
+	
+	console.log(foundNumbers.join(';'));
+
+</script>
+
+
+</body>
+</html>

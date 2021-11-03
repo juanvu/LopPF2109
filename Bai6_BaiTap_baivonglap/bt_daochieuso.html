@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>bai tap dao chieu so</title>
+
+</head>
+<body>
+<div id='result'>
+
+</div>
+</body>
+</html>
+<script>
+let number = Number(parseInt(prompt("Mời nhập số cần đảo ngược")));
+    let b = 0;
+
+
+while (number !== 0) {
+        b = b * 10 + number % 10;
+        number = (number - number % 10) / 10;
+    }
+    document.write(b);
+
+	<!-- let userInput = '321'; -->
+	
+	<!-- let index2 = 1; -->
+	<!-- //userInput.length = 3 -->
+	<!-- let reverseNumber = ""; -->
+	<!-- while(index2 <= userInput.length) { -->
+		
+		<!-- reverseNumber += userInput.substring(userInput.length-index2, userInput.length); -->
+		
+		<!-- index2++; -->
+	<!-- } -->
+
+</script>

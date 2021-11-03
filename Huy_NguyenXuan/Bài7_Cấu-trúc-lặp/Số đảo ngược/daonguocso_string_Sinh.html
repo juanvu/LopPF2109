@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Chương trình đảo ngược chuỗi</h2>
+    <button id="str" onclick="start();">Bắt đầu</button>
+    <script>
+        let guessStr = prompt("Nhập vào chuỗi của bạn:");
+        let reverseStr = "";
+
+        function result() {
+            let length = guessStr.length; 
+            if(isNaN(guessStr)) {
+                for(let i = length-1 ; i >= 0; i--) {
+                    reverseStr += guessStr[i];
+                }
+                return reverseStr;
+            }else {
+                for(let i = length-1 ; i >= 0; i--) {
+                    if(guessStr[i] == 0) {
+                        continue;
+                    }
+                    reverseStr += guessStr[i];
+                }
+                return reverseStr;
+            }
+        }
+
+        function start() {
+            result();
+            alert("Chuỗi của bạn sau khi đảo ngược là : " + reverseStr);
+        }
+    </script>
+</body>
+</html>

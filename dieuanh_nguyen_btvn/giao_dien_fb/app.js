@@ -94,7 +94,7 @@ function loadMoreItems(nbItems){
 function createPostTemplate(post){
     let now = moment();
     let $template = $("#news-feed-template").clone(true).removeAttr("id");
-    let $comment = $template.find("#comment-template").clone(true).removeAttr("id");
+    let $commentTemplate = $template.find("#comment-template").clone(true).removeAttr("id");
     let postTime = moment(post.time);
     let postTimeText = postTime.fromNow();
     console.log(postTime.diff(now,"days",true));
@@ -112,6 +112,7 @@ function createPostTemplate(post){
     }
     if (!!post.comments){
         post.comments.forEach(function(comment){
+            let $comment = $commentTemplate.clone(true);
             $comment.find(".comment-user").text(comment.name);
             $comment.find(".comment-message").text(comment.message);
             $comment.find(".comment-time").text(moment(comment.time).fromNow());

@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>demo toan user name password</title>
+
+</head>
+<body>
+<div id='result'>
+
+</div>
+</body>
+</html>
+<script>
+	/*
+Viết chương hình hiển thị thẻ <hr> theo độ rộng từ 1 đến 100. Kết quả sẽ được hiển thị như hình
+*/
+
+
+
+
+
+let userInput; 
+while (true) {
+	userInput = prompt('Moi ban nhap so tu 0=>9, nhap "q" de thoat chuong trinh');
+	if(userInput == 'q') {
+		break
+	}
+	let luckyNumber = Math.floor((Math.random()*10)); 
+	if(userInput == luckyNumber) {
+		alert(`so lucky la: ${luckyNumber}, so cua ban vao nhap vao la ${userInput}. Ban chien thang`);
+	}else {
+		alert(`so lucky la: ${luckyNumber}, so cua ban vao nhap vao la ${userInput}. Ban  hua roi`);
+	}
+
+}
+
+
+</script>

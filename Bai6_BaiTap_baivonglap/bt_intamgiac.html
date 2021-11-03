@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>bai tap dao chieu so</title>
+
+<style>
+table td {
+	border: 1px solid black;
+}
+</style>
+</head>
+<body>
+<div id='result'>
+	<table >
+		<tbody id='tBodyRs'>
+		</tbody>
+	</table>
+</div>
+</body>
+</html>
+<script>
+let h = 5;
+
+let width = 1;
+
+
+while(h > 0) {
+	let printOutput = "";
+	
+	let tempWidth = 0;
+	while(tempWidth < width) {
+		printOutput += "*";
+		tempWidth++
+	}
+	
+	<!-- let space = ""; -->
+	<!-- let temptVal =0 ; -->
+	<!-- while(temptVal  < h-width) { -->
+		<!-- space += " "; -->
+		<!-- temptVal ++; -->
+	<!-- } -->
+	
+	
+	
+	
+	console.log(space + printOutput);
+	
+	h--;
+	width++;
+}
+
+</script>

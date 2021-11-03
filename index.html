@@ -7,55 +7,12 @@
     <title>Document</title>
     <script src="./main.js"></script>
 </head>
-
-<style>
-    #firstSelect {
-        padding: 0 30px;
-    }
-
-    #secondSelect {
-        padding: 0 30px;
-    }
-    
-    
-    td {
-        padding: 0 30px;
-    }
-
-    #btn {
-        color: #fff;
-        background-color: rgb(119, 29, 122);
-        padding: 0 5px;
-    }
-</style>
-
 <body>
-    <table id="table">
-        <tr>
-            <th>Amount</th>
-            <th>From Currency</th>
-            <th>To Currency</th>
-        </tr>
+    <h1>Sample Screen:</h1>
+    <input type="text" name="" id="inputText">
+    <input type="button" value="Add" name="addBtn" onclick="addTxt();" id="">
+    <input type="button" value="Display" name="displayBtn" onclick="displayTxt();" id="">
 
-        <tr>
-            <td><input type="text" name="" id="firstInput"></td>
-            <td><select name="" id="firstSelect">
-                    <option id="vnCurrency" value="">VND</option>
-                    <option id="usdCurrency" value="">USD</option>
-                </select>
-            
-            </td>
-            <td><select name="" id="secondSelect">
-                    <option id="vnCurrency" value="">VND</option>
-                    <option id="usdCurrency" value="">USD</option>
-                </select>
-            </td>
-
-            <td><input onclick="showValue();" type="button" value="Convert" name="" id="btn"></td>
-        </tr>
-        
-    </table>
-
-    <p id="convert"></p>
+    <div id="result"></div>
 </body>
 </html>

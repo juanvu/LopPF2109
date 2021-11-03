@@ -1,8 +1,17 @@
-let showValue = function() {
-    document.getElementById('vnCurrency');
-    document.getElementById('usdCurrency');
-    let input = document.getElementById('firstInput').value;
-    
-    let convert = parseInt(input) / 23000;
-    document.getElementById('convert').innerText = convert;
+let x = 0;
+let array = Array();
+
+function addTxt() {
+    array[x] = document.getElementById('inputText').value;
+    alert("Element: " + array[x] + "Added text index" + x);
+    x++;
+    document.getElementById('inputText').value;
+}
+
+function displayTxt() {
+    let e = "<hr/>";
+    for ( let i = 0; i < array.length; i++) {
+        e += "Element " + i + " = " + array[i] + "<br/>";
+    }
+    document.getElementById('result').innerHTML = e;
 }

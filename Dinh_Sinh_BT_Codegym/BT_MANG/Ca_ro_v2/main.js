@@ -58,20 +58,39 @@ function checkWin (key) {
     let check = false;
     for(let i =  0 ; i < 5 ; i ++) {
         for(let j = 0 ; j < 5 ; j++) {
-            if(j < 3) {
-                if(board[i][j] == key && board[i][j+1] == key && board[i][j+2] == key) {
-                    check = true;
-                    break;
+            if(j <= 4-4) {
+                if(board[i][j] != board[i][j+1] && board[i][j+3] != board[i][j+4]) {
+                    check = false;
+                }else {
+                    if(j < 3) {
+                        if(board[i][j] == key && board[i][j+1] == key && board[i][j+2] == key) {
+                            check = true;
+                            break;
+                        }
+                    }
                 }
             }
-            if(i < 3) {
-                if(board[i][j] == key && board[i+1][j] == key && board[i+2][j] == key) {
+            if(i <= 4-4) {
+                if(board[i][j] != board[i+1][j] && board[i+3][j] != board[i+4][j]) {
+                    check = false;
+                }else {
+                    if(i < 3) {
+                        if(board[i][j] == key && board[i+1][j] == key && board[i+2][j] == key) {
+                            check = true;
+                            break;
+                        }
+                    }
+                }
+            }
+            
+            if(i < 4 && j < 4 && i > 1 && j > 1) {
+                if(board[i][j] == key && board[i-1][j+1] == key && board[i+1][j-1] == key) {
                     check = true;
                     break;
                 }
             }
             if(i < 4 && j < 4 && i > 1 && j > 1) {
-                if(board[i][j] == key && board[i-1][j+1] == key && board[i+1][j-1] == key) {
+                if(board[i][j] == key && board[i-1][j-1] == key && board[i+1][j+1] == key) {
                     check = true;
                     break;
                 }

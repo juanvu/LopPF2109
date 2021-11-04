@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="table">
+        <h2>Sample Screen:</h2>
+        <input type="text" width="35px" id="value"/>
+        <input type="button" value="Add" width="25px" onclick="add()"/>
+        <input type="button" value="Display" width="25px" onclick="display()"/>
+        <hr>
+        <div id="show">
+
+        </div>
+    </div>
+</body>
+<script>
+
+    let x=0;
+    let array=Array();
+    function add(){
+        array[x] = document.getElementById("value").value;
+        console.log(array[x]);
+        x++;
+        document.getElementById("value").value = "";
+    }
+    
+    function display(){
+        let e;
+        for(var i=0;i<array.length;i++){
+            
+            e+="Element["+i+"] :"+array[i]+"<br/>"
+        }
+        document.getElementById("show").innerHTML=e;
+    }
+</script>
+
+</html>

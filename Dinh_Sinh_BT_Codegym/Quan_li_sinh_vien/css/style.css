@@ -1,0 +1,44 @@
+th {
+    width: 150px;
+    height: 30px;
+  }
+  h2 {
+    text-transform: uppercase;
+  }
+  td {
+    text-align: center;
+    line-height: 30px;
+  }
+  table, th, td{
+    border:1px solid blueviolet;
+  }
+  table {
+    border-collapse: collapse;
+  }
+  .form-send{
+    width: 500px;
+    border: 2px solid rgb(39, 33, 33);
+    padding: 5px;
+  }
+
+  .form-send > label {
+    width: 100px;
+    float: left;
+  }
+  .form-send > input {
+    width: 350px;
+  }
+
+  .form-control {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    }

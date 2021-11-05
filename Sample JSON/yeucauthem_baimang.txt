@@ -1,0 +1,5 @@
+tìm xem có bao nhiêu người yêu thích quả chuối, và in ra tên những người đó: (favoriteFruit)
+tìm xem ai có nhiều bạn bè nhất, in ra tên người đó.
+tìm và in ra danh sách đàn ông trên 30 tuổi, có số dư tiền là trên 2000$
+tìm người đăng ký (registered) trước thời điểm 2019-10-10
+in ra tất cả các tên miền của email (ko được trùng lặp). tên miền là chuỗi sau dấu @

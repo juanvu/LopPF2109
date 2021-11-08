@@ -10,8 +10,8 @@ if (userInput) {
         if(dics[i].key.toUpperCase() == userInput.toUpperCase()) {
             let foundDic = dics[i];
             foundResult = true;
-        alert("Dich ra vietnamese la: " + foundDic.vietnam);
-        break;
+            alert("Dich ra vietnamese la: " + foundDic.vietnam);
+            break;
         } 
     }
     if (!foundResult) {

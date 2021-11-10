@@ -3,14 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=`, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            width: 800px;
+            table-layout: fixed;
+        }
+        td{
+            border: 1px solid black;
+            width: 20px;
+            height: 20px;
+            padding: 5px;
+            text-align: center;
+        }
+        td:hover{
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <h2>Trò chơi cờ Caro</h2>
-    <p id="carogame"></p>
-    <input id="player1" style="display: initial;" type="button" value="Player 1" onclick="player1()">
-    <input id="player2" style="display: none;" type="button" value="Player 2" onclick="player2()">
+    <table>
+        <tbody id="gameBoard">
+        
+        </tbody>
+    </table>
+    <script src="main.js"></script>
 </body>
-<script src="main.js"></script>
 </html>

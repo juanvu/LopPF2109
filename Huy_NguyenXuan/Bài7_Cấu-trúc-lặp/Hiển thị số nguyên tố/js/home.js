@@ -1,19 +1,14 @@
-let n = Number(prompt("Mời nhập số lượng số nguyên tố cần in ra"));
-function in_snt(n) {
-    let count;
-    for 
-}
-function kiem_tra_snt(cout) {
-    // Biến cờ hiệu
+let indexGuess = Number(prompt("Nhập vào số lượng số nguyên tố mà bạn muốn xem (Tốc độ sẽ nhanh hơn khi dưới 100 số)"));
+
+let snt = `<table border='1' width='300' cellspacing='0' cellpadding='3'>`;
+
+function check(n) {
     let flag = true;
- 
-    // Nếu n bé hơn 2 tức là không phải số nguyên tố
     if (n < 2){
         flag = false;
     }
     else{
-        // lặp từ 2 tới n-1
-        for (var i = 2; i < n-1; i++)
+        for (let i = 2; i < n; i++)
         {
             if (n % i == 0){
                 flag = false;
@@ -21,9 +16,26 @@ function kiem_tra_snt(cout) {
             }
         }
     }
- 
-    // Kiểm tra biến flag
-    if (flag == true){
-        document.write(n);
+    return flag;
+}
+
+function result() {
+    let i = 1;
+    let numStart = 2;
+    while(i <= indexGuess) {
+        if (check(numStart)) {
+            snt += `<td> ${numStart} </td>`;
+            i++;
+        }
+        numStart++;
+        if(i > 20 &&  (i-1)%20 == 0) {
+            snt += "</tr>";
+        }
     }
+    snt += `</table>`;
+}
+
+function start() {
+    result();
+    document.write(snt)
 }

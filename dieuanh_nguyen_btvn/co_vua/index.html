@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #board{
+            table-layout:fixed;
+            width: 540px;
+            height:540px;
+            border-collapse: collapse;
+        }
+        #board th,#board td{
+            height: 48px;
+            width: 48px;
+            text-align: center;
+            padding: 5px;
+        }
+        #board tbody tr>td:not(:first-child){
+            border: 1px solid black;
+        }
+        #board tbody tr>td:first-child{
+            text-align: right;
+            padding-right: 10px;
+            font-weight: bold;
+        }
+        #board thead tr>th{
+            padding-bottom: 10;
+            vertical-align: bottom;
+        }
+        #board td.board-cell.black{
+            background-color:rgba(0, 0, 0, 0.719);
+        }
+    </style>
+</head>
+<body>
+    <table id="board">
+        <thead>
+            <tr>
+                <th></th>
+                <th>A</th>
+                <th>B</th>
+                <th>C</th>
+                <th>D</th>
+                <th>E</th>
+                <th>F</th>
+                <th>G</th>
+                <th>H</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+</html>

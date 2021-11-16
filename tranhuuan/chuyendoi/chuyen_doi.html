@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+function checkSnt(number) {
+    if (number < 2) {
+        return false;
+    } else {
+        if (number == 2) {
+            return true;
+        } else {
+            for (let i = 2; i <= Math.sqrt(number); i++) {
+                if (number % i == 0) {
+                    return false;
+                }else{
+                    return true;
+                }
+            }
+        }
+    }
+}
+let arr = [];
+
+function dem() {
+
+    for (let j = 0; j < 1000; j++) {
+        if (checkSnt(j) == true) {
+            arr.push(j);
+        }
+    }
+
+}
+dem();
+console.log(arr);
+
+
+</script>
+
+</html>

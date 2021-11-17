@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function inputVal() {
+            let numberArray = [];
+            let numberValue = Number(prompt("Mời nhập vào số lượng số cần xử lý"));
+            for (var i=0; i < numberValue; i++) {
+                numberArray[i] = Number(prompt("Mời bạn nhập vào số thứ " + (i+1)));
+            }
+            let numberMin = numberArray[0];
+            for (var i=1; i < numberValue; i++) {
+                if (numberArray[i] < numberMin) {
+                    numberMin = numberArray[i];
+                }
+            }
+            alert(numberMin);
+        }
+        inputVal();
+    </script>
+</body>
+</html>

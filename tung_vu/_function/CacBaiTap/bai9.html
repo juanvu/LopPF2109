@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 8</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let arr = [];
+    let nums = 0;
+    do {
+        nums = Number(prompt("Nhập vào số phần tử của mảng:"));
+    } while (isNaN(nums));
+    for (let i = 0; i < nums; i++) {
+        arr.push(prompt(`Nhập vào phần tử [${i}]:`))
+    }
+    alert(`Mảng mới là: ${newArr(arr)}`);
+    function newArr(arr) {
+        return arr.reverse();
+    }
+</script>

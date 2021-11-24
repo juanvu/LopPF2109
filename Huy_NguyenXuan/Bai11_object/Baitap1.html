@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id='myCanvas' width="300" height="300" style='border:1px solid #d3d3d3;'>
+    <p>
+        The browser does not support canvas.
+    </p>
+</canvas>
+    <script>
+        let Rectangle = class {
+            constructor (width,height) {
+                this.width = width;
+                this.height = height;
+            }
+            getArea() {
+                document.write("<br>Area: " + this.width*this.height);
+            }
+            getPerimeter() {
+                document.write("<br>Perimeter: " + ((this.width + this.height)*2));
+            }
+            draw() {
+                var c = document.getElementById("myCanvas");
+                var ctx = c.getContext('2d');
+                ctx.beginPath();
+                ctx.rect(100,20,this.width,this.height);
+                ctx.stroke();
+            }
+        }
+        let rec1 = new Rectangle(200,150);
+        document.write("<br>width: " + rec1.width);
+        // rec1.width = 5;
+
+        document.write("<br>height: " + rec1.height);
+        rec1.getArea();
+        rec1.getPerimeter();
+        rec1.draw();
+    </script>
+</body>
+</html>

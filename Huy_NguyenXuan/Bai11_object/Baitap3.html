@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let Apple = class {
+        
+        constructor(){
+            this.KhoiLuong = 10;
+        }
+        
+        //ham giam don vi cua tao di 1
+        decrease() {
+            if(this.KhoiLuong > 0) {
+                this.KhoiLuong--;
+            }
+        }
+        
+        isEmpty() {
+            
+        }
+        
+        getWeight() {
+            this.KhoiLuong;
+        }
+    }
+
+
+    let Humman = class {
+        constructor(name, gender, weight) {
+            this.name = name;  //field + Có tên.
+            this.gender = gender;  //+ Có giới tính.
+            this.weight = weight; //+ Có cân nặng.
+        }
+        
+        isMale(){
+            return this.gender > 0 ? "Male" : "Female";
+        }
+        
+        setGender(gender){
+            this.gender = gender;
+        }
+        
+        checkApple(apple){
+            if(apple) {
+                return apple.getWeight();
+            }
+        }
+        
+        //ham an tao
+        eat(apple){
+            /* + Biết ăn táo. Mỗi lần ăn, chỉ ăn một miếng táo (1đv). 
+            Khi ăn táo, khối lượng của người đó sẽ tăng lên một đv và khối lượng quả táo sẽ giảm đi một đv.
+            Chỉ ăn táo khi khối lượng của quả táo lớn hơn 0.
+            */
+            if(apple.getWeight() > 0) {
+                apple.decrease();
+                this.weight++;
+            }
+            
+        }
+        
+        
+        //+ Biết nói một chuỗi các từ. (bằng cách in ra màn hình console chuỗi đó)
+        say(text) {
+            if(text) {
+                console.log(text);
+            }
+        }
+        
+        
+        getName() {
+            return this.name;
+        }
+        
+        setName(name){
+            this.name = name;
+        }
+        
+        getWeight() {
+            return this.weight;
+        }
+        
+        setWeight(weight) {
+            this.weight = weight;
+        }
+    }
+
+    let tao = new Apple();
+    let man = new Humman("Adam",-2,70);
+    console.log(man.eat(tao));
+    console.log(man);
+    console.log(tao.getWeight());
+    console.log(tao);
+    </script>
+</body>
+</html>

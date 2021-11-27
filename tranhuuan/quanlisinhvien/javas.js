@@ -1,85 +1,118 @@
 
-function check(){
-    
-    let id = document.getElementById('id').value;
-    let name = document.getElementById('name').value;
-    let sinh = document.getElementById('sinh').value;
-    let sex = document.getElementById('sex').value;
-    let age = document.getElementById('age').value;
-    let class2 = document.getElementById('class2').value;
-    if(id!=""){
-        if(name!=""){
-            if(sinh!=""){
-                  if(sex!=""){
-                        if(age!=""){
-                             if(class2!=""){
-                                
-                             }else{
-                                 alert("bạn chưa nhập môn học");
-                             }
+let students = [
+    {
+        Id: 2051120088,
+        Name: "tranhuuan",
+        ngaySinh: '17/03/2002',
+        sex: 'nam',
+        age: 20,
+        class2: 'python',
+    },
+];
+
+// cài đặt student
+
+function getStudent() {
+    let recod = document.getElementById('recods');
+    recod.innerHTML = '';
+    let rowItem = '';
+    if (students) {
+
+        for (let i = 0; i < students.length; i++) {
+            let student = students[i];
+            rowItem = `
+                <tr>
+                    <td>${student.Id}<td>
+                    <td>${student.Name}</td>
+                    <td>${student.ngaySinh}</td>
+                    <td>${student.sex}</td>
+                    <td>${student.age}</td>
+                    <td>${student.class2}</td>
+                    <td><input type='button' value='remove' onclick = 'remove(${student.Id})'/><input type='button' value='update' onclick = 'update(${student.Id})'/></td>
+                <tr>
+        `;
+        recod.innerHTML += rowItem;
+        }
+        
+    }
+
+}
+
+getStudent();
+// kiểm tra thông tin sinh viên
+function kiemtrathongtin(Id, name, ngaySinh, sex, age, class2) {
+    let val = false;
+    if(Id){
+        if(name){
+            if(ngaySinh){
+                if(sex){
+                    if(age){
+                        if(class2){
+                            val = true;
                         }else{
-                            alert("bạn chưa nhập tuổi");
+                            alert('lớp không được để trống!!');
                         }
-                  }else{
-                      alert("không có dữ liệu(sex)");
-                  }
+                    }else{
+                        alert('tuoi khong duoc để trống');
+                    }
+                }else{
+                    alert('giới tính không được trống');
+                }
             }else{
-                alert("bạn chưa nhập ngày tháng năm sinh");
+                alert('ngày sinh không được để trống');
             }
         }else{
-            alert("bạn chưa nhập tên");
+            alert("tên không được để trống");
         }
     }else{
-        alert("bạn chưa nhập id");
+        alert('thông tin id không được để trống');
     }
+    return val;
 }
+// lưu thông tin sinh viên lên bảng recods
+function saveStudent() {
+    let mssv = document.getElementById('id').value;
+    let hoten = document.getElementById('name').value;
+    let born = document.getElementById('born').value;
+    let gioiTinh = document.getElementById('sex').value;
+    let tuoi = document.getElementById('age').value;
+    let lop = document.getElementById('class2').value;
+    let kiemtra = kiemtrathongtin(mssv, hoten, born, gioiTinh, tuoi, lop);
+    if(kiemtra == true){
+        let student = {
+            Id: mssv,
+            Name: hoten,
+            ngaySinh: born,
+            sex: gioiTinh,
+            age: tuoi,
+            class2: lop,
+        };
+        students.push(student);
+        getStudent();
+    }
+};
 
-function getStudent(){
-    const myNode=document.getElementById("recods")
-    myNode.innerHTML="";
-    if(students){
-        //khai báo một biến để dùng để lưu danh sách students
-        let rowitems;
-        for(var i=0;i<students.length;i++){
-            let student=students[i];//lấy ra một student cụ thể trong danh sách students
-            let rowitem=`<tr><td id='td'>${id}</td> <td id='td'>${name}</td><td id='td'>${sinh}</td><td id='td'>${sex}</td><td id='td'>${age}</td><td id='td'>${class2}</td><td>
-            <input type="button" value="xóa" onclick=""/>
-            <input type="button" value="sửa" onclick=""/>
-            </td></tr>`;
-            //thêm 1 rowitem trong vào trong rowitems 
-            rowitems+=rowitem;
+function remove(Id){
+    for( let i = 0; i< students.length;i++){
+        let student = students[i];
+        if(student.Id == Id){
+            students.splice(i,1);
         }
-        myNode.innerHTML=rowitems;
-
     }
+    getStudent();
 }
 
-
-function myclick() {
-    check();
-    let students={
-        id :"A20",
-        name : "nguyen thi anh",
-        sinh : "1/03/2002",
-        sex : "nam",
-        age : "19",
-        class2 : "c++",
+function update(Id){
+    let ma = document.getElementById('id').value;
+    let ten = document.getElementById('name').value;
+    let sinh = document.getElementById('born').value;
+    let sex = document.getElementById('sex').value;
+    let tuoi = document.getElementById('age').value;
+    let lop = document.getElementById('class2').value;
+    for(let i = 0; i < students.length; i++){
+        let student = students[i];
+        if(student.Id == Id){
+            ma.innerText = student.Id;
+        }
     }
-    const myNode=document.getElementById("recods");
-    myNode.innerHTML="";
-    let rowitems="";
-    for(var i=0;i<students.length;i++){
-        let student=students[i];
-        let rowitem=`<tr><td id='td'>${student.id}</td> 
-                        <td id='td'>${student.name}</td>
-                        <td id='td'>${student.sinh}</td>
-                        <td id='td'>${student.sex}</td>
-                        <td id='td'>${student.age}</td>
-                        <td id='td'>${student.class2}</td>
-                        <td><input type="button" value="xóa" onclick=""/>
-                        <input type="button" value="sửa" onclick=""/>
-                        </td></tr>`;
-        rowitems+=rowitem;
-    }
-    myNode.innerHTML=rowitems;
 }

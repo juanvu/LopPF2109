@@ -1,112 +1,109 @@
-let showGame = document.getElementById("carogame");
-
-let board = [];
-let data = "";
-for (let i = 0; i < 5; i++) {
-    board[i] = ['?', '?', '?', '?', '?'];
+let sizeX, sizeY, board,playersHistory,player1Turn;
+const PLAYER_1 = "X";
+const PLAYER_2 = "O";
+window.onload = function(e){
+    initGameBoard();
 }
 
-for (let i = 0; i < 5; i++) {
-    data += "<br/>";
-    for (let j = 0; j < 5; j++) {
-        data += board[i][j] + "&nbsp;&nbsp;";
+function initGameBoard(){
+    do {
+        //sizeX = prompt("Nhap chieu rong cua ban co");
+        sizeX = 20;
+        sizeX = parseInt(sizeX);
     }
-}
-showGame.innerHTML = data;
-
-function player1() {
-    let positionX = prompt("Nhập vào tọa độ của Y: ");
-    let positionY = prompt("Nhập vào tọa độ của X: ");
-    data = "";
-    board[positionX-1][positionY-1] = "X";
-    for (let i = 0; i < 5; i++) {
-        data += "<br/>";
-        for (let j = 0; j < 5; j++) {
-            data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+    while (isNaN(sizeX) || sizeX <= 0);
+    do {
+        //sizeY = prompt("Nhap chieu cao cua ban co");
+        sizeY = 20;
+        sizeY = parseInt(sizeY);
+    }
+    while (isNaN(sizeY) || sizeY <= 0 );
+    board = [];
+    // Theo hang
+    for (let i = 0; i<sizeY; i ++){
+        board[i] = [];
+        // Theo cot
+        for (let j = 0; j<sizeX; j++){
+            board[i][j] = ".";
         }
     }
-    if(checkWin("X")) {
-        alert("Xin chúc mừng player 1 đã win !!!");
-        resetGame();
-    }
-    showGame.innerHTML = "<hr/>" + data;
-    document.getElementById("player1").style.display = 'none';
-    document.getElementById("player2").style.display = 'initial';
+    playersHistory = {
+        [PLAYER_1]: [],
+        [PLAYER_2]: []
+    };
+    player1Turn = true;
+    showGame();
 }
 
-function player2() {
-    let positionX = prompt("Nhập vào tọa độ của Y: ");
-    let positionY = prompt("Nhập vào tọa độ của X: ");
-    data = "";
-    board[positionX-1][positionY-1] = "O";
-    for (let i = 0; i < 5; i++) {
-        data += "<br/>";
-        for (let j = 0; j < 5; j++) {
-            data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+function showGame(){
+    const gameBoard = document.getElementById("gameBoard");
+    gameBoard.innerHTML = "";
+    for (let i = 0; i<sizeY; i ++){
+        const row = document.createElement("tr");
+        for (let j = 0; j<sizeX; j++){
+            const cell = document.createElement("td");
+            if (board[i][j] === "."){
+                cell.addEventListener("click",(e)=>clickCell(e,i,j))
+            }
+            cell.textContent = board[i][j];
+            row.appendChild(cell);
         }
+        gameBoard.appendChild(row);
     }
-    if(checkWin("O")) {
-        alert("Xin chúc mừng player 2 đã win !!!");
-        resetGame();
-    }
-    showGame.innerHTML = "<hr/>" + data;
-    document.getElementById("player2").style.display = 'none';
-    document.getElementById("player1").style.display = 'initial';
 }
 
-function checkWin (key) {
-    let check = false;
-    for(let i =  0 ; i < 5 ; i ++) {
-        for(let j = 0 ; j < 5 ; j++) {
-            if(j <= 4-4) {
-                if(board[i][j] != board[i][j+1] && board[i][j+3] != board[i][j+4]) {
-                    check = false;
-                }else {
-                    if(j < 3) {
-                        if(board[i][j] == key && board[i][j+1] == key && board[i][j+2] == key) {
-                            check = true;
-                            break;
-                        }
-                    }
-                }
-            }
-            if(i <= 4-4) {
-                if(board[i][j] != board[i+1][j] && board[i+3][j] != board[i+4][j]) {
-                    check = false;
-                }else {
-                    if(i < 3) {
-                        if(board[i][j] == key && board[i+1][j] == key && board[i+2][j] == key) {
-                            check = true;
-                            break;
-                        }
-                    }
-                }
-            }
-            
-            if(i < 4 && j < 4 && i > 1 && j > 1) {
-                if(board[i][j] == key && board[i-1][j+1] == key && board[i+1][j-1] == key) {
-                    check = true;
-                    break;
-                }
-            }
-            if(i < 4 && j < 4 && i > 1 && j > 1) {
-                if(board[i][j] == key && board[i-1][j-1] == key && board[i+1][j+1] == key) {
-                    check = true;
-                    break;
-                }
-            }
-            if(i < 3 && j < 3) {
-                if(board[i][j] == key && board[i+1][j+1] == key && board[i+2][j+2] == key) {
-                    check = true;
-                    break;
+function clickCell(e,i,j){
+    if (board[i][j] === "."){
+       if (player1Turn){
+           playersHistory[PLAYER_1].push([i,j]); 
+           board[i][j] = "X";
+       }
+       else{
+            playersHistory[PLAYER_2].push([i,j]); 
+            board[i][j] = "O";
+       }
+       showGame();
+       const endGame = checkEndGame();
+        if (endGame){
+            setTimeout(function(){
+                alert("Van dau ket thuc");
+                initGameBoard();
+            },500);
+            return;
+        }
+        player1Turn = !player1Turn;
+    }
+    else{
+        alert("Ban khong the choi vao o nay !");
+    }
+}
+
+function checkEndGame(){
+    let endGame = checkWinner();
+    if (endGame){
+        alert(player1Turn?`Player 1 (${PLAYER_1}) da thang`:`Player 2 (${PLAYER_2}) da thang`);
+    }
+    else{
+        for (let i = 0; i<sizeY; i ++){
+            for (let j = 0; j<sizeX; j++){
+                if (board[i][j] === "."){
+                    return false;
                 }
             }
         }
+        alert("Ban co khong con cho trong");
     }
-    return check;
+    return true;
 }
 
-function resetGame() {
-    alert("Quá trình tạo mới trò chơi đang diễn ra !!!");
-    location.reload();
+function checkWinner(){
+    const player = player1Turn?PLAYER_1:PLAYER_2;
+    const turns = playersHistory[player];
+    if (turns.length>=4){
+        const lastTurn = turns[turns.length-1];
+        const row = lastTurn[0];
+        const column = lastTurn[1];
+        return checkRow(row,column) || checkColumn(row,column) || checkDiagonal1(row,column) || checkDiagonal2(row,column);
+    }   
+    return false;
 }

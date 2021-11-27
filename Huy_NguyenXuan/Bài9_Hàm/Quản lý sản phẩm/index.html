@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type='text' id='txtProductName' max-length='255'/>
+        <input type='button' value='add' onclick='addProduct()'>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id='tbodyProducts'>
+            <tr>
+                <td>Sony experia</td>
+                <td><input type='button' id='btnEdit' product-name='' value='Edit'>
+                    &nbsp;&nbsp;&nbsp;
+                <input type='button' id='btnDelete' value='Delete'></td>
+            </tr>
+        </tbody>
+
+    </table>
+    <script src='JS/home.js'></script>
+</body>
+</html>

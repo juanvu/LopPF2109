@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function MyDate(day,month,year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+            this.getDay = function() {
+                return this.day;
+            }
+            this.getMonth = function() {
+                return this.month;
+            }
+            this.getYear = function() {
+                return this.year;
+            }
+            this.setDay = function(day) {
+                this.day = day;
+                return this.day;
+            }
+            this.setMonth = function(month) {
+                this.month = month;
+                return this.month;
+
+            }
+            this.setYear = function(year) {
+                this.year = year;
+                return this.year;
+            }
+            this.SetDate = function() {
+                alert("day: " + this.day + "; month: " + this.month + "; year:" + this.year);
+            }
+            this.toString = function() {
+                strDate = this.day + "/" + this.month + "/" + this.year;
+                return strDate.toString();
+            }
+        }
+
+        let date1 = new MyDate(2,10,2007);
+        let day = date1.getDay(); // 2
+        let month = date1.getMonth(); // 2
+        let year = date1.getYear(); // 2007
+        alert(day + "/" + month + "/" + year);
+
+        day = date1.setDay(10); //10
+        month = date1.setMonth(8); //8
+        year = date1.setYear(2019); //2019
+        alert(day + "/" + month + "/" + year);
+
+        date1.SetDate();
+        alert(date1.toString());
+        //Chú ý sự khác nhau của this.day và day:
+        //Khi dùng this.day giá trị biến sẽ thay đổi theo code
+        //Khi dùng day giá trị biến sẽ cố định theo biến khai báo ở đầu class
+    </script>
+</body>
+</html>

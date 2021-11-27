@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="game"></div>
+</body>
+<script>
+    function Hero(image, top, left, size, speed){
+  this.image = image;
+  this.top = top;
+  this.left = left;
+  this.size = size;
+  this.speed = speed;
+  
+  this.getHeroElement = function(){
+    return '<img width="'+ this.size + '"' +
+      ' height="'+ this.size + '"' +
+      ' src="' + this.image +'"' +
+      ' style="top: '+this.top+'px; left:'+this.left+'px;position:absolute;" />';
+  }
+
+  
+  this.move = function(){
+    this.left;
+    this.top;
+    console.log('ok: ' + this.left);
+
+    if (window.innerWidth > this.left && this.top == top) {
+      this.left += this.speed;
+    }else if (window.innerHeight > this.top && this.left != left) {
+      this.top += this.speed;
+    }else if (this.left > left) {
+      this.left -= this.speed;
+    }else if (this.top > top ){
+      this.top -= this.speed;
+    }
+  }
+
+  
+}
+
+var hero = new Hero('./con_meo.jpg', 20, 30, 200, 150);
+
+function start(){
+  
+  hero.move();
+  document.getElementById('game').innerHTML = hero.getHeroElement();
+  setTimeout(start, 500)
+}
+
+start();
+</script>
+
+</html>

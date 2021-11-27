@@ -9,18 +9,10 @@
 <body>
     <script>
     let Apple = class {
+        
         constructor(){
             this.KhoiLuong = 10;
-            
-            Object.defineProperty(this, 'KhoiLuong', {
-            value: 10,
-            writable: false, //cho phep ghi/gan du lieu hay ko
-        configurable: false, //cho phep cau hinh hay ko 
-        enumerable: true // cho phep duyet trong mang hay ko
-            });
-            
         }
-        
         
         //ham giam don vi cua tao di 1
         decrease() {
@@ -34,7 +26,7 @@
         }
         
         getWeight() {
-            console.log("toi co khio luong la: " + this.KhoiLuong);
+            this.KhoiLuong;
         }
     }
 
@@ -47,7 +39,7 @@
         }
         
         isMale(){
-            return this.gender > 0 ? "Male" : "Female"
+            return this.gender > 0 ? "Male" : "Female";
         }
         
         setGender(gender){
@@ -98,6 +90,13 @@
             this.weight = weight;
         }
     }
+
+    let tao = new Apple();
+    let man = new Humman("Adam",-2,70);
+    console.log(man.eat(tao));
+    console.log(man);
+    console.log(tao.getWeight());
+    console.log(tao);
     </script>
 </body>
 </html>

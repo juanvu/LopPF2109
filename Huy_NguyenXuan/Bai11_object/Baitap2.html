@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let TempConvert = class {
+            constructor(c, commentX) {
+                this.C = c;
+            this.CommentX = commentX;
+            }
+            CommentX = ""
+            
+            convertToF() {
+                //(0°C × 9/5) + 32
+                document.write("<br>°C to °F: " + ((this.C * 1.8) + 32));
+            }
+            convertToK() {
+                //0°C + 273.15 = K
+                document.write("<br>°C to °K: " + (this.C + 273.15));
+            }
+        }
+
+        let temp1 = new TempConvert();
+        temp1.C = 25;
+        document.write("Nhiet do cai dat: " + temp1.C);
+        temp1.convertToF();
+        temp1.convertToK();
+        
+        temp1.ConmmentX = "new value 1";
+        console.log(temp1["ConmmentX"]);
+    </script>
+</body>
+</html>

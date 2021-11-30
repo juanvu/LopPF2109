@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //cong tac
+    let SwitchButton = class {
+        constructor(){
+        
+        }
+        
+        connectToLamp(inputlamp){
+            this.lamp = inputlamp;
+        }
+        
+        switchOff(){
+            if(this.lamp) {
+                this.lamp.turnOff();
+            }
+            
+        }
+        
+        switchOn() {
+            this.lamp.turnOn();
+        }
+    }
+
+
+    //den
+    let ElectricLamp = class {
+        constructor(name) {
+            this.name = name;
+            this.status = false;
+        }
+        
+        turnOff() {
+            this.status = false;
+            console.log('Den ' + this.name + ' tat.');
+        }
+        
+        turnOn() {
+            this.status = true;
+            console.log('Den ' + this.name + ' phat sang.');
+            
+        }
+    }
+
+
+
+    let congtac1 = new SwitchButton();
+
+
+    let denNhapNhay = new ElectricLamp('Den Nhap Nhay');
+
+    congtac1.connectToLamp(denNhapNhay);
+
+    congtac1.switchOn();
+
+    congtac1.switchOff();
+    </script>
+</body>
+</html>

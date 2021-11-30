@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+</style>
+
+<body>
+    
+</body>
+<script>
+    /*
+    1. chuyển kênh
+    2. tăng âm lượng
+    3. giảm âm lượng
+    4. bật tắt
+
+    */
+  
+
+    class tivi{
+        constructor(turnOn){
+            this.turnOn = turnOn;
+            this.remote = remote;
+            this.amthanh = 10;
+        }
+
+        // bật tắt tivi
+        on(){
+            console.log("on");
+        }
+
+        off(){
+            console.log("tat");
+        }
+        //tăng âm lượng
+        tangAmThanh(){
+            this.amthanh++;
+            console.log(this.amthanh);
+        }
+        //giảm âm thanh
+        giamAmThanh(){
+            this.amthanh--;
+        }
+
+        // chuyển kênh
+        chuyenKenh7(){
+            console.log("chuyen kênh 7");
+        }
+    }
+
+
+    class remote{
+        constructor(action, remote){
+            this.action = action;
+            this.remote = remote;
+        }
+    
+
+        // bật tắt
+        bat_tat(remote){
+            if(remote == true){
+                    this.remote.on();
+                // xử lí âm thanh
+                    if(this.action){
+                        this.remote.tangAmThanh();
+                        
+                    }else{
+                        this.remote.giamAmThanh();
+                    }
+                // chuyển đổi kênh
+                    if(this.action == 7){
+                        this.remote.chuyenKenh7();
+                    }
+            }else{
+                // màn hình tắt
+                this.remote.off();
+            }
+        }
+
+        
+    }
+
+let samsung = new tivi(false);
+
+let remo = new remote(7,samsung);
+remo.bat_tat(samsung);
+</script>
+</html>

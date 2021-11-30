@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function reverseNumber() {
+            let numberInput = Number(prompt("Mời nhập vào số lượng số cần đảo ngược"));
+            let numberArray = [];
+            for (var i=0; i<numberInput; i++) {
+                numberArray[i] = Number(prompt("Mời bạn nhập vào số " + (i+1)));
+            }
+            numberReverse = numberArray.reverse();
+            numberJoin = numberArray.join('-');
+            alert(numberJoin);
+        }
+        reverseNumber();
+    </script>
+</body>
+</html>

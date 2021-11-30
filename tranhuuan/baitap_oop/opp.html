@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="300" height="200" style="border:1px solid #d3d3d3;">
+        <p>
+        The browser does not support canvas.
+        </p>
+      </canvas>
+</body>
+<script>
+
+class hinhChuNhat{
+    constructor(dai, rong){
+        this.dai = dai;
+        this.rong = rong;
+    }
+
+    chuViHinhChuNhat(){
+        if(this.dai > 0 || this.rong > 0){
+            console.log((this.dai + this.rong)*2);
+        }else{
+            console.log("sai");
+        }
+    }
+    dienTichHinhChuNhat(){
+        if(this.dai > 0 || this.rong > 0){
+            console.log(this.dai * this.rong);
+        }else{
+            console.log("sai");
+        }
+    }
+
+    draw() {
+  	var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.beginPath();
+    ctx.rect(20, 20, this.dai, this.rong);
+    ctx.stroke();
+  }
+
+}
+
+var hinh1 = new hinhChuNhat(5,6);
+console.log("width :" + hinh1.dai);
+console.log("height " + hinh1.rong);
+hinh1.chuViHinhChuNhat();
+hinh1.dienTichHinhChuNhat();
+hinh1.draw();
+</script>
+</html>

@@ -26,7 +26,7 @@
         }
         
         getWeight() {
-            this.KhoiLuong;
+            return this.KhoiLuong;
         }
     }
 
@@ -93,7 +93,8 @@
 
     let tao = new Apple();
     let man = new Humman("Adam",-2,70);
-    console.log(man.eat(tao));
+    man.eat(tao);
+    man.eat(tao);
     console.log(man);
     console.log(tao.getWeight());
     console.log(tao);

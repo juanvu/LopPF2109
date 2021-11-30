@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>khia bao lop rectagle</title>
+</head>
+
+
+<body>
+
+<canvas id="myCanvas" width="300" height="200" style="border:1px solid #d3d3d3;">
+  <p>
+  The browser does not support canvas.
+  </p>
+</canvas>
+
+</body>
+<script>
+let Rectangle = class {
+	constructor(width, height) {
+		this.width = width;
+		this.height = height;
+	}
+	
+  //tinh dien tich
+	getArea() {
+		console.log(this.width*this.height);
+	}
+	
+  //tinh chu vi
+  getCV() {
+  	console.log(2*(this.width+this.height));
+  
+  }	
+  
+  draw() {
+  	var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.beginPath();
+    ctx.rect(20, 20, this.width, this.height);
+    ctx.stroke();
+  }
+}
+
+let rec1 = new Rectangle(200,150);
+console.log("wisdth: " + rec1.width);
+rec1.width = 5;
+
+console.log("height: " + rec1.height);
+rec1.getArea();
+
+rec1.draw();
+
+</script>
+</html>

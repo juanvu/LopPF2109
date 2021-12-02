@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+function checksdx(num) {
+    let sdn = 0;
+    let stemp = num;
+    while (num > 0) {
+        let laydu = num % 10;
+        num = Math.floor(num / 10);
+        sdn = sdn * 10 + laydu;
+    }
+
+    if (sdn == stemp) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+let num = Number(prompt('nhập vào một số nguyên bất kì'));
+checksdx(num);
+function xuat() {
+    if (checksdx(num) == true) {
+        console.log("đây là số đối xứng!!");
+    } else {
+        console.log("đây không phải là số đối xứng !!");
+    }
+}
+
+xuat();
+</script>
+
+</html>

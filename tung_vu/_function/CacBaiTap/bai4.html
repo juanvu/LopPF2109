@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 4</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let r = 0;
+    const pi = 3.14;
+    do {
+        r = parseFloat(prompt("Nhập vào bán kính:"));
+    } while (isNaN(r));
+    chuVi(r);
+    dienTich(r);
+    function chuVi(num) {
+        alert(`Chu vi hình tròn có bán kính ${r} là: ${2*r*pi}`);
+    }
+    function dienTich(num) {
+        alert(`Diện tích hình tròn có bán kính ${r} là: ${r*r*pi}`);
+    }
+</script>

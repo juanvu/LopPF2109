@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adam và Eva</title>
+</head>
+<body>
+    
+</body>
+<script>
+/*
+tạo một quả táo:
+    + quả táo có khối lượng mà chỉ có Adam và Eva có thẻ thay đổi
+    + constructor : chứa khối lượng của quả táo
+    + decrease    : khi Adam và Eva ăn thì khối lượng quả táo giảm xuống
+    + isEmtpty    : kiểm tra khối lượng này đã về 0 nếu là kết thúc hoạt động ăn
+    + getWieght   : hiển thị khối lượng
+
+tạo một class người
+    + constructor : chứa tên, giới tính, cân nặng
+    + ismale      : kiểm tra giới tính nếu lớn hơn 0 là male và bé hơn 0 là female
+    + setGender   : 
+    + eat(apple): khi gọi hàm decrease thì người ăn sẽ được cộng thêm 1 dv
+    + checkApple() : kiểm tra khối lượng của quả táo
+    + getName     : 
+    + setName     : 
+    + getWieght   :
+    + setWieght   :
+
+*/
+// tạo class quả táo
+    class Apple{
+        khoiluong;
+        constructor(){
+            this.khoiluong = 10;
+        }
+
+        decrease(){
+            this.khoiluong--;
+            console.log(this.khoiluong);
+        }
+        
+        isEmpty(){
+           return this.khoiluong > 0 ? true: false;
+            
+            
+        }
+        getWieght(){
+           return this.khoiluong;
+        }
+    };
+
+// tạo class  người
+ class human{
+     name;
+     gender;
+     weight;
+     constructor(name, gender, weight){
+         this.name = name;
+         this.gender = gender;
+         this.weight = weight;
+     }
+
+     isMale(){
+         return this.gender > 0 ? "male": "female";
+     }
+
+     setGender(gender){
+        this.gender = gender;
+     }
+
+     checkApple(Apple){
+        if(Apple){
+            return Apple.getWieght();
+        }
+     }
+
+     eat(Apple){
+         if(Apple.getWieght() > 0){
+            Apple.decrease();
+            this.weight++;
+            console.log(this.weight);
+        }else{
+            console.log("đã ăn xong");
+        }
+    }
+
+    getName(){
+        this.name = name;
+
+    }
+
+    setName(){
+        return this.name;
+
+    }
+
+    getWieght(){
+        this.weight = weight;
+    }
+
+    setWeight(){
+        return this.weight;
+    }
+ }  
+let tao = new Apple();
+let man = new human("Adam",-2,70);
+man.eat(tao);
+
+</script>
+</html>

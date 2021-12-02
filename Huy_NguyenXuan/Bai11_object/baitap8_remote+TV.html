@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let Remote = class{
+            constructor(ma) {
+                this.ma = ma;
+            }
+            chuyenKenh(tv, kenh) {
+                tv.chuyenKenh(kenh);
+            }
+            dieuChinhAmLuong() {
+
+            }
+
+        }
+
+        let Tivi = class {
+            constructor(kenh) {
+                this.kenh = kenh;
+                this.amLuong = 50;
+                this.trangThai = true;
+            }
+            chuyenKenh(tenkenh) {
+                this.kenh = tenkenh;
+            }
+            dieuChinhAmLuong() {
+
+            }
+            
+        }
+
+        let lgRemote = new Remote('lg');
+        let lgTv = new Tivi('');
+
+        lgRemote.chuyenKenh(lgTv, 'VTV6');
+    </script>
+</body>
+</html>

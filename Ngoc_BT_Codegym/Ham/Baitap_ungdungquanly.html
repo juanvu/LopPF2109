@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="txtProductName" maxlength="255"/>
+        <input type="button" onclick="addProduct()" value="Add" />
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="tbodyProducts">
+          <tr>
+            <td>Sony experia</td>
+            <td><input type='button' id='btnEdit' value='Edit' /> 
+            &nbsp; &nbsp; 
+            <input type="button" id="btnDelete" value="Delete"/></td>
+          </tr>
+        </tbody>        
+    </table>
+</body>
+<script>
+//luu ten cacs dien thoai
+let products = [];
+	
+	//add mockup datas
+	products.push("Nokia ex");
+	
+	//ham de add product
+	let addProduct = function() {
+        let productName = document.getElementById("txtProductName").value;
+        products.push(productName);
+
+        displayProducts();
+	}
+	
+	//ham de sua product
+	let editProduct = function() {
+        //lay ra duoc phan tu khi bam nut edit
+
+        //tim kiem product trong mang, roi cap nhat lai chinh no trong mang
+
+        //render, ve lai cai table
+	}
+	
+	//ham de xoa product
+	let deleteProduct = function() {
+	
+	}
+	
+	//ham hien thi danh sach product
+	//8h10
+	let displayProducts = function() {
+		//tim duoc the tbody cua cai table tren html
+		let tbody = document.getElementById('tbodyProducts');
+		
+		
+		let finalTbodyHtml = "";
+		//duyet danh sach san pham, su dung for
+		let elFormat = "<tr><td>${productName}</td><td><input type='button' id='btnEdit' value='Edit' /> &nbsp;	&nbsp;<input type='button' id='btnDelete' value='Delete' /></td></tr>";
+		for(let i=0;i < products.length;i++) {
+			finalTbodyHtml += elFormat.replace('${productName}',products[i]).replace();
+		}
+		
+		
+		//trong khi duyet thi append cac Row san pham vao
+		tbody.innerHTML = finalTbodyHtml;
+	}
+	
+	displayProducts();
+</script>
+</html>

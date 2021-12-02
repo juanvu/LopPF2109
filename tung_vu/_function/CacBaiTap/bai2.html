@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 2</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let arr1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let arr2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    let input = prompt("Mời nhập vào:");
+    check(input);
+    function check(str) {
+        for (const key1 in arr1) {
+            if (arr1[key1].toUpperCase() === str.toUpperCase()) {
+                for (const key2 in arr2) {
+                    if (key1 == key2) {
+                        alert(`Chòm sao: ${arr2[key2]}`);
+                    }
+                }
+            } else alert(`${input} không phù hợp!`)
+        }
+        
+    } 
+</script>

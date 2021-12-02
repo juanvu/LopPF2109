@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 7</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let num1 = 0;
+    let num2 = 0;
+    let num3 = 0;
+    do {
+        num1 = parseFloat(prompt("Nhập vào số thứ nhất:"));
+        num2 = parseFloat(prompt("Nhập vào số thứ hai:"));
+        num3 = parseFloat(prompt("Nhập vào số thứ ba:"));
+    } while (isNaN(num1) || isNaN(num1) || isNaN(num1));
+    max(num1,num2,num3);
+    function max(num1,num2,num3) {
+        let max = num1;
+        if (max < num2) {
+            max = num2;
+        } else if (max < num3) {
+            max = num3;
+        }
+        alert(`Số lớn nhất là: ${max}`);
+    }
+</script>

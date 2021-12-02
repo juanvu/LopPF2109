@@ -10,7 +10,7 @@ let courses = [
 	},
 ];
 
-let genStudentTable = function () {
+let genCourseTable = function () {
 	const myNode = document.getElementById("courseTbody");
 	myNode.innerHTML = "";
 

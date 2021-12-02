@@ -39,20 +39,20 @@ let genCourseTable = function () {
 genCourseTable();
 
 let LuuKhoaHoc = function () {
-	let MaKH = document.getElementById("txtMaKH").value;
-	let TenKH = document.getElementById("txtTenKH").value;
-	let TrinhDo = document.getElementById("txtTrinhDo").value;
-	let Time = document.getElementById("txtTime").value;
-	let GiaoVien = document.getElementById("txtGV").value;
-	let HocPhi = document.getElementById("txtHP").value;
+	let makh = document.getElementById("txtMaKH").value;
+	let tenkh = document.getElementById("txtTenKH").value;
+	let trinhdo = document.getElementById("txtTrinhDo").value;
+	let time = document.getElementById("txtTime").value;
+	let giaovien = document.getElementById("txtGV").value;
+	let hocphi = document.getElementById("txtHP").value;
 
 	let isKhoaHocHopLe = kiemTraDuLieuKhoaHoc(
-		MaKH,
-		TenKH,
-		TrinhDo,
-		Time,
-        GiaoVien,
-        HocPhi
+		makh,
+		tenkh,
+		trinhdo,
+		time,
+        giaovien,
+        hocphi
 	);
 	if (isKhoaHocHopLe) {
 		let course = {
@@ -66,7 +66,7 @@ let LuuKhoaHoc = function () {
 
 		courses.push(course);
 
-		gencourseTable();
+		genCourseTable();
 
 		document.getElementById("newCourse").reset();
 	}
@@ -112,10 +112,10 @@ let xoaKhoaHoc = function (maKH) {
 		for (var i = 0; i < courses.length; i++) {
 			let course = courses[i]; 
 
-			if(course.maKH.toUpperCase() == maKH.toUpperCase()) {
+			if(course.MaKH.toUpperCase() == maKH.toUpperCase()) {
 				courses.splice(i,1);
 			}
 		}
-		genStudentTable();
+		genCourseTable();
 	}
 }

@@ -1,0 +1,122 @@
+<html>
+<head>
+<title>khia bao lop rectagle</title>
+</head>
+
+
+<body>
+
+<canvas id="myCanvas" width="300" height="200" style="border:1px solid #d3d3d3;">
+  <p>
+  The browser does not support canvas.
+  </p>
+</canvas>
+
+</body>
+<script>
+    let Apple = class {
+	constructor(){
+		this.KhoiLuong = 10;
+		
+		<!-- Object.defineProperty(this, 'KhoiLuong', { -->
+		  <!-- value: 10, -->
+		  <!-- writable: false, //cho phep ghi/gan du lieu hay ko -->
+      <!-- configurable: false, //cho phep cau hinh hay ko  -->
+      <!-- enumerable: true // cho phep duyet trong mang hay ko -->
+		<!-- }); -->
+		
+	}
+	
+	
+	//ham giam don vi cua tao di 1
+	decrease() {
+		if(this.KhoiLuong > 0) {
+			this.KhoiLuong--;
+		}
+	}
+	
+	isEmpty() {
+		
+	}
+	
+	getWeight() {
+		return this.KhoiLuong;
+	}
+}
+
+
+let Humman = class {
+	constructor(name, gender, weight) {
+		this.name = name;  //field + Có tên.
+		this.gender = gender;  //+ Có giới tính.
+		this.weight = weight; //+ Có cân nặng.
+	}
+	
+	isMale(){
+		return this.gender > 0 ? "Male" : "Female"
+	}
+	
+	setGender(gender){
+		this.gender = gender;
+	}
+	
+	checkApple(apple){
+		if(apple) {
+			return apple.getWeight();
+		}
+	}
+	
+	//ham an tao
+	eat(apple){
+		/* + Biết ăn táo. Mỗi lần ăn, chỉ ăn một miếng táo (1đv). 
+		Khi ăn táo, khối lượng của người đó sẽ tăng lên một đv và khối lượng quả táo sẽ giảm đi một đv.
+		Chỉ ăn táo khi khối lượng của quả táo lớn hơn 0.
+		*/
+		if(apple.getWeight() > 0) {
+			apple.decrease();
+			this.weight++;
+		}
+		
+	}
+	
+	
+	//+ Biết nói một chuỗi các từ. (bằng cách in ra màn hình console chuỗi đó)
+	say(text) {
+		if(text) {
+			console.log(text);
+		}
+	}
+	
+	
+	getName() {
+		return this.name;
+	}
+	
+	setName(name){
+		this.name = name;
+	}
+	
+	getWeight() {
+		return this.weight;
+	}
+	
+	setWeight(weight) {
+		this.weight = weight;
+	}
+}
+
+
+let tao1 = new Apple();
+
+console.log(tao1.getWeight()); //10dv
+
+tao1.weight = 34034;
+
+tao1.getWeight();
+
+let human = new Humman("Ngoc", 0, 20);
+human.eat(tao1);
+
+console.log(tao1.getWeight()); //9dv
+</script>
+</html>

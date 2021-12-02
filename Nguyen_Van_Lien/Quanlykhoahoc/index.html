@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./main.js"></script>
+  </head>
+
+  <body>
+
+    <div style="width: 280px">
+      <div>
+        <h4>Thêm mới khóa học</h4>
+      </div>
+      <form id="newCourse">
+        <div><label>Ma KH</label>: <input type="text" id="txtMaKH" /></div>
+        <div><label>Tên KH</label>: <input type="text" id="txtTenKH" /></div>
+        <div><label>Trình độ</label>: <input type="text" id="txtTrinhDo" /></div>
+        <div>
+          <label>Thời gian học</label>: <input type="text" id="txtTime" />
+        </div>
+        <div><label>Giáo viên phụ trách</label>: <input type="text" id="txtGV" /></div>
+        <div><label>Học Phí</label>: <input type="text" id="txtHP" /></div>
+        <div style="text-align: right">
+          <input
+            type="button"
+            value="Lưu"
+            id="btnSave"
+            onclick="LuuSinhVien();"
+          />
+        </div>
+      </form>
+    </div>
+    <br><br>
+    <table id="courseList">
+        <thead>
+          <tr>
+            <th>MaKH</th>
+            <th>Tên KH</th>
+            <th>Trình độ</th>
+            <th>Thời gian học</th>
+            <th>Giáo Viên phụ trách</th>
+            <th>Học phí</th>
+          </tr>
+        </thead>
+        <tbody id="courseTbody"></tbody>
+      </table>
+  </body>
+
+  <style>
+    .form-control {
+      background: red;
+    }
+  </style>
+
+</html>

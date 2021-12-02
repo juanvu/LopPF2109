@@ -105,9 +105,9 @@ let kiemTraDuLieuKhoaHoc = function (maKh, tenKH, trinhDo, time, giaoVien, hocPh
 	return valid;
 };
 
-let xoaHocSinh = function (maKH) {
+let xoaKhoaHoc = function (maKH) {
 
-	if(confirm(`bạn có muốn xóa học sinh ${maKH} không?`)) {
+	if(confirm(`bạn có muốn xóa khóa học ${maKH} không?`)) {
 
 		for (var i = 0; i < courses.length; i++) {
 			let course = courses[i]; 

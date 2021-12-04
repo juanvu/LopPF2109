@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body  onload="doready()">
+    
+    <div id ='battlebox' style="border: 1px solid black; height: 190px; width: 190px; background-color: white;">
+        <img 
+        id='tank'
+        src="tank.png"
+        style="position: relative;top: 0px; left: 0px;"
+        width="19px"
+        height="19px"
+        >
+        <img 
+        src="boom.png"
+        id = 'boom'
+        style="position: relative;top : 76px; left: 76px;"
+        height="19px"
+        width="19px"
+        >
+    
+   <script>
+       alert('Press Ok then KeyDown To Star')
+       let tanktop = parseInt( document.getElementById('tank').style['top']);
+       let tankleft = parseInt(document.getElementById('tank').style['left']);
+       const step = 19 ;
+       let boomTop = parseInt(document.getElementById('boom').style['top']);
+       let boomLeft = parseInt(document.getElementById('boom').style['left']) + 19;
+
+       function goUp()  { 
+            tanktop -= step;
+            if (tanktop < 0 ) {
+           tanktop = 0 ;
+            }
+           else if (tanktop == boomTop & tankleft == boomLeft ) {
+            document.getElementById('tank').src = 'explosion.png';
+                document.getElementById('boom').src = 'explosion.png';
+                document.getElementById('battlebox').style.backgroundColor = "red";
+
+            }
+           document.getElementById('tank').style.transform = 'rotate(360deg)';
+           document.getElementById('tank').style['top'] = tanktop + 'px';
+        }
+
+       function goLeft() {
+            tankleft -= step;
+            if (tankleft < 0){ 
+                tankleft = 0
+            } else
+            if (tanktop == boomTop & tankleft == boomLeft ) {
+                document.getElementById('tank').src = 'explosion.png';
+                document.getElementById('boom').src = 'explosion.png';
+                document.getElementById('battlebox').style.backgroundColor = 'red';
+              
+            }
+             document.getElementById('tank').style.transform = 'rotate(-90deg)';
+             document.getElementById('tank').style['left'] = tankleft + 'px';
+        }
+
+       function goRight() {
+             tankleft += step;
+             if (tankleft > 171) {
+                 tankleft = 171
+            }else if (tanktop == boomTop & tankleft == boomLeft ) {
+                document.getElementById('tank').src = 'explosion.png';
+                document.getElementById('boom').src = 'explosion.png';
+                document.getElementById('battlebox').style.backgroundColor ="red";
+                
+
+            }
+           document.getElementById('tank').style['left'] = tankleft + 'px';
+           document.getElementById("tank").style.transform = 'rotate(90deg)';
+        }
+
+       function goDown() {
+            tanktop += step ;
+            if (tanktop > 171 ) {
+                tanktop = 171
+            }else if ( tanktop == boomTop & tankleft == boomLeft) {
+                document.getElementById('tank').src = 'explosion.png';
+                document.getElementById('boom').src = 'explosion.png';
+                document.getElementById('battlebox').style.backgroundColor = 'red';
+                
+                
+            }
+            document.getElementById('tank').style['top'] = tanktop + 'px' ;
+            document.getElementById("tank").style.transform = 'rotate(180deg)';
+        }
+  
+
+        
+        function moveSelection(evt) {
+            switch (evt.keyCode) {
+                case 37:
+                    goLeft();
+                    break;
+                case 39:    
+                    goRight();
+                    break;
+                case 38:    
+                    goUp();
+                    break;
+                case 40:                     
+                    goDown();
+                    break;
+               
+            }
+        }
+        function doready() {
+            window.addEventListener('keydown', moveSelection);
+        }
+
+
+
+   </script>
+</body>
+</html>

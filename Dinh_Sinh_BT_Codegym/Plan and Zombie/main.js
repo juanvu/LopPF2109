@@ -50,11 +50,12 @@ canvas.addEventListener('mouseleave', function() {
     mouse.y = undefined;
 })
 
-// game board
+// game board : Định nghĩa một hàng 
 const controlsBar = {
     width: canvas.width,
     height: cellSize,
 }
+// Khởi tạo một class mỗi ô riêng biệt
 class Cell {
     constructor(x, y) {
         this.x = x;
@@ -63,12 +64,14 @@ class Cell {
         this.height = cellSize;
     }
     draw() {
+        // Nếu có sự va chạm thì hiển thị ô di chuyển tới
         if(mouse.x && mouse.y && collision(this, mouse)) {
             ctx.strokeStyle = 'black';
             ctx.strokeRect(this.x, this.y, this.width, this.height); 
         }
     }
 }
+// Đưa các ô đã tạo vào mảng 
 function createGird() {
     for(let y = cellSize ; y < canvas.height ; y+= cellSize) {
         for(let x = 0 ; x < canvas.width ; x+= cellSize) {
@@ -76,6 +79,7 @@ function createGird() {
         }
     }
 }
+// Gọi hàm tạo bàn cờ 
 createGird();
 function handleGameGird() {
     for(let i = 0 ; i < gameGird.length ; i++) {
@@ -83,7 +87,7 @@ function handleGameGird() {
     }
 }
 
-// projectiles
+// projectiles: đường đạn
 class Projectile {
     constructor(x, y) {
         this.x = x;
@@ -99,6 +103,7 @@ class Projectile {
     draw() {
         ctx.fillStyle = 'black';
         ctx.beginPath();
+        // Vẽ đạn bắn quái vật
         ctx.arc(this.x, this.y, this.width, 0, Math.PI * 2);
         ctx.fill();
     }
@@ -110,6 +115,8 @@ function handleProjectiles() {
         projectiles[i].draw();
 
         for(let j = 0 ; j < enemies.length ; j++) {
+            // nếu có đường đạn và quái vật và cớ sự va chạm với nhau thì máu của quái vật bị giảm
+            // Khi giảm về 0 sẽ xóa quái vật đi
             if(enemies[j] && projectiles[i] && collision(projectiles[i], enemies[j])) {
                 enemies[j].health -= projectiles[i].power;
                 projectiles.splice(i, 1);
@@ -133,6 +140,7 @@ class Defender {
     constructor(x, y) {
         this.x = x;
         this.y = y;
+        // Dùng để fix khi quái vật tấn công anh hùng không bị ảnh hưởng đến anh hùng khác
         this.width = cellSize - cellGap * 2;
         this.height = cellSize - cellGap * 2;
         this.shooting = false;

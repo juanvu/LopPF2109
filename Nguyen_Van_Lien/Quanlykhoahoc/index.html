@@ -23,17 +23,20 @@
         <div><label>Giáo viên phụ trách</label>: <input type="text" id="txtGV" /></div>
         <div><label>Học Phí</label>: <input type="text" id="txtHP" /></div>
         <div style="text-align: right">
+          <br>
           <input
             type="button"
             value="Lưu"
             id="btnSave"
             onclick="LuuKhoaHoc();"
           />
+          &nbsp; &nbsp;
         </div>
       </form>
     </div>
     <br><br>
-    <table id="courseList">
+    <table border="1" cellspacing='0' cellpadding="5" style="margin-top: 50px;" id="courseList">
+      <caption style="background-color: #4970a3;color: white;height: 30px;padding-top: 8px;">Danh sách khóa học</caption>
         <thead>
           <tr>
             <th>MaKH</th>
@@ -48,10 +51,7 @@
       </table>
   </body>
 
-  <style>
-    .form-control {
-      background: red;
-    }
+  
   </style>
     <script src="./main.js"></script>
 

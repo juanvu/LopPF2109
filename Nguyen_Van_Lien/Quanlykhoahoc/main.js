@@ -10,6 +10,26 @@ let courses = [
 	},
 ];
 
+function suaKhoaHoc(maKH) {
+
+	if(confirm(`Bạn có sửa khóa học ${maKH} không?`)) {
+		for (var i = 0; i < courses.length; i++) {
+			let course = courses[i];
+
+			if(course.MaKH.toUpperCase() == maKH.toUpperCase()) {
+				document.getElementById("txtMaKH").value = course.MaKH;
+				document.getElementById("txtTenKH").value = course.TenKH;
+				document.getElementById("txtTrinhDo").value = course.TrinhDo;
+				document.getElementById("txtTime").value = course.Time;
+				document.getElementById("txtGV").value = course.GiaoVien;
+				document.getElementById("txtHP").value = course.HocPhi;
+				
+			}
+		}
+		genCourseTable();
+	}
+}
+
 let genCourseTable = function () {
 	const myNode = document.getElementById("courseTbody");
 	myNode.innerHTML = "";
@@ -26,7 +46,8 @@ let genCourseTable = function () {
 				  <td>${course.Time}</td>
 				  <td>${course.GiaoVien}</td>
 				  <td>${course.HocPhi}</td>
-				  <td><input type='button' value='Xóa' onclick='xoaKhoaHoc("${course.MaKH}");' /></td>
+				  <td><input type='button' style="background-color: red;" value='Xóa' onclick='xoaKhoaHoc("${course.MaKH}");' /></td>
+				  <td><input type='button' style="background-color: yellow;" value='Sửa' onclick='suaKhoaHoc("${course.MaKH}");' /></td>
 				  </tr>`;
 
 			rowItems += rowItem;
@@ -104,6 +125,8 @@ let kiemTraDuLieuKhoaHoc = function (maKh, tenKH, trinhDo, time, giaoVien, hocPh
 
 	return valid;
 };
+
+
 
 let xoaKhoaHoc = function (maKH) {
 

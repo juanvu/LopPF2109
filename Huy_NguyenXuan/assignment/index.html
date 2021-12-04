@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' href='style.css'>
+</head>
+<body>
+    <div>
+        <h1>Bảng quản lý thông tin sinh viên</h1>
+    </div>
+    <div>
+        <table id='studentList'>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>MaSV</th>
+                    <th>Họ Tên</th>
+                    <th>Tuổi</th>
+                    <th>Ngày Sinh</th>
+                    <th>Giới Tính</th>
+                    <th>Địa chỉ</th>
+                    <th>SL sách</th>
+                    <th>Ngoại khóa</th>
+                    <th>Hành Động</th>
+                </tr>
+            </thead>
+            <tbody id='studentTbody'></tbody>
+        </table>
+        <button id="delAll" onclick="xoaNhieuSinhVien()";>Xóa nhiều học sinh</button>
+    </div>
+    <hr>
+    <div style='width: 480px;'>
+        <div class='form-send'>
+            <b><i>(*) Thông tin bắt buộc</i></b>
+        </div>
+        <form id='newStudentForm'>
+            <div class='form-send'><p>Ma SV (*):</p><label for=''><input class='inputVal' type='text' id='txtMaSV'/></div></label>
+            <div class='form-send'><p>Họ Tên (*):</p><label for=''><input class='inputVal' type='text' id='txtHoTen'/></div></label>
+            <div class='form-send'><p>Tuổi (*):</p><label for=''><input class='inputVal' type='number' id='txtTuoi'/></div></label>
+            <div class='form-send'><p>Ngày sinh (*):</p><label for=''><input class='inputVal' type='date' id='txtDate'/></div></label>
+            <div class='form-send'>
+                <p>Giới Tính (*):</p>
+                <label class='inputValGender' for=''>
+                    <input class='' id='male' type='radio' name='gender' value='Nam'>Nam
+                    <input class='' id='female' type='radio' name='gender' value='Nữ'>Nữ
+                </label>
+            </div>
+            <!-- Tỉnh,Huyện,Xã -->
+            <div  class='form-send'>
+                <p>Địa chỉ:</p>
+                <label for=''><input class='inputVal' type="text" id="txtDiaChi" />
+                </label>
+            </div>
+            <div  class='form-send'><p>Tỉnh (*):</p><label for=''><select class='inputVal' id='selectCity' onchange='showCity()'>
+                <option selected disabled value=''>--Chọn tỉnh thành--</option>
+                <option value="angiang">An Giang</option>
+                <option value="bariavungtau">B&#224; Rịa - Vũng T&#224;u</option>
+                <option value="baclieu">Bạc Li&#234;u</option>
+                <option value="bacgiang">Bắc Giang</option>
+                <option value="backan">Bắc Kạn</option>
+                <option value="bacninh">Bắc Ninh</option>
+                <option value="bentre">Bến Tre</option>
+                <option value="binhduong">B&#236;nh Dương</option>
+                <option value="binhdinh">B&#236;nh Định</option>
+                <option value="binhphuoc">B&#236;nh Phước</option>
+                <option value="t40">B&#236;nh Thuận</option>
+                <option value="t64">C&#224; Mau</option>
+                <option value="t3">Cao Bằng</option>
+                <option value="t60">Cần Thơ</option>
+                <option value="t33">Đ&#224; Nẵng</option>
+                <option value="t43">Đăk Lăk</option>
+                <option value="t44">Đăk N&#244;ng</option>
+                <option value="t7">Điện Bi&#234;n</option>
+                <option value="t49">Đồng Nai</option>
+                <option value="t57">Đồng Th&#225;p</option>
+                <option value="t42">Gia Lai</option>
+                <option value="t2">H&#224; Giang</option>
+                <option value="t3">H&#224; Nam</option>
+                <option value="hanoi">H&#224; Nội</option>
+                <option value="t19">H&#224; T&#226;y</option>
+                <option value="t29">H&#224; Tĩnh</option>
+                <option value="t20">Hải Dương</option>
+                <option value="t21">Hải Ph&#242;ng</option>
+                <option value="t61">Hậu Giang</option>
+                <option value="t11">H&#242;a B&#236;nh</option>
+                <option value="hochiminh">Hồ Ch&#237; Minh</option>
+                <option value="t22">Hưng Y&#234;n</option>
+                <option value="t59">Ki&#234;n Giang</option>
+                <option value="t41">Kon Tum</option>
+                <option value="t38">Kh&#225;nh H&#242;a</option>
+                <option value="t8">Lai Ch&#226;u</option>
+                <option value="t13">Lạng Sơn</option>
+                <option value="t6">L&#224;o Cai</option>
+                <option value="t45">L&#226;m Đồng</option>
+                <option value="t52">Long An</option>
+                <option value="t25">Nam Định</option>
+                <option value="t26">Ninh B&#236;nh</option>
+                <option value="t39">Ninh Thuận</option>
+                <option value="t28">Nghệ An</option>
+                <option value="t16">Ph&#250; Thọ</option>
+                <option value="t37">Ph&#250; Y&#234;n</option>
+                <option value="quangbinh">Quảng B&#236;nh</option>
+                <option value="t34">Quảng Nam</option>
+                <option value="t14">Quảng Ninh</option>
+                <option value="t35">Quảng Ng&#227;i</option>
+                <option value="t31">Quảng Trị</option>
+                <option value="t62">S&#243;c Trăng</option>
+                <option value="t9">Sơn La</option>
+                <option value="t47">T&#226;y Ninh</option>
+                <option value="t53">Tiền Giang</option>
+                <option value="t5">Tuy&#234;n Quang</option>
+                <option value="t23">Th&#225;i B&#236;nh</option>
+                <option value="t12">Th&#225;i Nguy&#234;n</option>
+                <option value="t27">Thanh H&#243;a</option>
+                <option value="t32">Thừa Thi&#234;n Huế</option>
+                <option value="t55">Tr&#224; Vinh</option>
+                <option value="t56">Vĩnh Long</option>
+                <option value="t17">Vĩnh Ph&#250;c</option>
+                <option value="t10">Y&#234;n B&#225;i</option>
+            </select></label></div>
+            <div class='form-send'>
+                <p>Quận/ Huyện:</p>
+                <label for=''>
+                    <select class='inputVal' id="selectDistrict">
+                        <option selected disabled value="">--Chọn Quận/Huyện--</option>
+                        <option data-city="hanoi" value="hanoi-longbien" class="quanhuyen">Long Biên</option>
+                        <option data-city="hanoi" value="hanoi-badinh" class="quanhuyen">Ba Đình</option>
+                        <option data-city="hanoi" value="hanoi-dongda" class="quanhuyen">Đống Đa</option>
+                        <option data-city="hochiminh" value="hochiminh-quan1" class="quanhuyen">Quận 1</option>
+                        <option data-city="hochiminh" value="hochiminh-tanbinh" class="quanhuyen">Quận 2</option>
+                        <option data-city="hochiminh" value="hochiminh-binhthanh" class="quanhuyen">Bình Thạnh</option>
+                        <option data-city="quangbinh" value="quangbinh-botrach" class="quanhuyen">Bố Trạch</option>
+                        <option data-city="quangbinh" value="quangbinh-donghoi" class="quanhuyen">Đồng Hới</option>
+                        <option data-city="quangbinh" value="quangbinh-lethuy" class="quanhuyen">Lệ Thủy</option>
+                    </select>
+                </label>
+            </div>
+            <!-- Số lượng sách mượn -->
+            <div class='form-send'>
+                <p>SL sách (*):</p>
+                <label for=''>
+                    <input type='number' id='txtSach' style='width: 40px; height: 30px; margin: 5px; margin-left: 30px;';/><input class='inputVal' type='text' id='txtTenSach' placeholder="Tên các đầu sách"/>
+                </label>
+            </div>
+            <!-- Điểm ngoại khóa -->
+            <div class='form-send'>
+                <p>Điểm ngoại khóa (*):</p>
+                <label for=''>
+                    <input class='inputNgoaiKhoa' type='number' id='txtNgoaiKhoa' style='width: 50px; height: 30px'/>
+                </label>
+            </div>
+            <!-- button Save - Update -->
+            <div class='form-send' style='text-align: center;'>
+                <p></p>
+                <label for=''>
+                    <input class='form-control' type='button' value='Save' id='btnSave' onclick='SaveSinhVien();'/>
+                    <input class='form-control' type='hidden' value='Update' id='btnUpdate' onclick='UpdateSinhVien();'/>
+                </label>
+            </div>
+        </form>
+    </div>
+    <script src='home.js'></script>
+</body>
+</html>

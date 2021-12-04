@@ -150,7 +150,7 @@ let kiemTraDuLieuSinhVien = function (maSV, hoTen, tuoi, gioitinh,dob,thanhpho,q
 };
 
 //hàm xóa sinh viên, truyền vào mã SV,
-let xoaHocSinh = function (maSV,genStudentTable) {
+let xoaHocSinh = function (maSV) {
 
 	//hàm confirm: bật lên thông báo xác nhận
 	if(confirm(`bạn có muốn xóa học sinh ${maSV} không?`)) {
@@ -163,9 +163,7 @@ let xoaHocSinh = function (maSV,genStudentTable) {
 				students.splice(i,1);
 			}
 		}
-		if (genStudentTable!==false){
-			genStudentTable();
-		}
+		genStudentTable();
 	}
 }
 

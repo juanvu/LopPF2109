@@ -1,0 +1,13 @@
+const BLACK = "BLACK";
+const WHITE = "WHITE";
+const KING = "KING";
+const QUEEN = "QUEEN";
+const ROOK = "ROOK";
+const BISHOP = "BISHOP";
+const KNIGHT = "KNIGHT";
+const PAWN = "PAWN";
+const VERTICAL_LINE = "VERTICAL_LINE";
+const HORIZONTAL_LINE = "HORIZONTAL_LINE";
+const DIAGONAL_LINE = "DIAGONAL_LINE";
+const KNIGHT_LINE = "KNIGHT_LINE";
+const PLAYER_TYPES = [BLACK, WHITE];

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý hàng tồn kho</title>
+</head>
+<h1>Quản lý hàng tồn kho</h1>
+<body>
+    <table class='tableBorder'>
+        <tr>
+            <th>Mã hàng</th>
+            <th>Tên hàng</th>
+            <th>Số lượng hàng trong kho</th>
+            <th>Nơi lưu trữ</th>
+            <th>Ngày xuất kho</th>
+            <th>Số lượng xuất</th>
+            <th>Ngày nhập kho</th>
+            <th>Số lượng nhập</th>
+            <th>Ngày hủy hàng</th>
+        </tr>
+    </table>
+    <hr><br>
+    <div style="width: 280px">
+      <form id="inventorymanagement">
+        <div class="form-send">
+    </div>
+    <div class="form-send"><label>Mã hàng:</label> <input type="text" id="txtMahang" /></div>
+    <div class="form-send"><label>Tên hàng:</label> <input type="text" id="txtTenhang" /></div>
+    <div class="form-send"><label>Nơi lưu trữ:</label> <input type="text" id="txtNoiluutru" /></div>
+    <div class="form-send"><label>Ngày xuất kho:</label> <input type="date" id="txtNgayxuatkho" /></div>
+    <div class="form-send"><label>Số lượng xuất kho:</label> <input type="number" id="txtSoluongxuat" /></div>
+    <div class="form-send"><label>Ngày nhập kho:</label> <input type="date" id="txtNgaynhapkho" /></div>
+    <div class="form-send"><label>Số lượng nhập kho:</label> <input type="number" id="txtSoluongnhap" /></div>
+    <div class="form-send"><label>Ngày hủy hàng:</label> <input type="text" id="txtNgayhuyhang" /></div>
+    <div  class="form-send" style="text-align: center">
+      <input class="form-control" type="button" value="Lưu" id="btnSave" onclick="LuuSinhVien();"/>
+      <input class="form-control" type="hidden" value="Cập nhật" id="btnUpdate" onclick="UpdateSinhVien();"/>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

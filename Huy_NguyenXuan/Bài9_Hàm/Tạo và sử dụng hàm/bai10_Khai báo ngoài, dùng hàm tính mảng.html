@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let textInput = prompt("Mời bạn nhập ký tự");
+        let valueInput = prompt("Mời bạn nhập ký tự cần kiểm tra");
+        function checkText(text) {
+            let result = 0;
+            for (var i = 0; i < text.length; i++) {
+                if (valueInput.toUpperCase() == text[i].toUpperCase()) {
+                    result += 1;
+                }
+            }
+            if (result == 0) {
+                    result = -1;
+                }
+            alert(result);
+        }
+        checkText(textInput);
+    </script>
+</body>
+</html>

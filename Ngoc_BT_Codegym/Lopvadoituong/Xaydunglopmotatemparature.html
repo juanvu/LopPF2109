@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>khia bao lop rectagle</title>
+</head>
+
+
+<body>
+
+<canvas id="myCanvas" width="300" height="200" style="border:1px solid #d3d3d3;">
+  <p>
+  The browser does not support canvas.
+  </p>
+</canvas>
+
+</body>
+<script>
+    let TempConvert = class {
+constructor(c, commentX) {
+	this.C = c;
+  this.CommentX = commentX;
+}
+	C = 0
+  CommentX = ""
+  
+  convertToF() {
+  	//(0°C × 9/5) + 32
+  	console.log((this.C * 9/5) + 32);
+  }
+}
+
+
+let temp1 = new TempConvert();
+temp1.C = 60;
+temp1.convertToF();
+temp1.ConmmentX = "new value";
+
+
+console.log(temp1["ConmmentX"]);
+</script>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    /*
+        Khai báo và khởi tạo một đối tượng công tắc và một đối tượng bóng đèn điện.
+        Kết nối công tắc với bóng đèn.
+        Bật tắt công tắc 10 lần.
+    */
+
+    class electrilamp {
+
+        constructor(status) {
+            this.status = status;
+        }
+
+        turnOff() {
+            console.log("đèn tắt");
+        }
+        turnOn() {
+
+            console.log("đèn sáng");
+        }
+    }
+
+    class switchButton {
+        statusButton;
+        constructor(stBtn, lamp) {
+            this.statusButton = stBtn;
+            this.lamp = lamp;
+        }
+        connectToLamp(lamp) {
+            if (lamp) {
+                if (this.statusButton) {
+                    this.lamp.turnOn();
+                } else {
+                    this.lamp.turnOff();
+                }
+            }
+        }
+
+        switchOff() {
+            this.statusButton = false;
+        }
+        switchOn() {
+            this.statusButton = true;
+        }
+
+    }
+    let la = new electrilamp(true);
+    let a = new switchButton(false, la);
+    a.connectToLamp(la);
+
+</script>
+
+</html>

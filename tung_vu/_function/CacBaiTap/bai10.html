@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 8</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let arr = ['a', 'b', 'c', 'd', 'e', 'a', 'a', 'b', 'f'];
+    let char = prompt("Nhập vào kí tự:");
+    check(char,arr);
+    function check(char,arr) {
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (char == arr[i]) {
+                count++;
+            }
+        }
+        if (count > 0) {
+            alert(`Kí tự ${char} xuất hiện ${count} lần`)
+        } else alert(-1);
+    }
+</script>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="lib/favicon.ico" type="image/x-icon">
+    <title>Quản lý sinh viên</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body onload="showStudent()">
+     <div class="panel">
+         <div class="panel-heading">
+             Nhập thông tin
+         </div>
+         <div class="panel-body">
+            <form method="post" id="inputForm">
+                <div class="form-group">
+                    <label>Họ và tên (*)</label>
+                    <input type="number" id="index" value="" hidden="true">
+                    <input type="text" class="form-control" id="studentName" placeholder="Nhập vào tên sinh viên">
+                    <span id="studentName-error" class="error"></span>
+                </div>
+                <div class="form-group">
+                    <label>Mã sinh viên (*)</label>
+                    <input type="text" class="form-control" id="studentCode" placeholder="Nhập vào mã sinh viên">
+                    <span id="studentCode-error" class="error"></span>
+                </div>
+                <div class="form-group">
+                    <label>Số điện thoại (*)</label>
+                    <input type="number" class="form-control" id="phoneNumber" placeholder="Nhập vào số điện thoại">
+                    <span id="phoneNumber-error" class="error"></span>
+                </div>
+                <div class="form-group">
+                    <label>Email (*)</label>
+                    <input type="email" class="form-control" id="studentEmail" placeholder="Nhập vào email">
+                    <span id="studentEmail-error" class="error"></span>
+                </div>
+                <div class="form-group">
+                    <label>Giới tính</label>
+                    <input type="radio" name="gender" id="male" value="Nam"> Nam 
+                    <input type="radio" name="gender" id="female" value="Nữ"> Nữ
+                </div>
+                <div class="form-group">
+                    <label>Lớp (*)</label>
+                    <input type="text" class="form-control" id="studentClass" placeholder="Nhập vào lớp của sinh viên">
+                    <span id="studentClass-error" class="error"></span>
+                </div>
+                <div class="form-group">
+                    <label>Địa chỉ</label>
+                    <div class="form-control" id="addr">
+                        <select id="province" onchange="changeProvince()">
+                            <option value="">Chọn</option>
+                        </select>
+                        <select id="district">
+                            <option value="">Chọn</option>
+                        </select>
+                        <input type="text" id="studentAddr" placeholder="Nhập vào địa chỉ của sinh viên">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <p>(*) trường bắt buộc nhập.</p>
+                </div>
+                <div>
+                    <button id="btn_update" class="btn btn-success" type="button" onclick="addStudent()">Thêm sinh viên</button>
+                    <button class="btn btn-danger" type="reset" onclick="resetForm()">Reset</button>
+                </div>
+            </form>
+         </div>
+     </div>
+     <div class="panel" style="margin-top: 20px">
+        <div class="panel-heading">
+            Thông tin sinh viên
+        </div>
+        <div class="panel-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Họ và tên</th>
+                        <th>Mã sinh viên</th>
+                        <th>Số điện thoại</th>
+                        <th>Email</th>
+                        <th>Giới tính</th>
+                        <th>Lớp</th>
+                        <th>Địa chỉ</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="result">
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
+<script src="js/main.js"></script>

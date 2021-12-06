@@ -1,0 +1,43 @@
+.panel {
+    border: solid brown 1px;
+    width: 80%;
+    margin: auto;
+}
+.panel-heading {
+    background-color: brown;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+}
+.panel-body {
+    padding: 10px;
+}
+.panel-body label {
+    font-weight: bold;
+}
+.form-group {
+    display: block;
+    margin-bottom: 10px;
+}
+.form-control {
+    display: block;
+    width: 98%;
+    font-size: 14px;
+    margin-top: 5px;
+}
+.table {
+    width: 100%;
+}
+.table tr {
+    border-bottom: solid gray 1px;
+}
+.error {
+    font-style: italic;
+    color: red;
+    font-size: 14px;
+}
+p {
+    font-style: italic;
+    color: red;
+    font-size: 14px;
+}

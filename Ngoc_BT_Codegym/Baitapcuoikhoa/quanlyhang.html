@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý hàng</title>
+</head>
+<h1>Quản lý hàng</h1>
+
+<body>
+    <table class='tableBorder' id="itemList">
+        <thead>
+            <tr>
+                <th>Mã hàng</th>
+                <th>Tên hàng</th>
+                <th>Số lượng</th>
+                <th>Giá mua</th>
+                <th>Ngày nhập</th>
+                <th>Nhãn hàng</th>
+                <th>Hành động</th>
+            </tr>
+        </thead>
+        <tbody id="itemTbody"></tbody>
+    </table>
+    <hr><br>
+    <div style="width: 280px">
+        <h4>Cập nhật hàng mới</h4>
+        <form id="newItemForm">
+            <div class="form-send">
+            </div>
+            <div class="form-send"><label>Mã hàng:</label> <input type="text" id="txtMahang" /></div>
+            <div class="form-send"><label>Tên hàng:</label> <input type="text" id="txtTenhang" /></div>
+            <div class="form-send"><label>Số lượng:</label> <input type="number" id="txtSoLuong" /></div>
+            <div class="form-send"><label>Giá mua:</label> <input type="number" id="txtGiaMua" placeholder="VND" />
+            </div>
+            <div class="form-send"><label>Ngày nhập:</label> <input type="date" id="txtNgayNhap" /></div>
+            <div class="form-send"><label>Nhãn hàng:</label> <input type="text" id="txtNhanHang" /></div>
+            <div class="form-send" style="text-align: center">
+                <input class="form-control" type="button" value="Lưu" id="btnSave" onclick="LuuHang();" />
+                <input class="form-control" type="hidden" value="Cập nhật" id="btnUpdate" onclick="UpdateHang();" />
+            </div>
+            <script src="main.js"></script>
+        </form>
+    </div>
+</body>
+
+</html>

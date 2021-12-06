@@ -51,7 +51,7 @@ let LuuSinhVien = function () {
 	let gioitinh = document.getElementById("txtGioiTinh").value;
 	let diachi = document.getElementById("txtDiaChi").value;
 
-	//kiểm tra dữu liêu hợp lệ
+	//kiểm tra dữ liêu hợp lệ
 	let isSinhVienHopLe = kiemTraDuLieuSinhVien(
 		maSV,
 		hoTen,

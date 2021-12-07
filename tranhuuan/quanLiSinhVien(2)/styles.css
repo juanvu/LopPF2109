@@ -1,0 +1,77 @@
+body{
+    background-color:#ffff;
+}
+#find{
+    margin-top: 25px;
+    margin-left: 38%;
+}
+
+.showManaegentStudent{
+    width: 65%;
+    height: 50%;
+    
+    
+    margin-left: 15%;
+    margin-top: 10px;
+    margin-right: 25px;
+    /* padding-top: 1%; */
+    
+    border: 1px solid black;
+    /* padding-left: 3%; */
+    border-radius:3px 3px ;
+}
+.panel{
+    margin: 0;
+    box-sizing: border-box;
+    padding-left: 25%;
+    padding-top: 10px;
+    background-color: #A52A2A;
+    height: 44px;
+    color:aliceblue;
+}
+table{
+    margin-top: 25px;
+    margin-left: 25px;
+    margin-bottom: 25px;
+}
+#chartdiv {
+    width: 100%;
+    height: 500px;
+}
+button{
+    width: 100px;
+    height: 35px;
+    border: 1px solid black;
+    border-radius: 10px;
+    color:black;
+    background-color: white;
+}
+button:hover{
+    background-color: rgb(10, 116, 236);
+    height: 40px;
+}
+input{
+    height: 25px;
+    width: 900px;
+    border-radius: 3px;
+    border:1px solid gray;
+    color: gray;
+    
+}
+tr{
+    height: 55px;
+}
+#search{
+    width: 150px;
+    height: 35px;
+}
+
+label{
+    font-size: 16px;
+    
+}
+p{
+    color: rgb(252, 32, 32);
+}
+
+/*================================================ from======================================*/

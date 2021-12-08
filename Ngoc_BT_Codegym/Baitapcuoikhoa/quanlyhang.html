@@ -13,6 +13,7 @@
     <table class='tableBorder' id="itemList">
         <thead>
             <tr>
+                <th></th>
                 <th>Mã hàng</th>
                 <th>Tên hàng</th>
                 <th>Số lượng</th>
@@ -30,8 +31,8 @@
         <form id="newItemForm">
             <div class="form-send">
             </div>
-            <div class="form-send"><label>Mã hàng:</label> <input type="text" id="txtMahang" /></div>
-            <div class="form-send"><label>Tên hàng:</label> <input type="text" id="txtTenhang" /></div>
+            <div class="form-send"><label>Mã hàng:</label> <input type="text" id="txtMaHang" /></div>
+            <div class="form-send"><label>Tên hàng:</label> <input type="text" id="txtTenHang" /></div>
             <div class="form-send"><label>Số lượng:</label> <input type="number" id="txtSoLuong" /></div>
             <div class="form-send"><label>Giá mua:</label> <input type="number" id="txtGiaMua" placeholder="VND" />
             </div>
@@ -41,7 +42,7 @@
                 <input class="form-control" type="button" value="Lưu" id="btnSave" onclick="LuuHang();" />
                 <input class="form-control" type="hidden" value="Cập nhật" id="btnUpdate" onclick="UpdateHang();" />
             </div>
-            <script src="main.js"></script>
+            <script src="./main.js"></script>
         </form>
     </div>
 </body>

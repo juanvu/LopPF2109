@@ -1,0 +1,19 @@
+body {
+    background: black;
+}
+
+#canvas1 {
+    border: 3px solid greenyellow;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 900px;
+    height: 600px;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('./img/theme_back.jpg');
+    font-family: 'Orbitron, sans-serif';
+}

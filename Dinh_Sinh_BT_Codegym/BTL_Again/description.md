@@ -1,0 +1,1 @@
+Mở file login.html trong folder navigation để đến trang đăng nhập chơi game

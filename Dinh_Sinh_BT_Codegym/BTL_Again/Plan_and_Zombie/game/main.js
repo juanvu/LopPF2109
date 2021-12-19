@@ -24,6 +24,31 @@ const defenders = [];
 const projectiles = [];
 const resources = [];
 
+// LOAD SOUNDS
+const RESOURCE_M = new Audio();
+RESOURCE_M.src = "./audio/resource_1.wav";
+
+const SHOT = new Audio();
+SHOT.src = "./audio/shot.wav";
+
+const EAT = new Audio();
+EAT.src = "./audio/eat.wav";
+
+const LEVELUP = new Audio();
+LEVELUP.src = "./audio/levelUp.wav";
+
+const WARNING = new Audio();
+WARNING.src = "./audio/warning.wav";
+
+const GAMEOVER = new Audio();
+GAMEOVER.src = "./audio/gameOver.wav";
+
+const DIE = new Audio();
+DIE.src = "./audio/die.wav";
+
+const SOUNDTRACK = new Audio();
+SOUNDTRACK.src = "./audio/soundtrack_2.mp3";
+
 
 // mouse
 const mouse = {
@@ -87,8 +112,6 @@ function handleGameGird() {
 // projectiles
 const projectileImg1 = new Image();
 projectileImg1.src = './img/Hero-Bullet.gif';
-const projectileImg2 = new Image();
-projectileImg2.src = './img/Hero-Girl-Bullet-Impact.gif';
 class Projectile {
     constructor(x, y) {
         this.x = x;
@@ -98,6 +121,7 @@ class Projectile {
         this.power = 20;
         this.speed = 5;
         this.chosenDefender = chosenDefender;
+        this.music = SHOT.play();
     }
     update() {
         this.x += this.speed;
@@ -115,7 +139,7 @@ function handleProjectiles() {
     for(let i = 0 ; i < projectiles.length ; i++) {
         projectiles[i].update();
         projectiles[i].draw();
-
+        projectiles[i].music;
         for(let j = 0 ; j < enemies.length ; j++) {
             if(enemies[j] && projectiles[i] && collision(projectiles[i], enemies[j])) {
                 enemies[j].health -= projectiles[i].power;
@@ -220,8 +244,10 @@ function handleDefenders() {
             if(defenders[i] && collision(defenders[i], enemies[j])) {
                 enemies[j].movement = 0;
                 defenders[i].health -= 1;
+                EAT.play();
             }
             if(defenders[i] && defenders[i].health <= 0) {
+                DIE.play();
                 defenders.splice(i, 1);
                 i--;
                 enemies[j].movement = enemies[j].speed;
@@ -386,8 +412,8 @@ class Boss {
     constructor(verticalPosition) {
         this.x = canvas.width;
         this.y = verticalPosition;
-        this.width = cellSize+30 - cellGap * 2;
-        this.height = cellSize+30 - cellGap * 2;
+        this.width = cellSize - cellGap * 2;
+        this.height = cellSize - cellGap * 2;
         this.speed = Math.random() * 0.2 + 0.6;
         this.movement = this.speed;
         this.health = 200;
@@ -431,13 +457,13 @@ function handleEnemies() {
             gameOver = true;
         }
         if(enemies[i].health <= 0) {
-            let gaineResource = enemies[i].maxHealth/5;
+            let gaineResource = enemies[i].maxHealth/2;
             // Sau khi tiêu diệt được quái thì số tiền sẽ được cộng bằng 20% máu của quái vật
             // đồng thời số điểm cũng tăng tương ứng
             floatingMessages.push(new floatingMessage('+' + gaineResource, enemies[i].x, enemies[i].y, 30, 'black'));
             floatingMessages.push(new floatingMessage('+' + gaineResource, 470, 85, 30, 'gold'));
             numberOfResources += gaineResource;
-            score += gaineResource/2;
+            score += gaineResource/5;
             // Tìm quái vật ở vị trí i trong mảng để xóa bằng hàm indexOf rồi xóa đi bằng hàm splice
             const findThisIndex = enemyPositions.indexOf(enemies[i].y)
             enemyPositions.splice(findThisIndex, 1);
@@ -462,7 +488,8 @@ function handleEnemies() {
         enemies.push(new Boss(verticalPosition));
         enemyPositions.push(verticalPosition);
     }
-    if(frame % enemiesInterval === 0 && winningScore1 < score && winningScore2 > score) {
+    if(frame % enemiesInterval === 0 && winningScore1 <= score && winningScore2 > score) {
+        WARNING.play();
         floatingMessages.push(new floatingMessage('Warning dangerous !!!', 60, 330, 70, 'red'));
         let verticalPosition = Math.floor(Math.random() * 5 + 1) * cellSize + cellGap;
         enemies.push(new Enemy(verticalPosition));
@@ -481,14 +508,14 @@ class Resource {
         this.width = cellSize * 0.6;
         this.height = cellSize * 0.6;
         this.amount = amounts[Math.floor(Math.random() * amounts.length)];
+        this.music = RESOURCE_M.play();
     }
     draw() {
         ctx.fillStyle = 'yellow';
         ctx.fillRect(this.x, this.y, this.width, this.height);
         ctx.fillStyle = 'black';
         ctx.font = '20px Orbitron';
-        ctx.fillText(this.amount, this.x + 15 , this.y + 25)
-        
+        ctx.fillText(this.amount, this.x + 15 , this.y + 25) 
     }
 }
 function handleResources() {
@@ -499,6 +526,7 @@ function handleResources() {
     }
     for(let i = 0 ; i < resources.length ; i++) {
         resources[i].draw();
+        resources[i].music;
         // Nếu có tài nguyên rơi và con trỏ chuột và chạm với tài nguyên thì thông báo message
         if(resources[i] && mouse.x && mouse.y && collision(resources[i], mouse)) {
             numberOfResources += resources[i].amount;
@@ -519,18 +547,11 @@ function handleGameStatus() {
     ctx.fillText('Score: ' + score, 180, 40);
     ctx.fillText('Resource: ' + numberOfResources, 180, 80);
     if(gameOver) {
-        // let grd = ctx.createLinearGradient(0,0,200,0);
-        // grd.addColorStop(0,"red");
-        // grd.addColorStop(1,"white");
-        // // Fill with gradient
-        // ctx.fillStyle = grd;
-        // ctx.fillRect(0,0,canvas.width,canvas.height);
-        // ctx.fillStyle = 'black';
-        // ctx.font = '90px Orbitron';
-        // ctx.fillText('GAME OVER', 135, 330);
+        GAMEOVER.play();
         ctx.drawImage(gameOverImg, 0, 0, canvas.width, canvas.height);
     }
     if(score >= winningScore2 && enemies.length === 0) {
+        LEVELUP.play();
         ctx.fillStyle == 'black';
         ctx.font = '60px Orbitron';
         ctx.fillText('LEVEL COMPLE', 130, 300);
@@ -575,7 +596,10 @@ function animate() {
     handleFloatingMessages();
     frame++;
     // chạy lại callback nếu như chưa gameover
-    if(!gameOver) requestAnimationFrame(animate);
+    if(!gameOver) {
+        SOUNDTRACK.play();
+        requestAnimationFrame(animate);
+    }
 }
 
 animate();
